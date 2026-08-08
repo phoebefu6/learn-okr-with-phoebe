@@ -4,8 +4,16 @@ Audience: C-level and upper management - the people who actually sign off tools.
 sign-off decision, not a technology briefing.
 
 ## Before the session
-- Re-verify the regulatory details the week you deliver. The course map flags this: EU AI Act
-  enforcement dates and NYC Local Law 144 specifics move. State them as of a date.
+- Re-verify the regulatory details the week you deliver. The course map has a re-verification log
+  with what was checked and when; regulation moves, so state everything as of a date.
+- As of August 2026 the three facts to have right: the EU Annex III classification stands, but the
+  AI Omnibus (in force 27 July 2026) deferred standalone Annex III compliance duties from 2 August
+  2026 to **2 December 2027**. NYC Local Law 144 is already live (in effect January 2023, enforced
+  since July 2023). The UK has NO AI Act and no high-risk tier - duties run through UK GDPR and
+  ICO guidance, and the Data (Use and Access) Act 2025 loosened Article 22 into a safeguard-led
+  regime. Do not say "the EU, the UK and New York all treat this as high-risk"; that is wrong.
+- If your audience spans the EU and the UK, expect the question directly: same tool, two rulebooks.
+  Have the answer ready rather than discovering it live.
 - Have the two cautionary cases straight and attributed: Microsoft Productivity Score (2020, the
   backlash and the subsequent removal of individual-level identification) and Amazon warehouse
   "time off task" as reported by MIT Technology Review. Say "as reported" for the second.

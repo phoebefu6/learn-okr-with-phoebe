@@ -6,7 +6,13 @@ use it for on Monday, and the answer is the two-lane rule.
 ## Before the session
 - Re-verify the regulation specifics the week you deliver: EU AI Act Annex III status and dates,
   and NYC Local Law 144 details. Present them as of a date, and say once that this is awareness,
-  not legal advice.
+  not legal advice. The course map holds a re-verification log of what was checked and when.
+- As of August 2026: the Annex III high-risk classification stands, but the AI Omnibus (in force
+  27 July 2026) moved standalone Annex III compliance duties to **2 December 2027**. Frame that as
+  build time, not a pass - a room that hears "2027" will otherwise stop listening. NYC Local Law
+  144 is live today. The UK has no AI Act and no high-risk tier; its duties come via UK GDPR and
+  ICO guidance, and the Data (Use and Access) Act 2025 replaced the near-prohibition on solely
+  automated significant decisions with a safeguard-led regime.
 - Find out which AI tools your organisation has actually approved for personal data. The
   where-does-the-data-go question is the one that gets asked, and "check with IT" is a weak answer
   if you could have checked.

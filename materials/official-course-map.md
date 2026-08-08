@@ -81,3 +81,17 @@
 - The broad performance-review/feedback craft owned by the sibling `learn-performance-management-with-phoebe`.
 
 **Re-verify before delivery:** EU AI Act enforcement dates + NYC LL144 details (regulation moves); the Adobe/Deloitte stats (quote as reported).
+
+## Regulatory re-verification log
+
+**Verified 2026-08-08.** Re-check before each delivery; these move.
+
+| Claim | Status | Detail |
+|---|---|---|
+| EU AI Act Annex III sec. 4 classifies worker management + evaluation AI as high-risk | ✓ holds | Covers recruitment and selection, decisions on terms of work, promotion and termination, task allocation, and monitoring or evaluating performance and behaviour. |
+| EU Annex III compliance duties apply from 2 August 2026 | ✗ **superseded** | The AI Omnibus deferred standalone Annex III duties to **2 December 2027**. Council final approval 29 June 2026; the amending regulation entered into force **27 July 2026**. The classification did NOT change - only the timeline. Sources: European Commission "AI Omnibus enters into force" (digital-strategy.ec.europa.eu), plus Gibson Dunn, White & Case, DLA Piper analyses. Note `artificialintelligenceact.eu/implementation-timeline` was still showing the old 2 Aug 2026 date when checked and should not be used as the authority. |
+| GDPR Article 22 - no solely automated decision with legal or similarly significant effect; human intervention required | ✓ holds | EU GDPR unchanged. |
+| NYC Local Law 144 - independent bias audit + notice | ✓ holds, more precise | Annual independent bias audit, publicly posted summary of results, and **at least 10 business days'** notice to candidates. In effect since 1 January 2023, enforced by DCWP since 5 July 2023. |
+| "The UK regulates worker-management AI as high-risk" | ✗ **was wrong, corrected** | The UK has no AI Act and no high-risk tier. Duties run through UK GDPR and ICO guidance, and the **Data (Use and Access) Act 2025** replaced the near-prohibition on solely automated significant decisions with a permissive, safeguard-led regime. ICO statutory Code of Practice on AI and ADM was in progress at the time of checking. This claim was live on a5 and has been rewritten. |
+
+Both a5 and b8 now carry an explicit "as of August 2026" jurisdiction-and-dates callout rather than an undated "the law now says" framing.
