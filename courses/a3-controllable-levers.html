@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 3 · Controllable levers - learn OKRs with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-okr-with-phoebe</a> / Leader session 3 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe · Leader track · Session 3 of 6</div>
+    <h1>Controllable levers: <span class="accent">grade what a team owns, watch what everyone shares</span></h1>
+    <p class="sub">A top-line number like conversion rate feels like the obvious thing to measure a team on. It is also one of the least fair, because four different teams move it at once. This session shows how to decompose a company goal until every branch has a clear owner, why the attribution problem makes shared metrics unfair to grade, and the design rule that fixes it: grade the controllable lever, watch the shared outcome together.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">Leaders: C-level · upper mgmt</span>
+      <span class="chip audience">No code · concepts + decisions</span>
+      <span class="chip time">~25 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:4">3-14 · Decompose to owners</span>
+      <span class="a3" style="flex:5">14-38 · The attribution problem + the fix</span>
+      <span class="a4" style="flex:1">38-42 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">In a1 we saw the promise and the peril of measuring people, and in a2 we separated OKRs (change) from KPIs (health) and drew the e-commerce metric tree: <strong>Revenue = Sessions x Conversion Rate x AOV</strong>. Today we take that tree and do the leadership work: decide who owns which branch. The trap you are about to design around is that the most tempting metrics - revenue, conversion rate, retention - are the ones no single team controls. Point a person's rating at a number four teams move and you have built something both unfair and easy to game. The fix is not a better number; it is a better decomposition. A note we carry through the whole course: an OKR score steers and teaches, it never sets pay - decoupling that is what keeps this honest.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Worked example (Cartwheel)</span>
+      <span class="pill inkpill">Sources covered (cited)</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you decide today</strong>
+      A repeatable move: take any shared top-line number, decompose it down the metric tree until each branch has one accountable owner, give each contributing team a controllable sub-lever to be graded on, and keep the shared outcome as a jointly-watched North Star that grades no one alone.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: DECOMPOSE TO OWNERS ============ -->
+  <section class="section" id="decompose">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · decompose to owners</span>
+      <h2>Push the tree down until every branch has a name <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A goal you cannot assign is a goal you cannot fairly grade. The discipline is to keep splitting a metric into its drivers until each leaf is small enough that one team can genuinely move it - and then write that team's name against it.</p>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The rule: keep splitting until each leaf has an owner<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Start at the top-line number and ask, at each level, "what drives this, and who could actually move that driver?" Stop when the answer is a single team:</p>
+        <ul>
+          <li><strong>Revenue</strong> is owned by no one - it is the whole company's result.</li>
+          <li>Split it: <strong>Sessions x Conversion Rate x AOV</strong>. Still shared, but closer.</li>
+          <li>Split conversion further: qualified traffic, add-to-cart rate, checkout completion, page speed. Now each driver has a plausible owner - Marketing, Product, Engineering.</li>
+          <li>Split AOV: items per order (Merchandising), price and bundle mix (Merchandising), upsell (Product).</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>HBR, "Use OKRs to Set Goals for Teams, Not Individuals" (2020),</strong> makes the leadership point directly: OKRs work at the team level because outcomes are produced by teams, not lone individuals - and they should not be wired into individual appraisal. Your job as a leader is to decompose the company goal into team-sized OKRs each team can own, not to hang one shared number around one person's neck.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Balance the branches - do not let one metric distort<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Decomposition tells you who owns what; the <strong>Balanced Scorecard</strong> (Kaplan &amp; Norton, HBR 1992) reminds you not to over-index on any single branch. Their argument: a company steered by financial numbers alone will quietly starve the things that produce those numbers later. Balance four lenses so no one metric distorts behaviour:</p>
+        <ul>
+          <li><strong>Financial</strong> - revenue, margin (the lagging result).</li>
+          <li><strong>Customer</strong> - satisfaction, retention (why they buy again).</li>
+          <li><strong>Internal process</strong> - speed, quality, reliability (how the work runs).</li>
+          <li><strong>Learning &amp; growth</strong> - skills, capability (what keeps it going).</li>
+        </ul>
+        <p>Applied to the tree: give each owner a metric, but make sure the set of owned metrics spans more than one lens. If every team is graded only on a financial leaf, you have rebuilt the single-number problem in disguise.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE ATTRIBUTION PROBLEM + FIX ============ -->
+  <section class="section" id="attribution">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the attribution problem</span>
+      <h2>Why a shared metric has no fair owner <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Conversion rate is moved by Marketing, Product, Engineering, and Merchandising at the same time. That is the attribution problem: when a result has many causes, you cannot cleanly credit or blame any one team - so grading one team on it is both unfair and gameable. The fix is to give each team a controllable sub-lever and keep conversion as a shared North Star.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The attribution problem: one shared conversion-rate metric is moved by four teams at once so no single team owns it, which is unfair to grade. The fix gives each team a controllable sub-lever and keeps conversion rate as a shared North Star watched together.">
+        <style>
+          .a3lH { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .a3lT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .a3lS { font: 400 10.5px Inter, sans-serif; fill: #E0E7FF; }
+          .a3lB { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .a3lX { font: 400 11px Inter, sans-serif; fill: #FEF3C7; }
+          .a3lI { font: 700 12.5px Inter, sans-serif; fill: #991B1B; }
+          .a3lN { font: 600 12.5px Inter, sans-serif; fill: #312E81; }
+          .a3lK { font: 700 12px Inter, sans-serif; fill: #1F2937; }
+          .a3lM { font: 400 10.5px Inter, sans-serif; fill: #6B7280; }
+        </style>
+
+        <!-- PROBLEM label -->
+        <text class="a3lH" x="24" y="24">The problem - one number, four movers, no owner</text>
+
+        <!-- four team boxes -->
+        <rect x="24" y="38" width="194" height="42" rx="9" fill="#818CF8"/>
+        <text class="a3lT" x="121" y="64" text-anchor="middle">Marketing</text>
+        <rect x="236" y="38" width="194" height="42" rx="9" fill="#818CF8"/>
+        <text class="a3lT" x="333" y="64" text-anchor="middle">Product</text>
+        <rect x="448" y="38" width="194" height="42" rx="9" fill="#818CF8"/>
+        <text class="a3lT" x="545" y="64" text-anchor="middle">Engineering</text>
+        <rect x="660" y="38" width="194" height="42" rx="9" fill="#818CF8"/>
+        <text class="a3lT" x="757" y="64" text-anchor="middle">Merchandising</text>
+
+        <!-- arrows down to conversion -->
+        <path d="M121 80 L235 118" stroke="#9CA3AF" stroke-width="1.6" marker-end="url(#a3lArr)"/>
+        <path d="M333 80 L390 118" stroke="#9CA3AF" stroke-width="1.6" marker-end="url(#a3lArr)"/>
+        <path d="M545 80 L490 118" stroke="#9CA3AF" stroke-width="1.6" marker-end="url(#a3lArr)"/>
+        <path d="M757 80 L645 118" stroke="#9CA3AF" stroke-width="1.6" marker-end="url(#a3lArr)"/>
+        <defs>
+          <marker id="a3lArr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0 0 L8 4 L0 8 Z" fill="#9CA3AF"/>
+          </marker>
+        </defs>
+
+        <!-- shared conversion box -->
+        <rect x="240" y="120" width="400" height="52" rx="10" fill="#4338CA"/>
+        <text class="a3lB" x="440" y="143" text-anchor="middle">Conversion rate  2.4%</text>
+        <text class="a3lS" x="440" y="162" text-anchor="middle">moved by all four teams at once</text>
+
+        <!-- warning -->
+        <rect x="24" y="186" width="832" height="38" rx="9" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.3"/>
+        <text class="a3lI" x="44" y="210">No single owner. Grade one team on it and you punish them for others' work - and invite gaming.</text>
+
+        <!-- FIX label -->
+        <text class="a3lH" x="24" y="262">The fix - one controllable sub-lever per team, one shared North Star</text>
+
+        <!-- four sub-lever boxes -->
+        <rect x="24" y="276" width="194" height="58" rx="9" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="a3lK" x="40" y="300">Marketing</text>
+        <text class="a3lM" x="40" y="320">Qualified sessions</text>
+        <rect x="236" y="276" width="194" height="58" rx="9" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="a3lK" x="252" y="300">Product</text>
+        <text class="a3lM" x="252" y="320">Add-to-cart rate</text>
+        <rect x="448" y="276" width="194" height="58" rx="9" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="a3lK" x="464" y="300">Engineering</text>
+        <text class="a3lM" x="464" y="320">Page load speed</text>
+        <rect x="660" y="276" width="194" height="58" rx="9" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="a3lK" x="676" y="300">Merchandising</text>
+        <text class="a3lM" x="676" y="320">Sell-through rate</text>
+
+        <!-- shared north star band -->
+        <rect x="24" y="348" width="832" height="46" rx="10" fill="#FEF3C7" stroke="#D97706" stroke-width="1.3"/>
+        <text class="a3lK" x="44" y="368">Shared North Star: conversion rate</text>
+        <text class="a3lM" x="44" y="386">watched together every week, reviewed jointly, graded on no single team</text>
+
+        <!-- bottom note -->
+        <rect x="24" y="410" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a3lN" x="46" y="422">Each team is graded on the lever it controls; the top-line stays context everyone owns together.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the attribution problem, and the sub-lever fix</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why shared-metric grading gets gamed<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>When a team is graded on a number it only partly controls, two bad things happen. First, luck dominates: a great quarter for the team can be erased by another team's outage, and a lazy quarter can be rescued by someone else's win - so the grade stops measuring the team. Second, people optimise their visible slice at the expense of the whole: Marketing floods the funnel with low-intent traffic to "help conversion inputs," which actually drops conversion rate. Give each team a controllable sub-lever and the incentive lines up with the real goal instead of fighting it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WALK-THROUGH 1 ============ -->
+  <section class="section" id="worked-1">
+    <div class="section-kicker">
+      <span class="klabel">Walk-through 1 of 2</span>
+      <h2>Split Cartwheel's conversion goal into owned levers <span class="tag demo">★ Worked example (Cartwheel) · 10 min</span></h2>
+    </div>
+    <p class="lede">Cartwheel's leadership wants "lift conversion rate from 2.4% to 3.0%." Watch how that one shared goal becomes four fairly-gradable team OKRs plus one shared North Star.</p>
+
+    <div class="steps">
+      <div class="step"><p>Name the shared outcome and refuse to grade any one team on it: <strong>conversion rate 2.4% - 3.0%</strong> becomes the jointly-watched North Star.</p></div>
+      <div class="step"><p>Decompose it into drivers and match each to the team that can actually move it: qualified traffic (Marketing), add-to-cart (Product), page speed (Engineering), sell-through and in-stock (Merchandising).</p></div>
+      <div class="step"><p>Write each team a key result on its own controllable lever - the thing it can move without waiting on anyone else.</p></div>
+      <div class="step"><p>Review the North Star together weekly as shared context, and grade each team only on its lever at the quarter's end.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The decomposition, side by side</strong>
+      <table class="clean">
+        <thead><tr><th>Team</th><th>Controllable lever (graded)</th><th>Shared outcome (watched)</th></tr></thead>
+        <tbody>
+          <tr><td>Marketing</td><td>Qualified sessions +15%</td><td>Conversion rate</td></tr>
+          <tr><td>Product</td><td>Add-to-cart rate 9% - 11%</td><td>Conversion rate</td></tr>
+          <tr><td>Engineering</td><td>Page load under 2.0s on 95% of views</td><td>Conversion rate</td></tr>
+          <tr><td>Merchandising</td><td>Sell-through +8%, in-stock over 97%</td><td>Conversion rate</td></tr>
+        </tbody>
+      </table>
+      Four fair grades, one shared number nobody games because nobody is scored on it alone.
+    </div>
+  </section>
+
+  <!-- ============ WALK-THROUGH 2 ============ -->
+  <section class="section" id="worked-2">
+    <div class="section-kicker">
+      <span class="klabel">Walk-through 2 of 2</span>
+      <h2>Decide: grade it, or watch it together? <span class="tag demo">★ Thought exercise · 8 min</span></h2>
+    </div>
+    <p class="lede">The core leadership judgment call on every metric is a single fork: is this something one team controls (grade it) or something many teams share (watch it together)? Get the fork right and fairness mostly takes care of itself.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grade versus watch: on the left a controllable lever owned by one team that is fair to grade, on the right a shared outcome owned by no one that should be watched together as context, not graded on any single team.">
+        <style>
+          .a3gT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .a3gS { font: 400 11px Inter, sans-serif; fill: #E0E7FF; }
+          .a3gX { font: 400 11px Inter, sans-serif; fill: #FEF3C7; }
+          .a3gL { font: 600 12px Inter, sans-serif; fill: #1F2937; }
+          .a3gN { font: 600 12.5px Inter, sans-serif; fill: #312E81; }
+        </style>
+
+        <!-- left: grade it -->
+        <rect x="24" y="34" width="398" height="46" rx="10" fill="#4338CA"/>
+        <text class="a3gT" x="44" y="55">Grade it - controllable lever</text>
+        <text class="a3gS" x="44" y="72">Add-to-cart rate · Product owns it</text>
+        <rect x="24" y="92" width="398" height="128" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="a3gL" x="44" y="120">✓ One clear owner</text>
+        <text class="a3gL" x="44" y="148">✓ The team can actually move it</text>
+        <text class="a3gL" x="44" y="176">✓ Fair to put on a scorecard</text>
+        <text class="a3gL" x="44" y="204">✓ Effort shows up in the number</text>
+
+        <!-- right: watch it together -->
+        <rect x="458" y="34" width="398" height="46" rx="10" fill="#D97706"/>
+        <text class="a3gT" x="478" y="55">Watch together - shared outcome</text>
+        <text class="a3gX" x="478" y="72">Conversion rate · everyone contributes</text>
+        <rect x="458" y="92" width="398" height="128" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="a3gL" x="478" y="120">• No single owner</text>
+        <text class="a3gL" x="478" y="148">• Context and alignment, not a grade</text>
+        <text class="a3gL" x="478" y="176">• Reviewed jointly, every week</text>
+        <text class="a3gL" x="478" y="204">• Grading one team on it is unfair</text>
+
+        <!-- bottom note -->
+        <rect x="24" y="242" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="a3gN" x="46" y="254">If you cannot name one team that fully controls it, do not grade anyone on it - watch it together.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the grade-it vs watch-it-together fork</figcaption>
+    </figure>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The retention trap.</strong> Cartwheel nearly graded its CX team on 90-day customer retention. But retention is moved by product quality, pricing, shipping speed, and merchandising - CX owns only the support experience. The fair fix: grade CX on a lever it controls (first-contact resolution and CSAT) and keep retention as a shared North Star the whole leadership team watches. Same ambition, honest grade.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Pick one shared top-line metric in your org (conversion, retention, NPS, revenue per employee) and list every team that moves it.</li>
+      <li>Assign each contributing team one controllable sub-lever it could genuinely be graded on - the thing it can move without waiting on another team.</li>
+      <li>Declare the top-line number a jointly-watched North Star, and write down who reviews it together and how often.</li>
+      <li>Run each sub-lever past the Balanced Scorecard lenses - do your owned metrics span more than just the financial one?</li>
+      <li>Optional: read HBR "Use OKRs to Set Goals for Teams, Not Individuals" (2020) before a4.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered (cited)</h2>
+    </div>
+    <p class="lede">Taught from the goal-setting and metric-design canon. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">HBR, "Use OKRs to Set Goals for Teams, Not Individuals" (2020)</span><span class="note">Parts 1-2 · team-level OKRs, do not wire shared outcomes to individual appraisal</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Kaplan &amp; Norton, "The Balanced Scorecard" (HBR 1992)</span><span class="note">Part 1 · balance financial / customer / process / learning so one metric does not distort</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · What is "the attribution problem"?</p>
+      <button class="qopt" type="button">A · When a metric is too hard to compute</button>
+      <button class="qopt" type="button">B · When a team refuses to accept a goal</button>
+      <button class="qopt" type="button">C · When an outcome is moved by many teams, so no single team can be fairly credited or blamed</button>
+      <p class="qwhy">Conversion rate is moved by Marketing, Product, Engineering, and Merchandising together. Grading one team on it punishes them for others' work and invites gaming.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · A metric is fair to grade a team on when...</p>
+      <button class="qopt" type="button">A · It is a big, impressive, top-line number</button>
+      <button class="qopt" type="button">B · That one team can genuinely control and move it</button>
+      <button class="qopt" type="button">C · Everyone in the company contributes to it</button>
+      <p class="qwhy">Grade the controllable lever. If you cannot name one team that fully controls it, do not grade anyone on it - watch it together as a shared North Star.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · What should happen to a shared outcome like conversion rate?</p>
+      <button class="qopt" type="button">A · Keep it as a jointly-watched North Star and grade each team on its own controllable sub-lever</button>
+      <button class="qopt" type="button">B · Assign it to whichever team has the most people</button>
+      <button class="qopt" type="button">C · Delete it because no one owns it</button>
+      <p class="qwhy">The shared outcome stays as context everyone watches together; each contributing team is graded on a sub-lever it controls (add-to-cart, page speed, sell-through).</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Decompose to owners</b><span>keep splitting a metric until each leaf has one team that can move it.</span></div>
+      <div class="cheat-item"><b>The attribution problem</b><span>shared outcomes have many movers and no single fair owner.</span></div>
+      <div class="cheat-item"><b>Grade the lever</b><span>score each team on a sub-lever it controls: add-to-cart, page speed, sell-through.</span></div>
+      <div class="cheat-item"><b>Watch the North Star</b><span>keep the shared top-line as jointly-watched context, graded on no one alone.</span></div>
+      <div class="cheat-item"><b>The fork</b><span>can one team control it? Grade it. Many teams share it? Watch it together.</span></div>
+      <div class="cheat-item"><b>Balanced Scorecard</b><span>span financial / customer / process / learning so one metric does not distort.</span></div>
+      <div class="cheat-item"><b>Still decoupled</b><span>none of these levers feed pay - OKR scores steer and teach only.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>a4 - fair-measurement principles: why "objective" scores often are not.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 3 of 6 · learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a4-fair-measurement.html">Next: Fair-measurement principles →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

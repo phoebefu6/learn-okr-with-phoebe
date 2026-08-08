@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 5 · Monitoring cadence - learn OKRs with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-okr-with-phoebe</a> / Manager session 5 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe · Manager track · Session 5 of 10</div>
+    <h1>Monitoring cadence: <span class="accent">check in without smothering</span></h1>
+    <p class="sub">You have written the OKRs and picked fair metrics. Now the weekly reality: how often do you look, at what, and with whom? This session builds the layered cadence - weekly 1:1s, monthly reviews, quarterly retros - matches the frequency to how new the work is (not to rank), and rebuilds a naked-number dashboard into one that actually tells you something. The rule underneath it all: tracking progress and evaluating people are different meetings.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Manager track</span>
+      <span class="chip audience">Managers: middle mgmt · team leads</span>
+      <span class="chip audience">No code · templates + worked examples</span>
+      <span class="chip time">~45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:4">3-20 · The layered cadence</span>
+      <span class="a3" style="flex:5">20-42 · Worked: cadence + fix a dashboard</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">In b1-b4 you built the goals and the metric tree: fair, outcome-based OKRs with an owner on every branch. This session is about <strong>watching them move</strong> - the rhythm of review that steers the work early enough to matter, without turning into surveillance. Most teams get this wrong in one of two ways: they check too rarely (problems surface at quarter-end when it is too late) or they check obsessively on everything (the team spends more time reporting than working). The fix is a <strong>layered cadence</strong> - different horizons answer different questions - and a discipline that never gets old: the meeting where you steer the work is not the meeting where you judge the person.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Worked example (Cartwheel)</span>
+      <span class="pill inkpill">Sources covered (cited)</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A three-horizon cadence table (weekly / monthly / quarterly) with what each meeting is FOR and who is in it, Grove's rule for setting frequency by task-maturity instead of seniority, and one naked-number dashboard tile rebuilt with target, trend, context, and a paired leading indicator.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE LAYERED CADENCE ============ -->
+  <section class="section" id="cadence">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the layered cadence</span>
+      <h2>Three horizons, three different questions <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">A good monitoring rhythm is not one meeting done more often - it is three meetings with three jobs. Confuse them and every review becomes a status readout that steers nothing.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three cadence horizons: weekly 1:1 asks is the work moving, monthly business review asks is the unit healthy, quarterly OKR retro asks did the bets pay off and what did we learn, with a note that steering is not evaluation">
+        <style>
+          .b5mT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b5mX { font: 400 11.5px Inter, sans-serif; fill: #E0E7FF; }
+          .b5mQ { font: 600 12px Inter, sans-serif; fill: #FEF3C7; }
+          .b5mA { fill: none; stroke: #D1D5DB; stroke-width: 2; }
+          .b5mN { font: 600 13px Inter, sans-serif; fill: #92400E; }
+        </style>
+        <rect x="24" y="42" width="252" height="118" rx="12" fill="#4338CA"/>
+        <text class="b5mT" x="44" y="70">Weekly · 1:1</text>
+        <text class="b5mX" x="44" y="92">Manager + one report</text>
+        <text class="b5mX" x="44" y="110">The report's meeting.</text>
+        <text class="b5mQ" x="44" y="140">Is the work moving?</text>
+        <text class="b5mX" x="44" y="152" style="fill:#C7D2FE">Blockers, next steps.</text>
+        <line class="b5mA" x1="280" y1="101" x2="310" y2="101"/>
+        <polygon points="310,96 322,101 310,106" fill="#D1D5DB"/>
+        <rect x="326" y="42" width="228" height="118" rx="12" fill="#818CF8"/>
+        <text class="b5mT" x="346" y="70">Monthly · review</text>
+        <text class="b5mX" x="346" y="92">Team + peers</text>
+        <text class="b5mX" x="346" y="110">Unit-level look.</text>
+        <text class="b5mQ" x="346" y="140" style="fill:#312E81">Is the unit healthy?</text>
+        <text class="b5mX" x="346" y="152">Trends, resourcing.</text>
+        <line class="b5mA" x1="558" y1="101" x2="588" y2="101"/>
+        <polygon points="588,96 600,101 588,106" fill="#D1D5DB"/>
+        <rect x="604" y="42" width="252" height="118" rx="12" fill="#D97706"/>
+        <text class="b5mT" x="624" y="70">Quarterly · OKR retro</text>
+        <text class="b5mX" x="624" y="92" style="fill:#FEF3C7">Team + leadership</text>
+        <text class="b5mX" x="624" y="110" style="fill:#FEF3C7">Score, reset, learn.</text>
+        <text class="b5mQ" x="624" y="140">Did the bets pay off?</text>
+        <text class="b5mX" x="624" y="152" style="fill:#FEF3C7">And what did we learn?</text>
+        <rect x="24" y="180" width="832" height="40" rx="10" fill="#EEF2FF" stroke="#4338CA" stroke-width="1.4"/>
+        <text class="b5mN" x="44" y="205" style="fill:#312E81">Faster horizons steer; slower horizons judge and learn. Keep them on separate tracks.</text>
+        <rect x="24" y="238" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b5mN" x="46" y="250">Steering is not evaluation. A weekly 1:1 is for unblocking, never for grading - the OKR score is decoupled from pay.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three horizons, three questions, steering kept apart from judgment</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The 1:1 is the report's meeting, not yours<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Grove's point in <em>High Output Management</em> is easy to miss: the weekly 1:1 belongs to the person being managed, not the manager. It is where they raise what is stuck, and where you catch a problem while it is still cheap to fix - a slipping key result in week two, not a failed objective in week twelve.</p>
+        <ul>
+          <li><strong>Weekly 1:1</strong> - is the work moving? Blockers, next steps, early signals. Short and frequent beats long and rare.</li>
+          <li><strong>Monthly review</strong> - is the unit healthy? Trends across the team, resourcing, cross-team dependencies. Zoom out from any single person.</li>
+          <li><strong>Quarterly OKR review + retro</strong> - did the bets pay off, and what did we learn? Score the OKRs (for learning, not pay), keep what worked, reset the next set.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Andy Grove ran Intel on this.</strong> He argued a 1:1 that surfaces one problem early "buys back" hours of a manager's own time later. The cadence is not overhead - it is the cheapest place to catch a drifting result before it becomes a missed quarter.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Grove's task-relevant maturity - cadence follows the task, not the title<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>How often you check in should track how <em>new</em> the work is to the person, not how senior they are. Grove called this <strong>task-relevant maturity</strong> (TRM): maturity is per-task, not per-person.</p>
+        <ul>
+          <li><strong>Low maturity on the task</strong> (new hire, or a veteran doing something unfamiliar) - check in weekly, structured, hands-on. Not distrust; scaffolding.</li>
+          <li><strong>High maturity on the task</strong> - lighter touch, monitor by exception, let them run. Over-checking here reads as micromanagement and erodes trust.</li>
+        </ul>
+        <p>The trap is anchoring cadence to rank. A senior leader learning a brand-new domain needs more structure, not less; a junior who has mastered a routine task needs less. Set frequency to the task in front of the person, and revisit it as they grow.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: DASHBOARDS DONE RIGHT ============ -->
+  <section class="section" id="dashboards">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · dashboards done right</span>
+      <h2>No naked numbers <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">A number on its own cannot be read. "Revenue: $1.2M" - is that good? Up or down? Against what? Every tile on a dashboard needs three companions before it means anything: a target, a trend, and context.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A naked number tile showing only Revenue 1.2M next to a done-right tile showing the same number with target, a rising trend arrow, context versus last month, and a green RAG dot">
+        <style>
+          .b5dT { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .b5dBig { font: 700 26px Inter, sans-serif; fill: #1F2937; }
+          .b5dX { font: 400 11px Inter, sans-serif; fill: #6B7280; }
+          .b5dLbl { font: 700 11px Inter, sans-serif; fill: #FFFFFF; }
+          .b5dN { font: 600 13px Inter, sans-serif; fill: #312E81; }
+          .b5dBad { font: 600 12px Inter, sans-serif; fill: #991B1B; }
+        </style>
+        <rect x="24" y="42" width="360" height="150" rx="12" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.4"/>
+        <text class="b5dX" x="44" y="70" style="fill:#991B1B; font-weight:700">NAKED NUMBER</text>
+        <text class="b5dX" x="44" y="92">Revenue</text>
+        <text class="b5dBig" x="44" y="126">$1.2M</text>
+        <text class="b5dBad" x="44" y="164">Good? Up or down? Against what?</text>
+        <text class="b5dBad" x="44" y="182">Nobody can act on this.</text>
+        <rect x="466" y="42" width="390" height="150" rx="12" fill="#FFFFFF" stroke="#4338CA" stroke-width="1.4"/>
+        <rect x="466" y="42" width="390" height="26" rx="12" fill="#4338CA"/>
+        <text class="b5dLbl" x="486" y="60">DONE RIGHT</text>
+        <text class="b5dX" x="486" y="92">Revenue · this month</text>
+        <text class="b5dBig" x="486" y="126">$1.2M</text>
+        <circle cx="828" cy="118" r="9" fill="#16A34A"/>
+        <text class="b5dX" x="486" y="150" style="fill:#16A34A; font-weight:700">Target $1.15M · +4% ahead</text>
+        <polyline points="640,150 660,144 680,148 700,138 720,132" fill="none" stroke="#4338CA" stroke-width="2.5"/>
+        <polygon points="720,127 730,132 720,137" fill="#4338CA"/>
+        <text class="b5dX" x="486" y="172">vs last month +9% · driven by AOV, not sessions</text>
+        <text class="b5dX" x="486" y="186" style="fill:#4338CA">paired leading: add-to-cart rate ↑</text>
+        <rect x="24" y="212" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="b5dN" x="46" y="224">Target + trend + context + a paired leading indicator. RAG is a conversation starter, not a verdict.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - a naked number rebuilt into a tile you can actually act on</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The Balanced Scorecard reflex - and vanity metrics to drop<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Kaplan and Norton's <strong>Balanced Scorecard</strong> (HBR, 1992) made one durable point: a board built only of financial numbers steers you off a cliff, because money is a lagging result. Balance it across four lenses - financial, customer, internal process, and learning/growth - so you see cause before effect.</p>
+        <ul>
+          <li><strong>One metric that matters per horizon.</strong> Pick a single headline number for each review level so the board has a spine. Everything else is supporting context, not competing headlines.</li>
+          <li><strong>Leading and lagging on the same board.</strong> Pair the slow result (revenue, retention) with the fast signal that predicts it (add-to-cart rate, activation). The leading one is where you can still act.</li>
+          <li><strong>Drop the vanity metrics.</strong> Totals that only ever go up (cumulative signups, page views, "total revenue since launch") always look good and steer nothing. Prefer rates and ratios you can compare period to period.</li>
+        </ul>
+        <p>A dashboard is a decision aid, not a trophy case. If a tile has never once changed a decision, it is decoration - retire it.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The reporting tax - when the cadence eats the work<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every review meeting and every dashboard tile has a hidden cost: the time your team spends preparing for it. A cadence that looks thorough on paper can quietly become a tax that crowds out the work it was meant to steer.</p>
+        <ul>
+          <li><strong>Reuse one source.</strong> The weekly, monthly, and quarterly views should draw from the same numbers at different zoom levels, not three separate reports built by hand.</li>
+          <li><strong>Kill the deck.</strong> If people build slides for a review, the review is about the slides. Look at the live dashboard together instead.</li>
+          <li><strong>Budget the check-in.</strong> If a review takes longer to prepare than the decisions it produces are worth, thin it out. Frequency should lower stakes, not raise the reporting burden.</li>
+        </ul>
+        <p>The test is simple: does this meeting change what someone does next week? If not, it is overhead wearing the costume of rigour.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 1 ============ -->
+  <section class="section" id="worked-1">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 1 of 2</span>
+      <h2>Set a monitoring cadence for a Cartwheel team <span class="tag demo">★ 12 min · everyone tries</span></h2>
+    </div>
+    <p class="lede">Cartwheel's Growth team just picked up a brand-new paid-social channel alongside its steady email programme. Build the cadence: what gets reviewed, how often, and with whom.</p>
+
+    <div class="steps">
+      <div class="step"><p>List the work and rate its maturity. The email programme is <strong>high maturity</strong> (runs itself); the new paid-social channel is <strong>low maturity</strong> (nobody has run it before).</p></div>
+      <div class="step"><p>Set frequency by maturity, not by who owns it: the new channel gets a tight weekly structured check; the mature email programme gets a light monthly look.</p></div>
+      <div class="step"><p>Assign each horizon a question and an audience - the 1:1 steers the owner, the monthly checks unit health, the quarterly retro scores and resets.</p></div>
+      <div class="step"><p>Write it into a table so it is a shared expectation, not a mood. Revisit maturity ratings each quarter as the new channel stabilises.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>Cartwheel Growth - the cadence table</strong>
+      <table class="clean">
+        <thead><tr><th>Horizon</th><th>What is reviewed</th><th>Question</th><th>Who</th></tr></thead>
+        <tbody>
+          <tr><td>Weekly 1:1</td><td>New paid-social KR + blockers</td><td>Is the work moving?</td><td>Manager + channel owner</td></tr>
+          <tr><td>Monthly review</td><td>Whole Growth funnel + email trend</td><td>Is the unit healthy?</td><td>Growth team + peers</td></tr>
+          <tr><td>Quarterly retro</td><td>Score the OKRs, keep/kill the channel</td><td>Did the bets pay off?</td><td>Team + leadership</td></tr>
+        </tbody>
+      </table>
+      Note the mature email programme is not in a weekly 1:1 - light-touch by exception. Cadence followed the task, not the seniority of who ran it.
+    </div>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 2 ============ -->
+  <section class="section" id="worked-2">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 2 of 2</span>
+      <h2>Fix a bad Cartwheel dashboard tile <span class="tag demo">★ 8 min · do your own</span></h2>
+    </div>
+    <p class="lede">Cartwheel's weekly board opens with a single tile: <strong>"Revenue: $1.2M"</strong>. It is a naked number - nobody in the room can tell whether that is a good week. Rebuild it.</p>
+
+    <div class="steps">
+      <div class="step"><p>Add a <strong>target</strong>: the week's plan was $1.15M, so $1.2M is +4% ahead. Now the number has a verdict.</p></div>
+      <div class="step"><p>Add a <strong>trend</strong>: show the last several weeks as a sparkline, and the change vs last month (+9%). One point is noise; a line is a story.</p></div>
+      <div class="step"><p>Add <strong>context</strong>: what drove it? Revenue rose on higher AOV, not more sessions - a very different situation to explain.</p></div>
+      <div class="step"><p>Pair a <strong>leading indicator</strong>: add-to-cart rate sits beside revenue so you see next week coming, not just last week's result.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The naked number vs the tile that steers.</strong> "$1.2M" ends a conversation - everyone nods and moves on. "$1.2M, +4% vs target, +9% MoM, driven by AOV not traffic, add-to-cart trending up" starts one: is the AOV lift durable or a one-off promo? RAG colour helps only if it is a prompt to ask why, never a verdict that closes the discussion. A green dot means "looks fine, confirm it"; a red dot means "let us talk", not "someone failed".</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Write your team's three-horizon cadence table: what is reviewed weekly / monthly / quarterly, and who is in each meeting.</li>
+      <li>Rate each stream of work as low or high task-maturity, and set its check-in frequency from that - not from seniority. Flag anything you are checking on out of habit.</li>
+      <li>Pick the worst naked-number tile on your current dashboard and rebuild it with target + trend + context + one paired leading indicator.</li>
+      <li>Find one vanity metric (a total that only goes up) and either convert it to a rate or retire it.</li>
+      <li>Audit your last three 1:1s: were they steering the work, or quietly grading the person? Note where the two got mixed.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered (cited)</h2>
+    </div>
+    <p class="lede">Taught from the monitoring and dashboard canon. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Grove, "High Output Management" - 1:1 cadence, task-relevant maturity</span><span class="note">Part 1 · the layered cadence, frequency by maturity not rank</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Kaplan &amp; Norton, "The Balanced Scorecard," HBR (1992)</span><span class="note">Part 2 · balance the board, leading + lagging, no naked numbers</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What should set how often you check in on a piece of work?</p>
+      <button class="qopt" type="button">A · The person's seniority - juniors weekly, seniors quarterly</button>
+      <button class="qopt" type="button">B · Task-relevant maturity - how new the task is to that person</button>
+      <button class="qopt" type="button">C · The same fixed cadence for everyone, no exceptions</button>
+      <p class="qwhy">Grove's rule: cadence follows maturity on the task, not rank. A senior in an unfamiliar domain needs more structure; a junior who has mastered a routine needs less. Revisit as they grow.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Why is "Revenue: $1.2M" a bad dashboard tile?</p>
+      <button class="qopt" type="button">A · The number is too large to read quickly</button>
+      <button class="qopt" type="button">B · Revenue should never appear on a dashboard</button>
+      <button class="qopt" type="button">C · It is a naked number - no target, no trend, no context, so nobody can act on it</button>
+      <p class="qwhy">Every tile needs target + trend + context, ideally with a paired leading indicator. Without them a number cannot be read: good or bad? up or down? against what?</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · A red RAG status on the board should be treated as...</p>
+      <button class="qopt" type="button">A · A conversation starter - "let us talk about why"</button>
+      <button class="qopt" type="button">B · A verdict that someone failed and should be marked down</button>
+      <button class="qopt" type="button">C · A signal to hide the metric until it recovers</button>
+      <p class="qwhy">RAG is a prompt to ask why, not a judgment. Tracking progress and evaluating people are different meetings - steering is decoupled from grading and pay.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Three horizons</b><span>weekly 1:1 (is it moving?), monthly review (is the unit healthy?), quarterly retro (did the bets pay off + what did we learn?).</span></div>
+      <div class="cheat-item"><b>The 1:1 is the report's meeting</b><span>their agenda, blockers first. Catch a slip in week two, not week twelve.</span></div>
+      <div class="cheat-item"><b>Cadence follows maturity</b><span>frequency tracks how new the task is, not seniority. Low maturity = weekly + structured; high = light touch.</span></div>
+      <div class="cheat-item"><b>Steering ≠ evaluation</b><span>tracking progress and judging people are different meetings. OKR score stays decoupled from pay.</span></div>
+      <div class="cheat-item"><b>No naked numbers</b><span>every tile = target + trend + context. A lone number cannot be read.</span></div>
+      <div class="cheat-item"><b>One metric that matters</b><span>one headline per horizon; leading + lagging on the same board.</span></div>
+      <div class="cheat-item"><b>RAG starts talk</b><span>red means "let us talk about why", never "someone failed".</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b6 - fair performance conversations: keep steering, development, and pay in separate rooms.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 5 of 10 · learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b4-metric-tree-per-function.html">← Prev: The metric tree per function</a> &nbsp;·&nbsp; <a href="b6-fair-conversations.html">Next: Fair performance conversations →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

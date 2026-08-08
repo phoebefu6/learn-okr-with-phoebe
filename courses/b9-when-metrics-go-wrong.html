@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 9 · When metrics go wrong - learn OKRs with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-okr-with-phoebe</a> / Manager session 9 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe · Manager track · Session 9 of 10</div>
+    <h1>When metrics go wrong: <span class="accent">diagnose it before it does damage</span></h1>
+    <p class="sub">Every metric you deploy starts decaying the moment people are held to it. That is not cynicism, it is the well-documented default: targets get gamed, the measure quietly replaces the goal in people's heads, numbers that flatter nobody's decisions accumulate on dashboards, and one figure gets asked to deliver a verdict it cannot support. This session names the four failure modes so you can spot them early, gives you a five-step repair kit, and has you diagnose three broken Cartwheel metrics and set the review cadence that catches the next one.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Manager track</span>
+      <span class="chip audience">Managers: middle mgmt · team leads</span>
+      <span class="chip audience">No code · templates + worked examples</span>
+      <span class="chip time">~45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:4">3-20 · Four failure modes + the repair kit</span>
+      <span class="a3" style="flex:5">20-42 · Worked: diagnose + post-mortem</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">You met Goodhart's Law back in b3 and watched a gamed number climb in the Fair-Metric Lab while the real outcome collapsed. This session is the maintenance manual for that problem. The framing that matters: <strong>a broken metric is almost never a people problem</strong>. When a number goes wrong, the usual cause is that the system rewarded exactly what it got - and the people responding to it were being rational. So the diagnosis never starts with "who gamed this". It starts with "what did we make worth doing", and the repair changes the incentive, not the person. One more thing to carry in: a metric can be technically accurate and still broken, because it is measuring something that stopped mattering, or being asked to carry a judgment it was never designed for.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Worked example (Cartwheel)</span>
+      <span class="pill inkpill">Sources covered (cited)</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The four failure modes named and distinguishable, the five-step repair kit, three broken Cartwheel metrics diagnosed and rewritten, a metric post-mortem you can run without blaming anyone, and a review cadence that treats your measures as things that need auditing rather than monuments.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: FOUR FAILURE MODES ============ -->
+  <section class="section" id="failure-modes">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · how metrics break</span>
+      <h2>Four failure modes, four different repairs <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">These four get lumped together as "bad metrics", but they fail for different reasons and the fixes are not interchangeable. Name the mode correctly and the repair is usually obvious.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 272" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The four ways metrics break: gaming under Goodhart's Law, surrogation where the measure replaces the goal, vanity metrics that change no decision, and single-number verdicts that carry more judgment than the number can support">
+        <style>
+          .b9fT { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .b9fB { font: 700 12.5px Inter, sans-serif; fill: #991B1B; }
+          .b9fG { font: 700 12.5px Inter, sans-serif; fill: #312E81; }
+          .b9fX { font: 400 11.5px Inter, sans-serif; fill: #4B5563; }
+          .b9fN { font: 600 13px Inter, sans-serif; fill: #92400E; }
+        </style>
+        <text class="b9fT" x="24" y="32">Four failure modes</text>
+        <rect x="24" y="48" width="404" height="78" rx="10" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.4"/>
+        <text class="b9fB" x="44" y="72">1 · Gaming (Goodhart, Campbell)</text>
+        <text class="b9fX" x="44" y="94">The number moves, the outcome does not.</text>
+        <text class="b9fX" x="44" y="114">Repair: pair it, or grade a lever people control.</text>
+        <rect x="452" y="48" width="404" height="78" rx="10" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.4"/>
+        <text class="b9fB" x="472" y="72">2 · Surrogation</text>
+        <text class="b9fX" x="472" y="94">The measure quietly replaces the goal.</text>
+        <text class="b9fX" x="472" y="114">Repair: restate the goal every time you show it.</text>
+        <rect x="24" y="138" width="404" height="78" rx="10" fill="#EEF2FF" stroke="#4338CA" stroke-width="1.4"/>
+        <text class="b9fG" x="44" y="162">3 · Vanity metric</text>
+        <text class="b9fX" x="44" y="184">Always up, changes no decision anyone makes.</text>
+        <text class="b9fX" x="44" y="204">Repair: retire it, or attach a decision to it.</text>
+        <rect x="452" y="138" width="404" height="78" rx="10" fill="#EEF2FF" stroke="#4338CA" stroke-width="1.4"/>
+        <text class="b9fG" x="472" y="162">4 · Single-number verdict</text>
+        <text class="b9fX" x="472" y="184">One figure asked to judge a person or team.</text>
+        <text class="b9fX" x="472" y="204">Repair: target plus trend plus context, always.</text>
+        <rect x="24" y="240" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b9fN" x="46" y="252">Diagnose the mode before you touch the metric. The wrong repair moves the damage somewhere quieter.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - four failure modes, each with its own repair</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Goodhart, Campbell, and the cobra effect<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three ways of saying the same uncomfortable thing:</p>
+        <ul>
+          <li><strong>Goodhart's Law</strong> - when a measure becomes a target, it stops being a good measure. The correlation that made it useful was observed on unmanaged behaviour; hold people to it and the behaviour changes underneath the number.</li>
+          <li><strong>Campbell's Law</strong> - the more any quantitative indicator is used for decision-making, the more it will be corrupted. Campbell was writing about social programmes and schools, and the pattern is identical inside companies: the higher the stakes on a number, the faster it decays.</li>
+          <li><strong>The cobra effect</strong> - the classic name for an incentive that produces the opposite of its intent, because people optimise the reward rather than the goal behind it.</li>
+        </ul>
+        <p>The practical consequence is not "do not measure". It is that <strong>a metric's usefulness has a shelf life that shortens as its stakes rise</strong>. Any number wired to pay decays fastest of all - which is the whole reason this course keeps OKR scores decoupled from compensation.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The support queue that got faster and worse.</strong> Cartwheel puts a target on average handling time. It falls beautifully for two months. Then reopens climb, CSAT slides, and refunds tick up: agents are closing conversations early to protect the number, which is precisely what the target asked them to do. Nobody cheated. The metric worked exactly as designed, and the design was the fault.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Surrogation - when the proxy eats the goal<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Surrogation is the subtlest of the four, because nobody is gaming anything. Research on strategy measurement (Choi, Hecht and Tayler, "Lost in Translation") describes how managers come to substitute the measure for the strategic construct it was meant to represent - they start managing the proxy as if it were the goal.</p>
+        <ul>
+          <li><strong>What it looks like:</strong> "customer satisfaction" becomes "the CSAT survey score", and improving the survey becomes the work - better timing of the survey, nudging happy customers to respond - while satisfaction itself flatlines.</li>
+          <li><strong>Why it happens:</strong> the proxy is concrete, visible, and reported weekly. The construct is abstract and slow. Attention flows to whatever is on the dashboard.</li>
+          <li><strong>The mitigation:</strong> keep the goal in the room. Name the construct every time the number is shown, use more than one proxy for anything important, and periodically ask "if this number improved and the goal did not, would we notice?"</li>
+        </ul>
+        <p>That last question is the surrogation test, and it is worth asking about your most-watched metric this week.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE REPAIR KIT ============ -->
+  <section class="section" id="repair">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the repair kit</span>
+      <h2>Five steps from symptom to fix <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">When a number starts behaving oddly, resist two instincts: defending it, and deleting it. Run these five steps instead. Most broken metrics end up repaired rather than removed - demoted to context, paired with a partner, or re-pointed at a lever the team actually controls.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A five-step repair flow: spot the symptom, name the incentive, check controllability, pair or re-anchor the metric, then re-review it on a cadence, with a warning that deleting a metric without removing its incentive moves the gaming elsewhere">
+        <style>
+          .b9rT { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .b9rB { font: 700 11.5px Inter, sans-serif; fill: #1F2937; }
+          .b9rX { font: 400 10.5px Inter, sans-serif; fill: #6B7280; }
+          .b9rBad { font: 600 12.5px Inter, sans-serif; fill: #991B1B; }
+          .b9rN { font: 600 13px Inter, sans-serif; fill: #312E81; }
+        </style>
+        <text class="b9rT" x="24" y="34">The repair flow</text>
+        <rect x="24" y="52" width="152" height="76" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b9rB" x="40" y="76">1 · Spot the</text>
+        <text class="b9rB" x="40" y="92">symptom</text>
+        <text class="b9rX" x="40" y="114">number up, goal flat</text>
+        <rect x="194" y="52" width="152" height="76" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b9rB" x="210" y="76">2 · Name the</text>
+        <text class="b9rB" x="210" y="92">incentive</text>
+        <text class="b9rX" x="210" y="114">what got rewarded</text>
+        <rect x="364" y="52" width="152" height="76" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b9rB" x="380" y="76">3 · Check</text>
+        <text class="b9rB" x="380" y="92">controllability</text>
+        <text class="b9rX" x="380" y="114">could they move it</text>
+        <rect x="534" y="52" width="152" height="76" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="b9rB" x="550" y="76">4 · Pair or</text>
+        <text class="b9rB" x="550" y="92">re-anchor</text>
+        <text class="b9rX" x="550" y="114">add a partner metric</text>
+        <rect x="704" y="52" width="152" height="76" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="b9rB" x="720" y="76">5 · Re-review</text>
+        <text class="b9rB" x="720" y="92">on a cadence</text>
+        <text class="b9rX" x="720" y="114">audit the measures</text>
+        <path d="M176 90 L194 90" stroke="#D1D5DB" stroke-width="2"/>
+        <path d="M346 90 L364 90" stroke="#D1D5DB" stroke-width="2"/>
+        <path d="M516 90 L534 90" stroke="#D1D5DB" stroke-width="2"/>
+        <path d="M686 90 L704 90" stroke="#D1D5DB" stroke-width="2"/>
+        <rect x="24" y="150" width="832" height="44" rx="10" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.4"/>
+        <text class="b9rBad" x="44" y="178">Deleting the metric without removing the incentive just moves the gaming somewhere quieter.</text>
+        <rect x="24" y="218" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="b9rN" x="46" y="230">Start at step 2, not step 1. The behaviour was rational - find what the system paid for.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - symptom, incentive, controllability, pair, re-review</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Pairing: the highest-yield repair<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most gaming has a signature: one dimension improves while another silently pays for it. Pairing a metric with the thing that would have to suffer makes the trade visible, so gaming stops being free.</p>
+        <ul>
+          <li><strong>Speed pairs with quality.</strong> Handling time with reopen rate or CSAT. Fast-and-wrong stops looking like a win.</li>
+          <li><strong>Volume pairs with an outcome.</strong> Tickets closed with first-contact resolution. Features shipped with adoption.</li>
+          <li><strong>Growth pairs with retention or cost.</strong> New signups with 30-day retention. Revenue with refund rate or margin.</li>
+          <li><strong>Any number pairs with a health guardrail</strong> - a threshold that must not be crossed while chasing the target. Guardrails do not have to be graded to work; they only need to be watched and honoured.</li>
+        </ul>
+        <p>The pair must be genuinely in tension. Two metrics that rise together are a dashboard, not a control. And keep the set small: two or three numbers that constrain each other beat a scorecard of twelve nobody reads.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Vanity metrics and the "so what" test<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Vanity metrics fail differently from gamed ones: nobody is distorting behaviour, the number is simply useless. The tells are consistent:</p>
+        <ul>
+          <li><strong>It only goes up.</strong> Cumulative totals - total registered users, total orders ever - can only rise, so they carry no information about now.</li>
+          <li><strong>No decision hangs on it.</strong> Ask what you would do differently if it were 20% higher or lower. If the answer is nothing, it is decoration.</li>
+          <li><strong>It has no denominator.</strong> Raw counts without a base rate flatter constantly. Sessions without conversion rate, followers without engagement rate.</li>
+          <li><strong>It is never compared to anything.</strong> No target, no trend, no segment, no prior period.</li>
+        </ul>
+        <p>The cost is not the number itself, it is attention: dashboard space and meeting time that a decision-shaped metric could have used. Retiring a vanity metric is a real improvement, and it is the cheapest one available - though expect resistance if someone reported it upward last quarter.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 1 ============ -->
+  <section class="section" id="worked-1">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 1 of 2</span>
+      <h2>Diagnose three broken Cartwheel metrics <span class="tag demo">★ 12 min · everyone tries</span></h2>
+    </div>
+    <p class="lede">Three numbers that have gone wrong in different ways. For each: name the mode, find the incentive, then write the repair. Do not skip to the repair - the mode decides which repair works.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Metric A:</strong> support average handling time is down 22%, but reopens are up 31% and CSAT is down 6 points.</p></div>
+      <div class="step"><p><strong>Metric B:</strong> the CSAT survey score is up, while refund requests and negative reviews are also rising. Someone changed when the survey is sent.</p></div>
+      <div class="step"><p><strong>Metric C:</strong> "total registered accounts" is on the weekly leadership dashboard and has risen every week for three years.</p></div>
+      <div class="step"><p>For each, ask the four questions in order: what is the symptom, what did we reward, could the team control it, and what is the smallest repair that removes the incentive?</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The three diagnoses</strong>
+      <table class="clean">
+        <thead><tr><th>Metric</th><th>Symptom</th><th>Mode</th><th>Repair</th></tr></thead>
+        <tbody>
+          <tr><td>Average handling time</td><td>Number improves, outcome degrades</td><td>Gaming (Goodhart)</td><td>Pair with reopen rate and CSAT; grade the pair, not the speed</td></tr>
+          <tr><td>CSAT survey score</td><td>Proxy improves, the goal does not</td><td>Surrogation</td><td>Restate the goal; add a second proxy (refunds, reviews); fix the survey timing</td></tr>
+          <tr><td>Total registered accounts</td><td>Only goes up, changes no decision</td><td>Vanity metric</td><td>Retire from the dashboard; replace with 30-day active rate</td></tr>
+        </tbody>
+      </table>
+      All three repairs share a shape: nobody gets blamed, and the incentive changes. If your repair requires people to behave less rationally, it is not a repair.
+    </div>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 2 ============ -->
+  <section class="section" id="worked-2">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 2 of 2</span>
+      <h2>Run a metric post-mortem, then set the review cadence <span class="tag demo">★ 10 min · do your own</span></h2>
+    </div>
+    <p class="lede">Two moves that turn this from firefighting into maintenance: a blameless post-mortem on the metric that broke, and a standing review that audits your measures the way you already review your results.</p>
+
+    <div class="steps">
+      <div class="step"><p>Open the post-mortem on <strong>the metric, not the team</strong>. The opening question is "what did this number make worth doing", never "who did this".</p></div>
+      <div class="step"><p>Reconstruct the timeline: when the target was set, when the behaviour shifted, when the partner signal moved, when anyone noticed. The gap between the last two is what you are really fixing.</p></div>
+      <div class="step"><p>Write the repair, and write what it will now be paired with. Note explicitly whether the metric stays gradable or drops to context.</p></div>
+      <div class="step"><p>Set the <strong>metric review cadence</strong>: quarterly, alongside the OKR review, ask of every measure whether it is still measuring the thing.</p></div>
+      <div class="step"><p>Add one standing item: which numbers has anyone stopped trusting? Loss of trust always precedes the data showing a problem.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The quarterly metric review, five questions</strong>
+      <table class="clean">
+        <thead><tr><th>Question</th><th>Looking for</th><th>Action if it fails</th></tr></thead>
+        <tbody>
+          <tr><td>Is it still measuring the goal?</td><td>Surrogation drift</td><td>Restate the goal; add a second proxy</td></tr>
+          <tr><td>Has anything improved while the outcome did not?</td><td>Gaming</td><td>Pair it, or re-point at a controllable lever</td></tr>
+          <tr><td>What decision did it change this quarter?</td><td>Vanity</td><td>Retire it or attach a decision</td></tr>
+          <tr><td>Is anyone graded on something they cannot move?</td><td>Controllability failure</td><td>Demote to context; grade the lever instead</td></tr>
+          <tr><td>Does anyone quietly distrust this number?</td><td>Early warning</td><td>Investigate before the data confirms it</td></tr>
+        </tbody>
+      </table>
+      Put this review on the calendar next to the OKR review. Measures need auditing on a cadence, exactly like results.
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The metric nobody would say was broken.</strong> A Cartwheel weekly report carried an on-time-delivery figure at 97% for eight months while customer complaints about late arrivals climbed. The number was accurate - it measured dispatch against the promise date, and dispatch really was on time. What had changed was the carrier's last-mile performance, which the metric never touched. Three people privately did not trust the figure; none raised it, because it was technically correct and defending it was easier than replacing it. The lesson: accuracy is not validity. Ask what a number does not cover, and treat quiet distrust as data.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take your team's three most-watched metrics and label each with a failure mode it is most exposed to. Write the pair you would add.</li>
+      <li>Run the surrogation test on your headline number: if it improved and the goal did not, would you notice? How?</li>
+      <li>Find one vanity metric on a dashboard you own and retire it. Note the resistance you get, and from where.</li>
+      <li>Run a blameless post-mortem on one metric that has already gone wrong. Start with the incentive, never the people.</li>
+      <li>Put a quarterly metric review on the calendar next to your OKR review, with the five questions as its agenda.</li>
+      <li>Ask two people privately which of your team's numbers they do not trust. Bring the answers to b10.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered (cited)</h2>
+    </div>
+    <p class="lede">Taught from the metric-failure canon. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Goodhart's Law; Campbell's Law (Campbell, 1979); the cobra effect</span><span class="note">Part 1 · why targets decay, and faster as stakes rise</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Choi, Hecht &amp; Tayler, "Lost in Translation," The Accounting Review - surrogation</span><span class="note">Part 1 · the measure replacing the goal, and the surrogation test</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Vanity-metric practice; target plus trend plus context (from b5)</span><span class="note">Part 2 · retiring decoration, and no single-number verdicts</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Handling time falls 22% while reopens rise 31%. What is the failure mode, and the repair?</p>
+      <button class="qopt" type="button">A · Vanity metric - retire it from the dashboard</button>
+      <button class="qopt" type="button">B · Surrogation - restate the goal when reporting it</button>
+      <button class="qopt" type="button">C · Gaming - pair speed with a quality metric so the trade becomes visible</button>
+      <p class="qwhy">The number improved while the outcome degraded: classic Goodhart. Pair speed with reopen rate or CSAT so fast-and-wrong stops counting as a win. Nobody cheated - the target asked for exactly what it got.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · The surrogation test is...</p>
+      <button class="qopt" type="button">A · If this number improved and the goal did not, would we notice?</button>
+      <button class="qopt" type="button">B · Is this number rising every week?</button>
+      <button class="qopt" type="button">C · Can the team control this number?</button>
+      <p class="qwhy">Surrogation is the measure quietly replacing the goal - improving the CSAT survey rather than satisfaction. The mitigation is keeping the construct in the room: name the goal whenever the proxy is shown, and use more than one proxy for anything important.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Why is deleting a broken metric usually the wrong first move?</p>
+      <button class="qopt" type="button">A · Dashboards look empty without it</button>
+      <button class="qopt" type="button">B · The incentive survives the metric, so the distorted behaviour just moves somewhere quieter</button>
+      <button class="qopt" type="button">C · Historical data would be lost</button>
+      <p class="qwhy">Diagnose the mode, then remove the incentive. Most broken metrics are repaired rather than deleted: paired with a partner, re-pointed at a controllable lever, or demoted to context on a dashboard.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 9 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Four modes</b><span>gaming, surrogation, vanity metric, single-number verdict. Different failures, different repairs.</span></div>
+      <div class="cheat-item"><b>Goodhart + Campbell</b><span>a measure decays once it becomes a target, and faster as the stakes rise.</span></div>
+      <div class="cheat-item"><b>Never start with who</b><span>the behaviour was rational. Ask what the system made worth doing.</span></div>
+      <div class="cheat-item"><b>Surrogation test</b><span>if the number improved and the goal did not, would we notice?</span></div>
+      <div class="cheat-item"><b>Pairing</b><span>speed with quality, volume with outcome, growth with retention. The pair must be in tension.</span></div>
+      <div class="cheat-item"><b>Vanity tells</b><span>only goes up, no denominator, no decision hangs on it, never compared.</span></div>
+      <div class="cheat-item"><b>Accuracy is not validity</b><span>a correct number can still miss the thing. Treat quiet distrust as data.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b10 - the capstone: assemble a full fair OKR and monitoring system for a Cartwheel team.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 9 of 10 · learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b8-ai-assisted.html">← Prev: AI-assisted, responsibly</a> &nbsp;·&nbsp; <a href="b10-build-your-system.html">Next: Build your measurement system →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

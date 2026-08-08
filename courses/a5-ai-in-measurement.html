@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 5 · AI in measurement - learn OKRs with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-okr-with-phoebe</a> / Leader session 5 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe · Leader track · Session 5 of 6</div>
+    <h1>AI in measurement: <span class="accent">helper, not judge</span></h1>
+    <p class="sub">AI arrives in performance management dressed as efficiency: summarise the feedback, score the productivity, rank the team. Some of that is genuinely useful and frees managers to coach. Some of it crosses a line into surveillance that the law now treats as high-risk. As the leader who signs off the tools, you set which side of that line your organisation lives on. This session gives you the distinction (support vs surveillance), the three regulatory gates every tool must clear, and the principles to hold - so AI stays a helper and a human stays accountable.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Leader track</span>
+      <span class="chip audience">Leaders: C-level · upper mgmt</span>
+      <span class="chip audience">No code · concepts + decisions</span>
+      <span class="chip time">45 minutes</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:4">3-18 · Support vs surveillance</span>
+      <span class="a3" style="flex:5">18-42 · Governance + the cautionary cases</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>The question a leader actually has to answer</h2>
+    </div>
+    <p class="lede">Not "should we use AI in performance management" - you already are, the moment a review tool suggests wording or a dashboard summarises feedback. The real question is narrower and sharper: what are we letting AI <em>decide</em>, and what are we only letting it <em>help with</em>? Get that boundary right and AI gives managers back the hours they were spending on admin, and makes feedback fairer by catching bias a tired human misses. Get it wrong and you have built surveillance that the EU, the UK, and New York now regulate as high-risk - and that quietly destroys the trust every other session of this course was trying to build. Tonight is about drawing that boundary on purpose.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Walk-through</span>
+      <span class="pill inkpill">Sources covered (cited)</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A clean split between what AI can legitimately do (summarise, de-bias, draft, surface progress) and what it must never do (surveil, score, rank, auto-fire); the three governance gates - EU AI Act, GDPR Article 22, NYC Local Law 144 - that every tool must clear; and a six-principle test you can apply to any AI measurement tool a vendor puts in front of you.
+    </div>
+    <div class="callout tip">
+      <strong>Rail before we start</strong>
+      This is awareness, not legal advice. Regulations move fast and differ by jurisdiction. Use this to ask your vendors and your counsel the right questions - not as a compliance sign-off.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: SUPPORT VS SURVEILLANCE ============ -->
+  <section class="section" id="line">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the line</span>
+      <h2>Support augments the manager; surveillance replaces judgment <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">The same technology sits on both sides of the line. The difference is not the model - it is whether the output <strong>informs a human</strong> who then decides, or <strong>becomes the decision</strong> about a person. Everything on the left frees a manager to spend more time coaching. Everything on the right measures activity and calls it performance.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two columns divided by a dashed line: on the left, AI as a helper that summarises feedback, flags biased language, reduces recency bias, drafts feedback, surfaces goal progress and frees manager time; on the right, AI as surveillance that logs keystrokes, produces per-person productivity scores, ranks people automatically and auto-fires on a proxy metric">
+        <style>
+          .a5sTt { font: 700 14px Inter, sans-serif; fill: #1F2937; }
+          .a5sHl { font: 700 15px Inter, sans-serif; fill: #312E81; }
+          .a5sHr { font: 700 15px Inter, sans-serif; fill: #991B1B; }
+          .a5sL { font: 400 12.5px Inter, sans-serif; fill: #374151; }
+          .a5sR { font: 400 12.5px Inter, sans-serif; fill: #991B1B; }
+          .a5sN { font: 600 13px Inter, sans-serif; fill: #312E81; }
+        </style>
+        <text class="a5sTt" x="24" y="28">The line: AI can support the manager, it must never become surveillance</text>
+        <rect x="24" y="48" width="396" height="248" rx="14" fill="#EEF2FF" stroke="#4338CA" stroke-width="1.4"/>
+        <rect x="460" y="48" width="396" height="248" rx="14" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.4"/>
+        <line x1="440" y1="48" x2="440" y2="296" stroke="#9CA3AF" stroke-width="1.4" stroke-dasharray="5 5"/>
+        <text class="a5sHl" x="44" y="80">AI as helper (support)</text>
+        <text class="a5sHr" x="480" y="80">AI as surveillance (do not)</text>
+        <rect x="44" y="105" width="9" height="9" rx="2" fill="#4338CA"/>
+        <text class="a5sL" x="64" y="114">Summarise + aggregate 360 feedback</text>
+        <rect x="44" y="131" width="9" height="9" rx="2" fill="#4338CA"/>
+        <text class="a5sL" x="64" y="140">Flag biased or vague review language</text>
+        <rect x="44" y="157" width="9" height="9" rx="2" fill="#4338CA"/>
+        <text class="a5sL" x="64" y="166">Reduce recency bias via continuous notes</text>
+        <rect x="44" y="183" width="9" height="9" rx="2" fill="#4338CA"/>
+        <text class="a5sL" x="64" y="192">Draft feedback for a human to edit</text>
+        <rect x="44" y="209" width="9" height="9" rx="2" fill="#4338CA"/>
+        <text class="a5sL" x="64" y="218">Surface goal progress at a glance</text>
+        <rect x="44" y="235" width="9" height="9" rx="2" fill="#4338CA"/>
+        <text class="a5sL" x="64" y="244">Free manager time for real coaching</text>
+        <rect x="480" y="105" width="9" height="9" rx="2" fill="#991B1B"/>
+        <text class="a5sR" x="500" y="114">Keystroke + screen logging</text>
+        <rect x="480" y="131" width="9" height="9" rx="2" fill="#991B1B"/>
+        <text class="a5sR" x="500" y="140">Per-person "productivity scores"</text>
+        <rect x="480" y="157" width="9" height="9" rx="2" fill="#991B1B"/>
+        <text class="a5sR" x="500" y="166">Automated ranking of people</text>
+        <rect x="480" y="183" width="9" height="9" rx="2" fill="#991B1B"/>
+        <text class="a5sR" x="500" y="192">Auto-firing on a proxy metric</text>
+        <text class="a5sR" x="480" y="240" style="font-style:italic;fill:#6B7280">Measures activity, not value -</text>
+        <text class="a5sR" x="480" y="258" style="font-style:italic;fill:#6B7280">and the law calls it high-risk.</text>
+        <rect x="24" y="322" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="a5sN" x="46" y="334">AI may inform a decision about a person; a human - never the tool - must own it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - support informs a human; surveillance replaces one</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why the "helper" list is genuinely worth having<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The left column is not a consolation prize - done well, it makes measurement <em>fairer</em> than a human alone:</p>
+        <ul>
+          <li><strong>De-biasing language</strong> - a model can flag that a draft review calls a woman "abrasive" and a man "assertive" for the same behaviour, or that feedback is vague ("great attitude") rather than specific. It catches what a rushed manager misses.</li>
+          <li><strong>Fighting recency bias</strong> - by summarising notes gathered all quarter, AI stops the whole review collapsing into "what happened last week".</li>
+          <li><strong>Giving time back</strong> - drafting and summarising is the admin that eats the hours managers should spend actually talking to people. Automate the paperwork, not the judgment.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The test that sorts the two lists.</strong> Ask of any feature: "if this output is wrong, who catches it before it affects a person?" If the answer is "a manager reviews and can overrule it," it is support. If the answer is "the system acts on it directly," it is surveillance wearing an efficiency badge - and it belongs on the right.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: GOVERNANCE ============ -->
+  <section class="section" id="governance">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the three gates</span>
+      <h2>The governance a leader must know <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">You do not need to be a lawyer, but you do need to know that measuring workers with AI is now one of the most regulated things software can do. Three rules matter most. Treat them as gates: an AI measurement tool that cannot clear all three should not go near your people.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 268" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three gates every AI measurement tool must pass: the EU AI Act which classes worker-management AI as high-risk under Annex III, GDPR Article 22 which forbids solely automated decisions with significant effect and requires human-in-the-loop, and NYC Local Law 144 which requires an independent published bias audit of automated employment tools">
+        <style>
+          .a5gTt { font: 700 14px Inter, sans-serif; fill: #1F2937; }
+          .a5gH { font: 700 14px Inter, sans-serif; fill: #1F2937; }
+          .a5gS { font: 700 11.5px Inter, sans-serif; fill: #92400E; }
+          .a5gB { font: 400 11.5px Inter, sans-serif; fill: #6B7280; }
+          .a5gN { font: 600 12.5px Inter, sans-serif; fill: #312E81; }
+        </style>
+        <text class="a5gTt" x="24" y="28">Every AI measurement tool must clear three gates</text>
+        <rect x="24" y="48" width="266" height="162" rx="12" fill="#EEF2FF" stroke="#4338CA" stroke-width="1.4"/>
+        <rect x="307" y="48" width="266" height="162" rx="12" fill="#EEF2FF" stroke="#4338CA" stroke-width="1.4"/>
+        <rect x="590" y="48" width="266" height="162" rx="12" fill="#EEF2FF" stroke="#4338CA" stroke-width="1.4"/>
+        <text class="a5gH" x="44" y="80">EU AI Act</text>
+        <text class="a5gS" x="44" y="102">Annex III, section 4</text>
+        <text class="a5gB" x="44" y="126">AI for worker management</text>
+        <text class="a5gB" x="44" y="146">is classed HIGH-RISK.</text>
+        <text class="a5gB" x="44" y="170">Needs risk controls,</text>
+        <text class="a5gB" x="44" y="190">logging, human oversight.</text>
+        <text class="a5gH" x="327" y="80">GDPR Article 22</text>
+        <text class="a5gS" x="327" y="102">human-in-the-loop</text>
+        <text class="a5gB" x="327" y="126">No SOLELY automated decision</text>
+        <text class="a5gB" x="327" y="146">with a significant effect.</text>
+        <text class="a5gB" x="327" y="170">Needs real human review,</text>
+        <text class="a5gB" x="327" y="190">and it must be contestable.</text>
+        <text class="a5gH" x="610" y="80">NYC Local Law 144</text>
+        <text class="a5gS" x="610" y="102">bias audit</text>
+        <text class="a5gB" x="610" y="126">Automated hiring /</text>
+        <text class="a5gB" x="610" y="146">promotion tools need an</text>
+        <text class="a5gB" x="610" y="170">independent bias audit,</text>
+        <text class="a5gB" x="610" y="190">published, with notice.</text>
+        <rect x="24" y="236" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="a5gN" x="46" y="248">Awareness, not legal advice - fast-moving law; consult counsel before you deploy.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - EU AI Act, GDPR Article 22, NYC Local Law 144</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What each gate is really protecting<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>EU AI Act</strong> - lists AI used for recruitment, task allocation, and monitoring or evaluating workers as "high-risk" (Annex III). High-risk does not mean banned; it means obligations: risk management, data governance, logging, transparency, and meaningful human oversight. If a vendor cannot show you these, that is your answer.</li>
+          <li><strong>GDPR Article 22</strong> - a person has the right not to be subject to a decision based <em>solely</em> on automated processing that has a legal or similarly significant effect (like firing or denying a promotion). The safeguard is a genuine human-in-the-loop who can review, explain, and reverse - plus the person's right to contest.</li>
+          <li><strong>NYC Local Law 144</strong> - automated employment decision tools must pass an independent bias audit, publish a summary, and notify candidates and employees. It exists because these tools were quietly encoding discrimination.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The one question that clears most of this</strong>
+          "Show me where a named human reviews the output, can overrule it, and where the affected person can contest it." If a tool has no such point, it fails all three gates at once.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WALK-THROUGH 1 ============ -->
+  <section class="section" id="cautionary">
+    <div class="section-kicker">
+      <span class="klabel">Walk-through 1 of 2</span>
+      <h2>Two cautionary cases, read as a leader <span class="tag demo">★ 10 min · think it through</span></h2>
+    </div>
+    <p class="lede">Both companies were sophisticated and well-resourced. Both crossed the line anyway - which is exactly why you cannot delegate this decision to a procurement checklist. Walk each one back to the boundary from Part 1.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Microsoft Productivity Score (2020).</strong> A feature let managers see per-employee activity - emails sent, chats, document edits, meeting attendance. Critics called it workplace surveillance; after public backlash Microsoft removed the individual-level view and apologised.</p></div>
+      <div class="step"><p><strong>Amazon warehouse "time off task" (reported by MIT Technology Review).</strong> Systems tracked idle time and, per reporting, could generate warnings and terminations largely automatically - people managed by an algorithm measuring seconds.</p></div>
+      <div class="step"><p>Locate each on the Part 1 line. Both sit firmly on the right: per-person activity scores, and automated action on a proxy - with the human either absent or reduced to a rubber stamp.</p></div>
+      <div class="step"><p>Ask the diagnostic question: did the metric measure <em>value delivered</em>, or just <em>activity observed</em>? In both cases, activity - which is precisely what Goodhart's Law tells us people will then game.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The same story, told two ways</strong>
+      <table class="clean">
+        <thead><tr><th>Design choice</th><th>Surveillance framing</th><th>Support framing</th></tr></thead>
+        <tbody>
+          <tr><td>Unit of measure</td><td>the individual, ranked</td><td>the team + the workflow</td></tr>
+          <tr><td>Who acts on it</td><td>the system, automatically</td><td>a manager, accountably</td></tr>
+          <tr><td>What is measured</td><td>activity (keystrokes, idle time)</td><td>outcomes + blockers</td></tr>
+          <tr><td>The person can...</td><td>nothing - it is opaque</td><td>see it, question it, contest it</td></tr>
+        </tbody>
+      </table>
+      The technology was similar in each column. The design choices - and the leadership behind them - are the whole difference.
+    </div>
+  </section>
+
+  <!-- ============ WALK-THROUGH 2 ============ -->
+  <section class="section" id="principles">
+    <div class="section-kicker">
+      <span class="klabel">Walk-through 2 of 2</span>
+      <h2>Audit your own AI touchpoints against six principles <span class="tag demo">★ 8 min · your org</span></h2>
+    </div>
+    <p class="lede">You almost certainly have more AI in your performance stack than you think - in the HRIS, the review tool, the recruiting funnel, the productivity dashboard. Take each place AI touches how people are measured and run it through the principle set.</p>
+
+    <div class="steps">
+      <div class="step"><p>List every point where AI touches performance or measurement - drafting reviews, summarising feedback, scoring candidates, ranking, flagging activity, monitoring.</p></div>
+      <div class="step"><p>For each, test the six principles: <strong>augment not replace</strong>, <strong>transparency</strong> (people know it is used and how), <strong>contestability</strong> (they can challenge it), <strong>human accountability</strong> (a named person owns the decision), <strong>measure outcomes not surveillance</strong>, and <strong>proportionality</strong> (the least intrusive method that works).</p></div>
+      <div class="step"><p>Flag any touchpoint that fails augment-not-replace, transparency, or contestability - those are the three that also map to the legal gates.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Proportionality is the quiet one.</strong> Even if a monitoring tool were legal and transparent, ask whether you need it at all. If a weekly outcome conversation would tell you the same thing as continuous keystroke logging, the logging is disproportionate - and every hour of it is a withdrawal from the trust account. The most defensible answer is often to measure less, and talk more.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>List every place AI currently touches performance or measurement in your organisation - reviews, feedback, recruiting, dashboards, monitoring.</li>
+      <li>Check each one against three tests: is it <strong>transparent</strong> to the people affected, is there a real <strong>human-in-the-loop</strong>, and is it <strong>contestable</strong>?</li>
+      <li>Circle any touchpoint that fails a test. Decide whether to fix it (add the human, make it transparent) or retire it.</li>
+      <li>Pick one vendor tool and ask them the single question: "show me where a named human reviews and can overrule the output, and how a person contests it."</li>
+      <li>Optional: read the summary of EU AI Act Annex III and the ICO guidance on GDPR Article 22 before a6.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered (cited)</h2>
+    </div>
+    <p class="lede">Taught from the AI-governance and worker-measurement canon. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act (Annex III, sec. 4); GDPR Article 22; NYC Local Law 144</span><span class="note">Part 2 · the three governance gates for AI worker measurement</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Microsoft Productivity Score backlash (2020); Amazon warehouse "time off task" (MIT Tech Review)</span><span class="note">Walk-through 1 · surveillance cautionary cases</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · What separates AI as support from AI as surveillance?</p>
+      <button class="qopt" type="button">A · The size of the model</button>
+      <button class="qopt" type="button">B · Whether it runs in the cloud</button>
+      <button class="qopt" type="button">C · Whether the output informs a human who decides, or becomes the decision itself</button>
+      <p class="qwhy">Same technology, different design. If a manager reviews and can overrule the output, it is support. If the system acts on a person directly, it is surveillance - and the law now treats that as high-risk.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · What does GDPR Article 22 require for a decision with significant effect on a person?</p>
+      <button class="qopt" type="button">A · That the model be open source</button>
+      <button class="qopt" type="button">B · That it not be based solely on automated processing - a real human-in-the-loop who can review and be contested</button>
+      <button class="qopt" type="button">C · That the data be stored in Europe</button>
+      <p class="qwhy">Article 22 protects people from purely automated decisions like firing or denying promotion. The safeguard is a genuine human who can review, explain, and reverse, plus the person's right to contest.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · The Microsoft Productivity Score and Amazon "time off task" cases both went wrong because they...</p>
+      <button class="qopt" type="button">A · Scored individuals on activity and let the system act with little human accountability</button>
+      <button class="qopt" type="button">B · Used too little data</button>
+      <button class="qopt" type="button">C · Were built by small teams</button>
+      <p class="qwhy">Both measured per-person activity rather than value delivered, and removed or minimised the accountable human. That is the surveillance side of the line, and exactly what Goodhart's Law predicts people will game.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Support vs surveillance</b><span>informs a human who decides = support; becomes the decision = surveillance.</span></div>
+      <div class="cheat-item"><b>AI can help</b><span>summarise 360s, flag biased language, cut recency bias, draft, surface progress, free time.</span></div>
+      <div class="cheat-item"><b>AI must not</b><span>keystroke-log, "productivity score" people, auto-rank, auto-fire on a proxy.</span></div>
+      <div class="cheat-item"><b>EU AI Act</b><span>worker-management AI = HIGH-RISK (Annex III): oversight, logging, transparency.</span></div>
+      <div class="cheat-item"><b>GDPR Article 22</b><span>no solely automated decision with significant effect; real human-in-the-loop, contestable.</span></div>
+      <div class="cheat-item"><b>NYC Local Law 144</b><span>independent, published bias audit of automated employment tools, with notice.</span></div>
+      <div class="cheat-item"><b>Six principles</b><span>augment not replace, transparency, contestability, human accountability, outcomes not surveillance, proportionality.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>a6 - rollout, cadence, and the culture that makes measurement work.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 5 of 6 · learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a4-fair-measurement.html">← Prev: Fair-measurement principles</a> &nbsp;·&nbsp; <a href="a6-rollout-culture.html">Next: Rollout, cadence &amp; culture →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

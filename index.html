@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn OKRs with phoebe - how to measure people and teams fairly</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(67,56,202,.15); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#EEF2FF); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .rail { margin-top: 1.4rem; border: 1px solid var(--hairline); border-left: 4px solid var(--amber); border-radius: var(--radius); background: var(--amber-50); padding: 1rem 1.2rem; font-size: .9rem; }
+  .rail b { color: var(--amber-ink); }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe</div>
+    <h1>How to measure people and teams <span class="accent">fairly</span></h1>
+    <p class="sub">Goals, metrics, and performance - done in a way that builds trust instead of gaming. This course teaches OKRs and fair performance measurement end to end, using an online retailer, Cartwheel, as the worked example. A leader track for C-level and upper management on designing the system, and a manager track for middle management and team leads on running it fairly. You will meet the biases that corrupt ratings, the law that guarantees any single metric gets gamed, where AI genuinely helps (and where it becomes surveillance), and a cadence that steers without smothering. You even drive a live Fair-Metric Lab. For everyone else, it is a plain-English guide to how good measurement actually works.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="2">2</b><span>tracks</span></div>
+      <div class="stat"><b data-count="16">16</b><span>sessions</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+      <div class="stat"><b data-count="1">1</b><span>live Fair-Metric Lab</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The leader / design track 🤝 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for C-level &amp; upper management · 6 x 45 min · no code, ever</span></h2>
+      <p class="plede">Thinking mode: how to design a measurement system that is fair and hard to game - what OKRs are and are not, the metric tree, the biases to guard against, how to govern AI in measurement, and the culture that makes it work. Each session ends with the questions to ask your team.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/a1-why-measure.html" style="--diff:#34D399">
+        <span class="cicon">💡</span>
+        <span class="cnum">Leader 1 · easy</span>
+        <h3>Why measure, and the trap</h3>
+        <p>The promise and the peril of measuring people - "what gets measured gets managed", and Goodhart's warning that any target gets gamed.</p>
+        <span class="meta"><span class="pill amber">▶ Leaders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/a2-okrs-vs-kpis.html" style="--diff:#34D399">
+        <span class="cicon">🎯</span>
+        <span class="cnum">Leader 2 · easy</span>
+        <h3>OKRs vs KPIs vs metrics</h3>
+        <p>The language of goals: objectives and key results, change vs health, and the Cartwheel metric tree where revenue = sessions x conversion x order value.</p>
+        <span class="meta"><span class="pill light">The metric tree</span></span>
+      </a>
+      <a class="course-card" href="courses/a3-controllable-levers.html" style="--diff:#FBBF24">
+        <span class="cicon">🌿</span>
+        <span class="cnum">Leader 3 · medium</span>
+        <h3>Controllable levers + attribution</h3>
+        <p>Decompose goals until each branch has an owner, grade what a team controls, and watch shared outcomes together - the attribution problem, solved.</p>
+        <span class="meta"><span class="pill light">Ownership map</span></span>
+      </a>
+      <a class="course-card" href="courses/a4-fair-measurement.html" style="--diff:#FBBF24">
+        <span class="cicon">⚖️</span>
+        <span class="cnum">Leader 4 · medium</span>
+        <h3>Fair-measurement principles</h3>
+        <p>Why ratings say more about the rater than the rated, how bias hides in feedback language, the three kinds of justice, and why OKRs must be decoupled from pay.</p>
+        <span class="meta"><span class="pill light">Fairness frameworks</span></span>
+      </a>
+      <a class="course-card" href="courses/a5-ai-in-measurement.html" style="--diff:#FB923C">
+        <span class="cicon">🤖</span>
+        <span class="cnum">Leader 5 · deciding</span>
+        <h3>AI in measurement</h3>
+        <p>Where AI genuinely helps versus where it becomes surveillance - the Microsoft and Amazon cautionary tales, plus the EU AI Act, GDPR, and NYC bias-audit rules.</p>
+        <span class="meta"><span class="pill light">Governance + guardrails</span></span>
+      </a>
+      <a class="course-card" href="courses/a6-rollout-culture.html" style="--diff:#FB923C">
+        <span class="cicon">🧭</span>
+        <span class="cnum">Leader 6 · deciding</span>
+        <h3>Rollout, cadence &amp; culture</h3>
+        <p>The monitoring cadence, psychological safety, separating steering from reward, and a maturity roadmap - plus when NOT to measure at all.</p>
+        <span class="meta"><span class="pill light">Roadmap exercise</span></span>
+      </a>
+    </div>
+
+    <div class="paths">
+      <h2>The manager / run track 🛠️ <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for middle management &amp; team leads · 10 x 45 min · templates + worked examples</span></h2>
+      <p class="plede">One running company, Cartwheel, threaded through the demos: you write real OKRs, choose metrics that are fair to grade on, set a monitoring cadence, run fair performance conversations, and use AI responsibly - following one team from goal-setting to a full measurement system.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/b1-foundations.html" style="--diff:#34D399">
+        <span class="cicon">🧱</span>
+        <span class="cnum">Manager 1 · easy</span>
+        <h3>Foundations</h3>
+        <p>The three purposes of measurement, activity vs outcome, and the six-point fair-metric checklist you will use all track.</p>
+        <span class="meta"><span class="pill amber">▶ Managers start here</span></span>
+      </a>
+      <a class="course-card" href="courses/b2-writing-okrs.html" style="--diff:#34D399">
+        <span class="cicon">✍️</span>
+        <span class="cnum">Manager 2 · easy</span>
+        <h3>Writing good OKRs</h3>
+        <p>Objectives that inspire and key results that prove it, committed vs stretch, the 0-1 scoring scale, and the ~0.7 sweet spot.</p>
+        <span class="meta"><span class="pill light">Cartwheel OKRs</span></span>
+      </a>
+      <a class="course-card" href="courses/b3-choosing-fair-metrics.html" style="--diff:#FBBF24">
+        <span class="cicon">⚗️</span>
+        <span class="cnum">Manager 3 · medium</span>
+        <h3>Choosing fair metrics</h3>
+        <p>Score a metric's fairness, then watch Goodhart's Law break it - a live Fair-Metric Lab where a gamed number climbs while the real outcome collapses.</p>
+        <span class="meta"><span class="pill light">★ interactive: Fair-Metric Lab</span></span>
+      </a>
+      <a class="course-card" href="courses/b4-metric-tree-per-function.html" style="--diff:#FBBF24">
+        <span class="cicon">🌳</span>
+        <span class="cnum">Manager 4 · medium</span>
+        <h3>The metric tree per function</h3>
+        <p>Fair OKRs for every Cartwheel team - Growth, Product, Engineering (DORA), Ops, Support, Merchandising, Data - each on a lever it controls.</p>
+        <span class="meta"><span class="pill light">Per-function OKRs</span></span>
+      </a>
+      <a class="course-card" href="courses/b5-monitoring-cadence.html" style="--diff:#FBBF24">
+        <span class="cicon">📊</span>
+        <span class="cnum">Manager 5 · medium</span>
+        <h3>Monitoring cadence + dashboards</h3>
+        <p>1:1s tuned to task-relevant maturity, weekly-monthly-quarterly rhythm, and dashboards that show target, trend, and context - not naked numbers.</p>
+        <span class="meta"><span class="pill light">Cadence + RAG</span></span>
+      </a>
+      <a class="course-card" href="courses/b6-fair-conversations.html" style="--diff:#FB923C">
+        <span class="cicon">💬</span>
+        <span class="cnum">Manager 6 · hands-on</span>
+        <h3>Fair performance conversations</h3>
+        <p>Continuous check-ins over the annual review, and keeping steering, development, and reward in separate conversations so honesty survives.</p>
+        <span class="meta"><span class="pill light">CFRs + check-ins</span></span>
+      </a>
+      <a class="course-card" href="courses/b7-beating-bias.html" style="--diff:#FB923C">
+        <span class="cicon">🎭</span>
+        <span class="cnum">Manager 7 · hands-on</span>
+        <h3>Beating the bias</h3>
+        <p>The idiosyncratic rater effect, recency and halo, biased feedback language, and calibration done fairly - plus auditing your own ratings.</p>
+        <span class="meta"><span class="pill light">Bias self-audit</span></span>
+      </a>
+      <a class="course-card" href="courses/b8-ai-assisted.html" style="--diff:#FB923C">
+        <span class="cicon">🤖</span>
+        <span class="cnum">Manager 8 · hands-on</span>
+        <h3>AI-assisted, responsibly</h3>
+        <p>Using AI to summarize feedback, flag biased language, and draft - with the guardrails: transparency, contestability, and what to never automate.</p>
+        <span class="meta"><span class="pill light">AI as helper</span></span>
+      </a>
+      <a class="course-card" href="courses/b9-when-metrics-go-wrong.html" style="--diff:#FBBF24">
+        <span class="cicon">⚠️</span>
+        <span class="cnum">Manager 9 · medium</span>
+        <h3>When metrics go wrong</h3>
+        <p>Gaming, surrogation, vanity metrics, and single-number verdicts - how to diagnose a broken metric and repair it before it does damage.</p>
+        <span class="meta"><span class="pill light">Diagnose + fix</span></span>
+      </a>
+      <a class="course-card" href="courses/b10-build-your-system.html" style="--diff:#F87171">
+        <span class="cicon">🏛️</span>
+        <span class="cnum">Manager 10 · hardest</span>
+        <h3>Build your measurement system</h3>
+        <p>The capstone: assemble a full fair OKR and monitoring system for a Cartwheel team, with health guardrails, a cadence, and a review of the measures themselves.</p>
+        <span class="meta"><span class="pill light">Capstone</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on / deciding</span>
+      <span><i style="background:#F87171"></i>hardest</span>
+    </div>
+
+    <div class="rail">
+      <b>An honest note on measuring people:</b> an OKR score is for steering and learning, never a direct input to pay - the moment it drives compensation, people game it and stop being honest. This course teaches from the canon (Grove, Doerr, Google re:Work, the Balanced Scorecard, DORA) and the fairness research (the idiosyncratic rater effect, organizational justice, bias in feedback language). AI is taught as a bias-checking assistant, never a judge: worker-management AI is high-risk under the EU AI Act and "solely automated" evaluation is a legal red line (GDPR Article 22). Cartwheel is a fictional teaching company and its benchmarks are illustrative. Regulations are summarized for awareness, not legal advice.
+    </div>
+
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Two doors, one course. Leaders design the system; managers run it fairly - and both meet at the Fair-Metric Lab. Employees are welcome to read either as knowledge-sharing.</p>
+      <div class="path"><b>🤝 Leader / design (no code)</b>
+        <a class="pstep" href="courses/a1-why-measure.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-okrs-vs-kpis.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-controllable-levers.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-fair-measurement.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a5-ai-in-measurement.html">a5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-rollout-culture.html">a6</a>
+      </div>
+      <div class="path"><b>🛠️ Manager / run (templates)</b>
+        <a class="pstep" href="courses/b1-foundations.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-writing-okrs.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-choosing-fair-metrics.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-metric-tree-per-function.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-monitoring-cadence.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-fair-conversations.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-beating-bias.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-ai-assisted.html">b8</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b9-when-metrics-go-wrong.html">b9</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b10-build-your-system.html">b10</a>
+      </div>
+      <div class="path"><b>🌱 Curious employee (a taste)</b>
+        <a class="pstep" href="courses/a1-why-measure.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-fair-measurement.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-choosing-fair-metrics.html">b3</a>
+      </div>
+      <div class="path"><b>🚀 Full journey (design AND run)</b>
+        <a class="pstep" href="courses/a1-why-measure.html">a1-a6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-foundations.html">b1-b10</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">Both tracks at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> · sources: Grove &amp; Doerr · Google re:Work · Goodhart's Law · rater-effect research (Scullen &amp; Mount) · organizational justice (Greenberg) · Balanced Scorecard · EU AI Act / GDPR / NYC LL144</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "OKRs &\nFair\nMeasure",
+  centerColor: "#312E81",
+  sessions: [
+    { label: "Why measure\n+ the trap", href: "courses/a1-why-measure.html", color: "#34D399",
+      concepts: [
+        { label: "Measure what matters", href: "courses/a1-why-measure.html" },
+        { label: "Goodhart's Law", href: "courses/a1-why-measure.html" } ] },
+    { label: "OKRs vs\nKPIs", href: "courses/a2-okrs-vs-kpis.html", color: "#34D399",
+      concepts: [
+        { label: "Objectives + KRs", href: "courses/a2-okrs-vs-kpis.html" },
+        { label: "Change vs health", href: "courses/a2-okrs-vs-kpis.html" },
+        { label: "Metric tree", href: "courses/a2-okrs-vs-kpis.html" } ] },
+    { label: "Controllable\nlevers", href: "courses/a3-controllable-levers.html", color: "#FBBF24",
+      concepts: [
+        { label: "Grade what you control", href: "courses/a3-controllable-levers.html" },
+        { label: "Attribution", href: "courses/a3-controllable-levers.html" } ] },
+    { label: "Fair\nmeasurement", href: "courses/a4-fair-measurement.html", color: "#FBBF24",
+      concepts: [
+        { label: "Rater effect", href: "courses/a4-fair-measurement.html" },
+        { label: "Justice", href: "courses/a4-fair-measurement.html" },
+        { label: "Decouple from pay", href: "courses/a4-fair-measurement.html" } ] },
+    { label: "AI in\nmeasurement", href: "courses/a5-ai-in-measurement.html", color: "#FB923C",
+      concepts: [
+        { label: "Support vs surveillance", href: "courses/a5-ai-in-measurement.html" },
+        { label: "EU AI Act / GDPR", href: "courses/a5-ai-in-measurement.html" } ] },
+    { label: "Rollout +\nculture", href: "courses/a6-rollout-culture.html", color: "#FB923C",
+      concepts: [
+        { label: "Cadence", href: "courses/a6-rollout-culture.html" },
+        { label: "Psychological safety", href: "courses/a6-rollout-culture.html" } ] },
+    { label: "Foundations", href: "courses/b1-foundations.html", color: "#34D399",
+      concepts: [
+        { label: "Three purposes", href: "courses/b1-foundations.html" },
+        { label: "Output vs outcome", href: "courses/b1-foundations.html" },
+        { label: "Fair-metric checklist", href: "courses/b1-foundations.html" } ] },
+    { label: "Writing\nOKRs", href: "courses/b2-writing-okrs.html", color: "#34D399",
+      concepts: [
+        { label: "Committed vs stretch", href: "courses/b2-writing-okrs.html" },
+        { label: "Scoring + ~0.7", href: "courses/b2-writing-okrs.html" } ] },
+    { label: "Choosing\nfair metrics", href: "courses/b3-choosing-fair-metrics.html", color: "#FBBF24",
+      concepts: [
+        { label: "Goodhart lab", href: "courses/b3-choosing-fair-metrics.html" },
+        { label: "Pair, do not police", href: "courses/b3-choosing-fair-metrics.html" },
+        { label: "Surrogation", href: "courses/b3-choosing-fair-metrics.html" } ] },
+    { label: "Metric tree\nper function", href: "courses/b4-metric-tree-per-function.html", color: "#FBBF24",
+      concepts: [
+        { label: "Per-team OKRs", href: "courses/b4-metric-tree-per-function.html" },
+        { label: "DORA", href: "courses/b4-metric-tree-per-function.html" } ] },
+    { label: "Monitoring\ncadence", href: "courses/b5-monitoring-cadence.html", color: "#FBBF24",
+      concepts: [
+        { label: "1:1s + TRM", href: "courses/b5-monitoring-cadence.html" },
+        { label: "Dashboards", href: "courses/b5-monitoring-cadence.html" } ] },
+    { label: "Fair\nconversations", href: "courses/b6-fair-conversations.html", color: "#FB923C",
+      concepts: [
+        { label: "Continuous check-ins", href: "courses/b6-fair-conversations.html" },
+        { label: "Separate the three", href: "courses/b6-fair-conversations.html" } ] },
+    { label: "Beating\nthe bias", href: "courses/b7-beating-bias.html", color: "#FB923C",
+      concepts: [
+        { label: "Rater effect", href: "courses/b7-beating-bias.html" },
+        { label: "Fair calibration", href: "courses/b7-beating-bias.html" } ] },
+    { label: "AI-assisted,\nresponsibly", href: "courses/b8-ai-assisted.html", color: "#FB923C",
+      concepts: [
+        { label: "De-bias language", href: "courses/b8-ai-assisted.html" },
+        { label: "Contestability", href: "courses/b8-ai-assisted.html" } ] },
+    { label: "When metrics\ngo wrong", href: "courses/b9-when-metrics-go-wrong.html", color: "#FBBF24",
+      concepts: [
+        { label: "Vanity metrics", href: "courses/b9-when-metrics-go-wrong.html" },
+        { label: "Diagnose + fix", href: "courses/b9-when-metrics-go-wrong.html" } ] },
+    { label: "Build your\nsystem", href: "courses/b10-build-your-system.html", color: "#F87171",
+      concepts: [
+        { label: "Full OKR system", href: "courses/b10-build-your-system.html" },
+        { label: "Health guardrails", href: "courses/b10-build-your-system.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

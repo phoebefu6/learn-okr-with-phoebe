@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 8 · AI-assisted, responsibly - learn OKRs with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-okr-with-phoebe</a> / Manager session 8 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe · Manager track · Session 8 of 10</div>
+    <h1>AI-assisted: <span class="accent">a helper on the evidence, never the judge</span></h1>
+    <p class="sub">Last session showed how much noise a human rater carries. That makes AI tempting - and dangerous in a very specific way. There is a genuinely useful lane: gathering scattered evidence, catching vague and biased language, drafting a first pass you then own. And there is a lane you must never hand over: the judgment itself. This session draws the line, gives you the four guardrails that keep you on the right side of it, walks the legal floor (EU AI Act, GDPR Article 22, NYC Local Law 144), and has you build a Cartwheel review pack with AI plus the disclosure your team is owed.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Manager track</span>
+      <span class="chip audience">Managers: middle mgmt · team leads</span>
+      <span class="chip audience">No code · templates + worked examples</span>
+      <span class="chip time">~45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:4">3-20 · Two lanes + the guardrails</span>
+      <span class="a3" style="flex:5">20-42 · Worked: review pack + disclosure</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">You now know the rating instrument is noisy and that bias travels in language. AI can genuinely help with both problems - it never forgets what happened in March, and it is very good at spotting that one person's review is all adjectives while another's is all evidence. But the same tool is one prompt away from producing a confident verdict on a human being from thin data, and a confident verdict is exactly what a biased system produces most easily. So the rule for this session is a single line, repeated: <strong>AI works on the evidence; the human makes the judgment.</strong> Everything else here is machinery to keep that line intact - guardrails, disclosure, a never-automate list, and a legal floor that already makes parts of it mandatory.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Worked example (Cartwheel)</span>
+      <span class="pill inkpill">Sources covered (cited)</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The two-lane rule that decides what AI may touch, three uses that genuinely reduce bias, the four guardrails (transparency, human in the loop, contestability, bias audit), the legal floor in plain English, a Cartwheel review pack assembled with AI and checked by you, and a written never-automate list plus a disclosure your team can read.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: TWO LANES ============ -->
+  <section class="section" id="lanes">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the two lanes</span>
+      <h2>What AI may touch, and what it must not <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Do not think about AI in performance measurement as a capability question. Think about it as two lanes with a hard wall between them: work on the evidence, and judgment about a person. AI belongs entirely in the first.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 316" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two lanes: an assist lane where AI may gather evidence, flag vague or biased language, and draft a first pass; and a decide lane, never handed over, covering ratings, pay, ranking, exits, and scoring OKRs">
+        <style>
+          .b8lT { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .b8lG { font: 700 13px Inter, sans-serif; fill: #312E81; }
+          .b8lR { font: 700 13px Inter, sans-serif; fill: #991B1B; }
+          .b8lB { font: 700 12px Inter, sans-serif; fill: #1F2937; }
+          .b8lX { font: 400 11px Inter, sans-serif; fill: #6B7280; }
+          .b8lBad { font: 600 12.5px Inter, sans-serif; fill: #991B1B; }
+          .b8lN { font: 600 13px Inter, sans-serif; fill: #92400E; }
+        </style>
+        <text class="b8lT" x="24" y="32">One wall, two lanes</text>
+        <rect x="24" y="44" width="832" height="112" rx="12" fill="#EEF2FF" stroke="#4338CA" stroke-width="1.4"/>
+        <text class="b8lG" x="44" y="68">Assist lane - AI works on the evidence</text>
+        <rect x="44" y="82" width="254" height="58" rx="8" fill="#FFFFFF" stroke="#C7D2FE"/>
+        <text class="b8lB" x="60" y="104">Gather + summarise evidence</text>
+        <text class="b8lX" x="60" y="124">pull scattered notes into one place</text>
+        <rect x="312" y="82" width="254" height="58" rx="8" fill="#FFFFFF" stroke="#C7D2FE"/>
+        <text class="b8lB" x="328" y="104">Flag vague or biased words</text>
+        <text class="b8lX" x="328" y="124">surface personality labels to fix</text>
+        <rect x="580" y="82" width="256" height="58" rx="8" fill="#FFFFFF" stroke="#C7D2FE"/>
+        <text class="b8lB" x="596" y="104">Draft a first pass</text>
+        <text class="b8lX" x="596" y="124">you edit, you own every word</text>
+        <rect x="24" y="170" width="832" height="88" rx="12" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.4"/>
+        <text class="b8lR" x="44" y="194">Decide lane - never hand this over</text>
+        <text class="b8lBad" x="44" y="220">Setting a rating. Deciding pay or promotion. Ranking people. Flagging someone for exit.</text>
+        <text class="b8lBad" x="44" y="242">Scoring an OKR on your behalf. Any judgment about a person made without a human deciding.</text>
+        <rect x="24" y="282" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b8lN" x="46" y="294">Test for the wall: if the output changes what happens to a person, a human must decide it and sign it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - AI works on the evidence, the human makes the judgment</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Three uses that genuinely reduce bias<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>These three are not productivity tricks. Each one attacks a specific bias you met in b7:</p>
+        <ul>
+          <li><strong>Evidence assembly beats recency.</strong> Recency bias wins because the last month is the easiest to remember. Ask AI to pull the full period's notes, tickets, and check-in records into a dated list, and the whole year is back on the table.</li>
+          <li><strong>Language checking beats the specificity gap.</strong> Have it flag every personality label, every unfalsifiable claim, and every sentence with no evidence attached - then compare across your whole team. Who got adjectives and who got numbers becomes visible in one pass.</li>
+          <li><strong>A first draft beats the blank page.</strong> The blank page is where managers fall back on impressions. A draft built strictly from your evidence list gives you something to correct rather than something to invent. You then rewrite it, and every word is yours.</li>
+        </ul>
+        <p>Notice what all three have in common: the AI never sees a conclusion it is asked to reach. It handles the material; you carry the judgment.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Surveillance is not measurement<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The fastest way to wreck a measurement system with AI is to point it at activity streams because they are easy to collect. Two well-documented cautionary cases:</p>
+        <ul>
+          <li><strong>Microsoft's Productivity Score (2020)</strong> drew a public backlash for surfacing per-employee activity data to managers. Microsoft changed the product to remove individual-level identification. The lesson: the moment a metric can be pointed at a named person's keystrokes, it stops being a steering signal and becomes monitoring.</li>
+          <li><strong>Amazon warehouse "time off task"</strong> reporting, as reported by MIT Technology Review and others, drove automated productivity tracking that could feed termination processes. The lesson: automating the pipeline from activity data to a consequence removes exactly the human judgment that made it defensible.</li>
+        </ul>
+        <p>Activity streams measure presence, not contribution - they are the bottom rung of the b1 ladder, dressed up in better data. If you would not grade someone on it manually, do not let a tool grade them on it automatically.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: GUARDRAILS + LEGAL FLOOR ============ -->
+  <section class="section" id="guardrails">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · guardrails and the legal floor</span>
+      <h2>Four guardrails, and the law underneath them <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The four guardrails are good practice on their own. What makes them non-negotiable is that regulators have already turned parts of them into requirements for exactly this use case - AI used to manage and evaluate workers.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 292" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four guardrails for AI in performance measurement - transparency, human in the loop, contestability, and bias audit - above a summary of the legal floor from the EU AI Act, GDPR Article 22, and NYC Local Law 144">
+        <style>
+          .b8gT { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .b8gB { font: 700 12.5px Inter, sans-serif; fill: #1F2937; }
+          .b8gX { font: 400 11px Inter, sans-serif; fill: #6B7280; }
+          .b8gL { font: 700 13px Inter, sans-serif; fill: #92400E; }
+          .b8gD { font: 600 12.5px Inter, sans-serif; fill: #92400E; }
+          .b8gN { font: 600 13px Inter, sans-serif; fill: #312E81; }
+        </style>
+        <text class="b8gT" x="24" y="32">The four guardrails</text>
+        <rect x="24" y="44" width="202" height="76" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b8gB" x="40" y="68">Transparency</text>
+        <text class="b8gX" x="40" y="90">people know AI is used</text>
+        <text class="b8gX" x="40" y="108">and on what data</text>
+        <rect x="234" y="44" width="202" height="76" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b8gB" x="250" y="68">Human in the loop</text>
+        <text class="b8gX" x="250" y="90">a person decides, always</text>
+        <text class="b8gX" x="250" y="108">not a rubber stamp</text>
+        <rect x="444" y="44" width="202" height="76" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="b8gB" x="460" y="68">Contestability</text>
+        <text class="b8gX" x="460" y="90">the person can challenge it</text>
+        <text class="b8gX" x="460" y="108">and see the evidence</text>
+        <rect x="654" y="44" width="202" height="76" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="b8gB" x="670" y="68">Bias audit</text>
+        <text class="b8gX" x="670" y="90">test outcomes by group</text>
+        <text class="b8gX" x="670" y="108">act on what you find</text>
+        <rect x="24" y="140" width="832" height="96" rx="10" fill="#FEF3C7" stroke="#D97706" stroke-width="1.4"/>
+        <text class="b8gL" x="44" y="166">The legal floor (summarised for awareness, not legal advice)</text>
+        <text class="b8gD" x="44" y="190">EU AI Act, Annex III: AI for worker management and evaluation is classified high-risk.</text>
+        <text class="b8gD" x="44" y="210">GDPR Article 22: no solely automated decision with significant effect - a human must intervene.</text>
+        <text class="b8gD" x="44" y="230">NYC Local Law 144: automated employment decision tools need a bias audit plus notice.</text>
+        <rect x="24" y="260" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="b8gN" x="46" y="272">These are a floor, not a target. Meeting them makes a system legal, not yet fair.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - four guardrails, with the legal floor underneath</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Human in the loop means a real decision, not a signature<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The guardrail that gets faked most often is human oversight. A manager clicking "approve" on twelve AI-generated ratings in four minutes is not a human in the loop; that is automation with a signature attached, and it is the shape GDPR Article 22 is aimed at.</p>
+        <ul>
+          <li><strong>The reviewer must be able to disagree</strong> - and there must be evidence that sometimes they do. If nothing is ever overridden, oversight is decorative.</li>
+          <li><strong>The reviewer must see the inputs</strong>, not just the output. A conclusion with no visible evidence cannot be meaningfully checked.</li>
+          <li><strong>The reviewer must have time.</strong> Oversight that is impossible within the time allotted is oversight on paper only.</li>
+          <li><strong>The reviewer must be accountable.</strong> Whoever signs owns the judgment - "the tool said so" is not a defence you would want to give to the person affected, or to a regulator.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The four-minute review round.</strong> A Cartwheel manager with fourteen reports uses AI to draft all fourteen reviews from her notes, skims them, and submits. Two are subtly wrong: one credits work another person did, one repeats a personality label from her own old notes. Both go into the record unchallenged. The tool did not cause the failure - the missing step did. Draft with AI, then read every line against your evidence as if you were the person receiving it.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What the bias audit actually looks like<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>"Bias audit" sounds like a specialist exercise. At a team level it is closer to arithmetic, and you can do a useful version yourself:</p>
+        <ul>
+          <li><strong>Compare outcomes by group</strong> - ratings, promotion rates, and stretch-project assignments split by gender, tenure, team, and working pattern (part-time and remote people are a common blind spot). Small numbers will not be conclusive; patterns repeating across cycles are.</li>
+          <li><strong>Compare language by group</strong> - the b7 audit, counted: evidence-backed statements versus adjectives, per person.</li>
+          <li><strong>Compare the tool's suggestions to your decisions</strong> - where you overrode the draft, and for whom. Systematic overrides in one direction tell you something about the tool; none at all tell you something about the oversight.</li>
+          <li><strong>Write down what you found and what you changed.</strong> An audit nobody acts on is documentation of a known problem, which is worse than not looking.</li>
+        </ul>
+        <p>For anything vendor-supplied and consequential, ask the vendor for their bias-audit results and the data behind them. Under NYC Local Law 144 that expectation is a legal requirement for covered tools, and it is a reasonable question anywhere.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 1 ============ -->
+  <section class="section" id="worked-1">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 1 of 2</span>
+      <h2>Build a Cartwheel review pack with AI <span class="tag demo">★ 12 min · everyone tries</span></h2>
+    </div>
+    <p class="lede">One Cartwheel analyst, one review cycle, a scattered pile of evidence. Use AI for the four jobs it is good at, and keep the judgment jobs in your own hands - then check the pack before it goes anywhere.</p>
+
+    <div class="steps">
+      <div class="step"><p>Collect the raw material yourself: check-in notes, OKR score history, the shipped work, peer comments. AI cannot fix evidence you never gathered.</p></div>
+      <div class="step"><p>Ask it to <strong>organise, not conclude</strong>: a dated list of what happened across the full period, grouped by the criteria you are rating against.</p></div>
+      <div class="step"><p>Ask it to <strong>flag the language</strong> in your own draft notes: personality labels, unfalsifiable claims, anything with no evidence behind it.</p></div>
+      <div class="step"><p>Ask for a <strong>first draft strictly from that evidence list</strong>, with a marker anywhere it had to infer. Then rewrite it in your voice.</p></div>
+      <div class="step"><p>Do the judgment yourself: the rating, the level call, the pay input. Read the final pack line by line against your evidence, as the person receiving it.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>Who does what in the review pack</strong>
+      <table class="clean">
+        <thead><tr><th>Job</th><th>AI</th><th>You</th><th>Why the split</th></tr></thead>
+        <tbody>
+          <tr><td>Assemble the year's evidence</td><td>✓ does it</td><td>supplies + verifies</td><td>Beats recency; it never forgets March</td></tr>
+          <tr><td>Flag vague or biased wording</td><td>✓ flags</td><td>decides each fix</td><td>Pattern-spotting at scale, judgment stays human</td></tr>
+          <tr><td>Draft the narrative</td><td>◐ first pass</td><td>rewrites + owns</td><td>Beats the blank page where impressions live</td></tr>
+          <tr><td>Set the rating</td><td>✗ never</td><td>✓ decides</td><td>Judgment about a person - the decide lane</td></tr>
+          <tr><td>Pay or promotion input</td><td>✗ never</td><td>✓ decides</td><td>Significant effect - human required</td></tr>
+          <tr><td>Score the OKR</td><td>✗ never</td><td>✓ with the team</td><td>Scoring is a learning conversation, not an output</td></tr>
+        </tbody>
+      </table>
+      One extra rule before you paste anything: check where the data goes. Performance notes are sensitive personal data about identifiable people - use a tool your organisation has approved for it, and only include what the task actually needs.
+    </div>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 2 ============ -->
+  <section class="section" id="worked-2">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 2 of 2</span>
+      <h2>Write the never-automate list and the disclosure <span class="tag demo">★ 10 min · do your own</span></h2>
+    </div>
+    <p class="lede">Two short documents make the guardrails real: a list your team can hold you to, and a plain-English disclosure that turns transparency from an intention into something people have actually read.</p>
+
+    <div class="steps">
+      <div class="step"><p>Write the <strong>never-automate list</strong>: every decision AI may not make in your team, stated as decisions, not tools.</p></div>
+      <div class="step"><p>Write the <strong>disclosure</strong>: what you use AI for, what data goes in, what it never decides, and how someone contests an outcome.</p></div>
+      <div class="step"><p>Add the <strong>contest route</strong>: who to go to, what they get to see, and what happens next. A right to challenge with no named path is not a right.</p></div>
+      <div class="step"><p>Share both with the team and ask what is missing. If reading the disclosure makes anyone uneasy, the practice needs changing, not the wording.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The two documents, in outline</strong>
+      <table class="clean">
+        <thead><tr><th>Document</th><th>Contents</th><th>Test it passes</th></tr></thead>
+        <tbody>
+          <tr><td>Never-automate list</td><td>Ratings, pay and promotion, ranking, exit flags, OKR scores, anything about a named person's activity stream</td><td>Every item is a decision, not a product name</td></tr>
+          <tr><td>Disclosure</td><td>Uses (evidence assembly, language flagging, drafting), data used, what AI never decides, who decides instead</td><td>A team member could explain it back to you</td></tr>
+          <tr><td>Contest route</td><td>Who to raise it with, what evidence they see, response time, what can change</td><td>Someone could actually use it this week</td></tr>
+          <tr><td>Audit note</td><td>What you checked by group, what you found, what you changed</td><td>It has a date and an action, not just a finding</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The disclosure that changed the practice.</strong> A team lead drafting this document got as far as "I use AI to summarise your check-in notes and draft your review" and stopped - because she realised her reports had never been told that their notes were being used that way at all. The document did its job before anyone read it. That is the useful property of writing transparency down: anything you would not want to disclose is the thing to stop doing, and you find it while drafting rather than after a complaint.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Write your never-automate list. Keep it to decisions, and keep it short enough that people remember it.</li>
+      <li>Draft the AI-use disclosure for your team in plain language, then read it as if you were a report receiving it. Fix whatever makes you wince.</li>
+      <li>Take one review you have already written and ask AI only to flag vague, unfalsifiable, or personality-based lines. Decide each fix yourself.</li>
+      <li>Check any performance tool your organisation uses against the four guardrails. For consequential vendor tools, ask for the bias-audit results.</li>
+      <li>Confirm where performance data goes when you use an AI tool, and whether that tool is approved for personal data at your organisation.</li>
+      <li>Run a small language audit by group across your last cycle: evidence-backed statements versus adjectives, per person. Note the pattern before b9.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered (cited)</h2>
+    </div>
+    <p class="lede">Taught from the AI-governance sources for worker measurement. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act, Annex III sec. 4 (employment and worker management as high-risk); GDPR Article 22 (automated decisions, human intervention)</span><span class="note">Part 2 · the legal floor, human in the loop, contestability</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">NYC Local Law 144 (bias audits and notice for automated employment decision tools)</span><span class="note">Part 2 · the bias-audit guardrail and vendor questions</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Microsoft Productivity Score backlash (2020); Amazon warehouse "time off task" reporting; review-language analysis (Snyder / Textio)</span><span class="note">Part 1 · surveillance versus measurement; language flagging as a bias control</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Which task belongs in the assist lane rather than the decide lane?</p>
+      <button class="qopt" type="button">A · Setting the final rating from the evidence</button>
+      <button class="qopt" type="button">B · Pulling the full period's notes into a dated evidence list</button>
+      <button class="qopt" type="button">C · Ranking the team for the pay round</button>
+      <p class="qwhy">AI works on the evidence; the human makes the judgment. Evidence assembly directly attacks recency bias. Ratings, ranking, pay, and exit flags all change what happens to a person, so a human must decide and sign them.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · A manager approves twelve AI-drafted ratings in four minutes. What is wrong?</p>
+      <button class="qopt" type="button">A · Nothing, a human approved them</button>
+      <button class="qopt" type="button">B · The drafts should have been longer</button>
+      <button class="qopt" type="button">C · That is automation with a signature - real oversight needs the inputs, the time, and the ability to disagree</button>
+      <p class="qwhy">Human in the loop means a real decision. The reviewer must see the inputs, have time to check them, be able to override, and be accountable for the result. If nothing is ever overridden, the oversight is decorative - and GDPR Article 22 is aimed at exactly this shape.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Under the EU AI Act, AI used to manage and evaluate workers is classified as...</p>
+      <button class="qopt" type="button">A · High-risk, with obligations attached</button>
+      <button class="qopt" type="button">B · Prohibited entirely</button>
+      <button class="qopt" type="button">C · Minimal risk, like a spam filter</button>
+      <p class="qwhy">Annex III places employment and worker management in the high-risk category. Together with GDPR Article 22 and, in New York City, Local Law 144's bias-audit and notice duties, that is the floor - meeting it makes a system legal, not yet fair.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 8 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The one line</b><span>AI works on the evidence; the human makes the judgment.</span></div>
+      <div class="cheat-item"><b>Assist lane</b><span>assemble evidence, flag vague or biased language, draft a first pass you rewrite.</span></div>
+      <div class="cheat-item"><b>Decide lane</b><span>ratings, pay, promotion, ranking, exit flags, OKR scores. Never handed over.</span></div>
+      <div class="cheat-item"><b>Four guardrails</b><span>transparency, human in the loop, contestability, bias audit.</span></div>
+      <div class="cheat-item"><b>Real oversight</b><span>sees the inputs, has the time, can disagree, and is accountable for signing.</span></div>
+      <div class="cheat-item"><b>Legal floor</b><span>EU AI Act high-risk · GDPR Art 22 human intervention · NYC LL144 bias audit + notice.</span></div>
+      <div class="cheat-item"><b>Surveillance is not measurement</b><span>activity streams measure presence. Microsoft and Amazon are the cautionary cases.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b9 - when metrics go wrong: gaming, surrogation, vanity metrics, and the repair.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 8 of 10 · learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b7-beating-bias.html">← Prev: Beating the bias</a> &nbsp;·&nbsp; <a href="b9-when-metrics-go-wrong.html">Next: When metrics go wrong →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

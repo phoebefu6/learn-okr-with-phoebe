@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 2 · OKRs vs KPIs - learn OKRs with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-okr-with-phoebe</a> / Leader session 2 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe · Leader track · Session 2 of 6</div>
+    <h1>OKRs vs KPIs vs metrics, <span class="accent">in plain English</span></h1>
+    <p class="sub">Leaders use "OKR", "KPI" and "metric" as if they were the same thing, and then wonder why their measurement system feels muddled. They are three different tools with three different jobs. This session draws the lines cleanly: the anatomy of an OKR, how it is scored, the difference between goals that measure change and health metrics that measure steady state, and how a single revenue number decomposes into a metric tree that gives every team something to own on Cartwheel.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Leader track</span>
+      <span class="chip audience">Leaders: C-level · upper mgmt</span>
+      <span class="chip audience">No code · concepts + decisions</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:4">3-20 · OKR anatomy + scoring</span>
+      <span class="a3" style="flex:5">20-42 · Change vs health + the metric tree</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Three words people muddle</h2>
+    </div>
+    <p class="lede">Last session we established the trap: any rewarded number gets gamed, so measurement has to be designed, not just adopted. This session gives you the vocabulary to design it. An <strong>OKR</strong> is a goal you are trying to change this quarter. A <strong>KPI</strong> is a vital sign you keep healthy all the time. A <strong>metric</strong> is any number you can track - the raw material both are built from. OKRs measure <em>change</em>; KPIs measure <em>health</em>; and the health metrics you refuse to let slip become your guardrails. Get these three straight and half the confusion in a planning meeting disappears. We keep last session's rail in force throughout: an OKR score is for steering and learning, never a direct input to pay.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Worked example (Cartwheel)</span>
+      <span class="pill inkpill">Sources covered (cited)</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The anatomy of an OKR (one qualitative Objective, two-to-three measurable Key Results), the difference between committed and aspirational goals, how the 0-1 score and the ~0.7 "sweet spot" work (and why that number is a Google norm to adapt, not a law), the change-vs-health distinction, and the Cartwheel metric tree that turns one revenue number into owned levers.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: OKR ANATOMY ============ -->
+  <section class="section" id="anatomy">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the anatomy of an OKR</span>
+      <h2>Objective + Key Results, scored 0 to 1 <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">An OKR has two parts. The <strong>Objective</strong> is qualitative and aspirational - a memorable sentence about where you want to be. The <strong>Key Results</strong> are the two-to-three measurable outcomes that prove you got there. If you cannot put a number on a Key Result, it is not a Key Result. The framework traces to Andy Grove at Intel and was carried to Google by John Doerr, whose "Measure What Matters" is the standard reference.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OKR anatomy: one qualitative objective with three measurable key results hanging off it, labelled committed or stretch, each scored from zero to one with about zero point seven as the sweet spot">
+        <style>
+          .a2aT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .a2aX { font: 400 12px Inter, sans-serif; fill: #E0E7FF; }
+          .a2aK { font: 700 12.5px Inter, sans-serif; fill: #1F2937; }
+          .a2aY { font: 400 11px Inter, sans-serif; fill: #6B7280; }
+          .a2aB { font: 700 10.5px Inter, sans-serif; }
+          .a2aN { font: 600 13px Inter, sans-serif; fill: #312E81; }
+        </style>
+        <!-- Objective -->
+        <rect x="24" y="30" width="500" height="70" rx="12" fill="#4338CA"/>
+        <text class="a2aT" x="44" y="58">Objective  (qualitative · aspirational)</text>
+        <text class="a2aX" x="44" y="82">"Make Cartwheel the effortless place to furnish a first home."</text>
+
+        <!-- connectors -->
+        <path d="M 120 100 L 120 128" stroke="#818CF8" stroke-width="2"/>
+        <path d="M 120 128 L 120 292 M 120 150 L 300 150 M 120 218 L 300 218 M 120 286 L 300 286" stroke="#818CF8" stroke-width="2" fill="none"/>
+
+        <!-- KR1 committed -->
+        <rect x="300" y="126" width="556" height="48" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="a2aK" x="318" y="147">KR1 · Lift checkout conversion from 2.4% to 3.0%</text>
+        <text class="a2aY" x="318" y="165">a measurable outcome, not a task</text>
+        <rect x="726" y="136" width="112" height="24" rx="12" fill="#4338CA"/>
+        <text class="a2aB" x="782" y="152" fill="#FFFFFF" text-anchor="middle">COMMITTED</text>
+
+        <!-- KR2 stretch -->
+        <rect x="300" y="194" width="556" height="48" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="a2aK" x="318" y="215">KR2 · Grow repeat-purchase rate from 22% to 35%</text>
+        <text class="a2aY" x="318" y="233">a bold "if we're lucky" target</text>
+        <rect x="742" y="204" width="96" height="24" rx="12" fill="#D97706"/>
+        <text class="a2aB" x="790" y="220" fill="#FFFFFF" text-anchor="middle">STRETCH</text>
+
+        <!-- KR3 committed -->
+        <rect x="300" y="262" width="556" height="48" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="a2aK" x="318" y="283">KR3 · Cut delivery complaints per 1k orders from 18 to 9</text>
+        <text class="a2aY" x="318" y="301">a quality guardrail, so growth doesn't game it</text>
+        <rect x="726" y="272" width="112" height="24" rx="12" fill="#4338CA"/>
+        <text class="a2aB" x="782" y="288" fill="#FFFFFF" text-anchor="middle">COMMITTED</text>
+
+        <rect x="24" y="322" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a2aN" x="46" y="334">Score each KR 0-1. ~0.7 on stretch KRs is the healthy "sweet spot" - a Google norm to adapt, not a law. And the score never sets pay.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - one Objective, a few measurable Key Results, labelled committed or stretch</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Committed vs stretch, and the 0-1 score<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two kinds of goal live under the same framework, and confusing them is how OKRs turn toxic:</p>
+        <ul>
+          <li><strong>Committed</strong> - you are expected to fully deliver these. A score below 1.0 is a real miss and needs a conversation. These are the promises.</li>
+          <li><strong>Aspirational / stretch</strong> - deliberately ambitious "moonshots". At Google, landing a stretch goal at roughly <strong>0.7</strong> is considered success; a consistent 1.0 means you set the bar too low. Treat ~0.7 as a Google-specific norm to adapt to your context, not a universal law.</li>
+        </ul>
+        <p>The score exists to spark a conversation - what did we learn, where do we adjust - not to rank people. Wire the 0-1 score to a bonus and you kill the willingness to set ambitious stretch goals overnight, because now a miss costs money. That is exactly the rail we set in a1, and it holds here.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Why Google keeps scores off comp.</strong> Google re:Work is explicit that OKRs work precisely because they are decoupled from compensation: people set genuinely hard goals only when missing one is safe. The instant the score touches pay, everyone sandbags to protect themselves - and you lose the ambition the framework was built to unlock.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: CHANGE VS HEALTH + METRIC TREE ============ -->
+  <section class="section" id="tree">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · change vs health, and the metric tree</span>
+      <h2>OKRs measure change; KPIs measure health <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Here is the cleanest way to tell an OKR from a KPI. An <strong>OKR</strong> is what you are trying to <em>change</em> this quarter - it has a start, a target, and an end. A <strong>KPI</strong> is a vital sign you keep <em>healthy</em> forever - conversion rate, gross margin, uptime. The KPIs you promise not to let slip while you chase a goal become your <strong>guardrails</strong>. And any top-line number decomposes into a tree of levers - which is how you give every team something real to own.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Cartwheel e-commerce metric tree: revenue equals sessions times conversion rate times average order value, and each of those three branches decomposes one level further, extending to the LTV to CAC ratio of at least three to one">
+        <style>
+          .a2tT { font: 700 13.5px Inter, sans-serif; fill: #FFFFFF; }
+          .a2tS { font: 400 11px Inter, sans-serif; fill: #E0E7FF; }
+          .a2tK { font: 700 12px Inter, sans-serif; fill: #1F2937; }
+          .a2tY { font: 400 10px Inter, sans-serif; fill: #6B7280; }
+          .a2tOp { font: 800 20px Inter, sans-serif; fill: #D97706; }
+          .a2tN { font: 600 13px Inter, sans-serif; fill: #92400E; }
+        </style>
+        <!-- Revenue root -->
+        <rect x="330" y="24" width="220" height="52" rx="12" fill="#312E81"/>
+        <text class="a2tT" x="440" y="48" text-anchor="middle">Revenue</text>
+        <text class="a2tS" x="440" y="66" text-anchor="middle">the top-line outcome</text>
+
+        <!-- equals operators -->
+        <text class="a2tOp" x="205" y="120" text-anchor="middle">=</text>
+        <text class="a2tOp" x="440" y="120" text-anchor="middle">×</text>
+        <text class="a2tOp" x="675" y="120" text-anchor="middle">×</text>
+
+        <!-- connectors root to three -->
+        <path d="M 400 76 L 130 104 M 440 76 L 440 104 M 480 76 L 750 104" stroke="#818CF8" stroke-width="2" fill="none"/>
+
+        <!-- Branch 1 Sessions -->
+        <rect x="24" y="106" width="230" height="52" rx="10" fill="#4338CA"/>
+        <text class="a2tT" x="139" y="130" text-anchor="middle">Sessions</text>
+        <text class="a2tS" x="139" y="148" text-anchor="middle">how many people visit</text>
+        <!-- Branch 2 Conversion -->
+        <rect x="325" y="106" width="230" height="52" rx="10" fill="#4338CA"/>
+        <text class="a2tT" x="440" y="130" text-anchor="middle">Conversion rate</text>
+        <text class="a2tS" x="440" y="148" text-anchor="middle">how many of them buy</text>
+        <!-- Branch 3 AOV -->
+        <rect x="626" y="106" width="230" height="52" rx="10" fill="#4338CA"/>
+        <text class="a2tT" x="741" y="130" text-anchor="middle">Average order value</text>
+        <text class="a2tS" x="741" y="148" text-anchor="middle">how much each buyer spends</text>
+
+        <!-- one-level decompositions -->
+        <path d="M 139 158 L 139 186 M 440 158 L 440 186 M 741 158 L 741 186" stroke="#818CF8" stroke-width="2"/>
+
+        <rect x="24" y="188" width="230" height="46" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="a2tK" x="139" y="208" text-anchor="middle">Paid + organic + return</text>
+        <text class="a2tY" x="139" y="224" text-anchor="middle">owned by Growth / Marketing</text>
+
+        <rect x="325" y="188" width="230" height="46" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="a2tK" x="440" y="208" text-anchor="middle">Add-to-cart × checkout done</text>
+        <text class="a2tY" x="440" y="224" text-anchor="middle">owned by Product / Engineering</text>
+
+        <rect x="626" y="188" width="230" height="46" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="a2tK" x="741" y="208" text-anchor="middle">Items/order × price × mix</text>
+        <text class="a2tY" x="741" y="224" text-anchor="middle">owned by Merchandising</text>
+
+        <!-- LTV:CAC extension -->
+        <rect x="24" y="262" width="832" height="56" rx="12" fill="#FEF3C7" stroke="#D97706" stroke-width="1.4"/>
+        <text class="a2tK" x="44" y="286">Zoom out to the whole customer: LTV : CAC ≥ 3 : 1</text>
+        <text class="a2tY" x="44" y="306" style="fill:#92400E">lifetime value should be at least three times the cost to acquire - the health check on all the growth above.</text>
+
+        <rect x="24" y="332" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a2tN" x="46" y="344">Each leaf has one clear owner. Nobody owns Revenue alone - which is exactly why it is a shared outcome, not a personal grade.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - one revenue number decomposes into owned levers, down to LTV:CAC</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the tree is the fairness engine, not just a diagram<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The metric tree does more than organise numbers - it solves an fairness problem you cannot solve any other way:</p>
+        <ul>
+          <li><strong>It assigns ownership.</strong> Revenue is shared by four teams, so it is nobody's fair individual grade. But "checkout completion rate" has a clear owner in Product, and "cost per acquired customer" has one in Growth. Grade the leaf; watch the root together.</li>
+          <li><strong>It exposes the attribution problem early.</strong> When two teams both move conversion, the tree shows it - and forces the honest conversation about shared credit instead of pretending one team did it all. We take this on directly in a3.</li>
+          <li><strong>It keeps guardrails visible.</strong> Chasing "Sessions" with cheap paid traffic will quietly wreck "LTV:CAC". Because both sit on the same tree, the trade-off is impossible to hide.</li>
+        </ul>
+        <p>Revenue = Sessions × Conversion Rate × Average Order Value is the canonical e-commerce identity; the LTV:CAC ≥ 3:1 rule of thumb is an illustrative benchmark, not a guarantee. Treat the exact ratios as starting points to calibrate for Cartwheel, not gospel.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WALK-THROUGH 1 ============ -->
+  <section class="section" id="worked-1">
+    <div class="section-kicker">
+      <span class="klabel">Walk-through 1 of 2</span>
+      <h2>Is it an OKR, a KPI, or a guardrail? <span class="tag demo">★ 10 min · think it through</span></h2>
+    </div>
+    <p class="lede">A thought exercise. Take Cartwheel's numbers and sort each into the right tool. The test is simple: are you trying to change it this quarter, keep it healthy forever, or protect it while you chase something else?</p>
+
+    <div class="steps">
+      <div class="step"><p>Put four Cartwheel numbers on the table: checkout conversion, gross margin %, repeat-purchase rate, and site uptime.</p></div>
+      <div class="step"><p>Ask of each: are we deliberately moving this from a start to a target this quarter (OKR), or holding it steady as a vital sign (KPI)?</p></div>
+      <div class="step"><p>Name the guardrails: which healthy KPIs must not slip while we chase the OKR? Margin and uptime protect the conversion push.</p></div>
+      <div class="step"><p>Write the pairing out loud: "This quarter we change conversion (OKR), while we hold margin and uptime (guardrail KPIs)."</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The sort, side by side</strong>
+      <table class="clean">
+        <thead><tr><th>Cartwheel number</th><th>Tool</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Checkout conversion 2.4% → 3.0%</td><td>OKR (change)</td><td>a deliberate, time-boxed lift with a target</td></tr>
+          <tr><td>Gross margin %</td><td>KPI / guardrail (health)</td><td>kept healthy always; protects the conversion push</td></tr>
+          <tr><td>Repeat-purchase rate 22% → 35%</td><td>OKR (stretch)</td><td>a bold change this quarter, scored ~0.7 as success</td></tr>
+          <tr><td>Site uptime 99.9%</td><td>KPI / guardrail (health)</td><td>a vital sign, not a quarterly goal</td></tr>
+        </tbody>
+      </table>
+      The same number can flip roles year to year: this quarter's OKR (change conversion) becomes next year's KPI (keep conversion healthy) once you have hit the level you want.
+    </div>
+  </section>
+
+  <!-- ============ WALK-THROUGH 2 ============ -->
+  <section class="section" id="worked-2">
+    <div class="section-kicker">
+      <span class="klabel">Walk-through 2 of 2</span>
+      <h2>Give every Cartwheel team a leaf to own <span class="tag demo">★ 8 min · think it through</span></h2>
+    </div>
+    <p class="lede">Walk the metric tree from the top and hand each branch to the team that genuinely controls it. This is the move that turns one shared revenue goal into fair, owned OKRs.</p>
+
+    <div class="steps">
+      <div class="step"><p>Start at the root: Revenue. Acknowledge out loud that no single team owns it - four teams move it together.</p></div>
+      <div class="step"><p>Walk down one level: Sessions → Growth, Conversion → Product + Engineering, Average Order Value → Merchandising.</p></div>
+      <div class="step"><p>Give each team a Key Result on its own controllable leaf, not on Revenue: Growth owns cost-per-acquired-customer, Product owns checkout completion, Merchandising owns items-per-order.</p></div>
+      <div class="step"><p>Keep Revenue and LTV:CAC as the shared numbers everyone watches together in the monthly review - watched, not personally graded.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The attribution trap you just avoided.</strong> If Cartwheel had graded all four teams directly on Revenue, a great quarter for Growth could mask a broken checkout, and a heroic Engineering fix could be invisible under a soft-market dip. Grading the controllable leaf makes each team's contribution legible and fair; watching the shared root together keeps everyone rowing the same direction. a3 makes "grade the lever, watch the outcome" the explicit rule.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 25-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Write one draft Objective for your own team - a single qualitative, aspirational sentence - plus two Key Results that are genuinely measurable. Label each Key Result <strong>committed</strong> or <strong>stretch</strong>.</li>
+      <li>Sanity-check your Key Results: could you put a number on each today? If not, it is not a Key Result yet - rewrite it.</li>
+      <li>Take one top-line number your org cares about and decompose it one level into its metric tree. Note who owns each branch.</li>
+      <li>Ask of your draft: if this OKR score were wired to bonuses, would you still set the stretch goal that ambitiously? Sit with the answer - it is the reason scores stay off pay.</li>
+      <li>Optional: skim Google re:Work "Set goals with OKRs" and the KPIs-vs-OKRs note on whatmatters.com before a3.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered (cited)</h2>
+    </div>
+    <p class="lede">Taught from the OKR and e-commerce-metrics canon. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Doerr, "Measure What Matters"; Google re:Work "Set goals with OKRs"; Grove, "High Output Management"</span><span class="note">Part 1 · OKR anatomy, committed vs stretch, 0-1 scoring, ~0.7, decoupled from pay</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">E-commerce metric canon (Revenue = Sessions × CR × AOV); LTV:CAC ≥ 3:1</span><span class="note">Part 2 · change vs health, guardrails, the Cartwheel metric tree</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · What is the cleanest distinction between an OKR and a KPI?</p>
+      <button class="qopt" type="button">A · OKRs are for executives, KPIs are for staff</button>
+      <button class="qopt" type="button">B · OKRs are numbers, KPIs are words</button>
+      <button class="qopt" type="button">C · An OKR measures a change you are driving this period; a KPI measures a health level you keep steady</button>
+      <p class="qwhy">OKRs have a start, a target, and an end - they measure change. KPIs are vital signs you keep healthy over time. The KPIs you protect while chasing an OKR become your guardrails.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · At Google, landing a stretch OKR at a score of about 0.7 is treated as...</p>
+      <button class="qopt" type="button">A · A failure that should affect the person's rating</button>
+      <button class="qopt" type="button">B · Success - and it is a Google-specific norm to adapt, not a universal law</button>
+      <button class="qopt" type="button">C · Proof the goal was too ambitious and should be cut</button>
+      <p class="qwhy">On stretch goals, ~0.7 signals healthy ambition; a consistent 1.0 means the bar was set too low. It is a Google norm to calibrate for your own context - and the score never sets pay.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · In the Cartwheel metric tree, why is Revenue a poor individual grade?</p>
+      <button class="qopt" type="button">A · It is a shared outcome moved by several teams at once - no one controls it alone</button>
+      <button class="qopt" type="button">B · It is too hard to calculate accurately</button>
+      <button class="qopt" type="button">C · It changes too slowly to be useful</button>
+      <p class="qwhy">Revenue = Sessions × Conversion × AOV, and those branches belong to different teams. Grade each team on its controllable leaf; watch the shared root (and LTV:CAC) together.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>OKR anatomy</b><span>one qualitative Objective + 2-3 measurable Key Results. No number, no KR.</span></div>
+      <div class="cheat-item"><b>Committed vs stretch</b><span>committed = deliver fully; stretch = bold moonshot, ~0.7 is success.</span></div>
+      <div class="cheat-item"><b>0-1 score</b><span>sparks a learning conversation, not a rank. ~0.7 is a Google norm to adapt.</span></div>
+      <div class="cheat-item"><b>Score ≠ pay</b><span>wire it to comp and ambition dies overnight. The fairness linchpin.</span></div>
+      <div class="cheat-item"><b>Change vs health</b><span>OKRs measure change; KPIs measure health; protected KPIs = guardrails.</span></div>
+      <div class="cheat-item"><b>The metric tree</b><span>Revenue = Sessions × Conversion × AOV, extending to LTV:CAC ≥ 3:1.</span></div>
+      <div class="cheat-item"><b>Own the leaf</b><span>grade each team on its controllable branch; watch the shared root together.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>a3 - controllable levers + attribution: grade the lever, watch the outcome.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 2 of 6 · learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a1-why-measure.html">← Previous: Why we measure</a> &nbsp;·&nbsp; <a href="a3-controllable-levers.html">Next: Controllable levers + attribution →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

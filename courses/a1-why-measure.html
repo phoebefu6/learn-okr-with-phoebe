@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 1 · Why we measure - learn OKRs with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-okr-with-phoebe</a> / Leader session 1 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe · Leader track · Session 1 of 6</div>
+    <h1>Why we measure people, <span class="accent">and the trap</span></h1>
+    <p class="sub">Measurement is one of the most powerful levers a leader has - and one of the easiest to point in the wrong direction. This first session sets the whole course up honestly: the real promise of measuring people, the predictable way every good measure eventually gets gamed, and the shift in intent that turns a scoreboard into a steering wheel. We anchor lightly on Cartwheel, a mid-size online retailer, and set the promise of the whole course: measurement that builds trust instead of gaming.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Leader track</span>
+      <span class="chip audience">Leaders: C-level · upper mgmt</span>
+      <span class="chip audience">No code · concepts + decisions</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · The promise and the peril</span>
+      <span class="a3" style="flex:5">18-42 · Goodhart, Campbell, the cobra</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>What this course is really about</h2>
+    </div>
+    <p class="lede">Six leader sessions on how to measure people and teams well. Not the mechanics of a review form - the design of the whole system: what a measurement is for, how goals (OKRs) differ from health metrics (KPIs), how to grade what a person actually controls, how bias corrupts ratings, where AI helps and where it becomes surveillance, and the cadence and culture that make monitoring build trust instead of fear. Everything is illustrated on <strong>Cartwheel</strong>, a mid-size direct-to-consumer online retailer. Tonight is the foundation the other five sessions lean on: measurement can align and motivate people, or it can teach them to game the number and hide - and the difference is a matter of design, not good intentions.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Worked example (Cartwheel)</span>
+      <span class="pill inkpill">Sources covered (cited)</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A clear grip on why "what gets measured gets managed" is both true and dangerous, the two laws that guarantee any target eventually gets gamed (Goodhart and Campbell), the cobra effect as the story you will never forget, and the reframe that runs through the whole course: measure to steer and grow people, not merely to judge them.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE PROMISE AND THE PERIL ============ -->
+  <section class="section" id="two-faces">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the promise and the peril</span>
+      <h2>Measurement has two faces <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">"What gets measured gets managed" is a management adage, often attributed to Peter Drucker though he never quite said it. It is half a truth. Measure the right thing well and people align and pull in one direction. Measure the wrong thing, or measure it to judge and punish, and the same people quietly optimise for the number instead of the mission.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two faces of measurement: measured well leads to aligned and motivated people, measured badly leads to a gamed and fearful organisation">
+        <style>
+          .a1fT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .a1fX { font: 400 11.5px Inter, sans-serif; fill: #E0E7FF; }
+          .a1fG { font: 400 11.5px Inter, sans-serif; fill: #FEF3C7; }
+          .a1fH { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .a1fN { font: 600 13px Inter, sans-serif; fill: #312E81; }
+        </style>
+        <rect x="330" y="30" width="220" height="52" rx="12" fill="#EEF2FF" stroke="#4338CA" stroke-width="1.4"/>
+        <text class="a1fH" x="440" y="53" text-anchor="middle">One measurement, put in place</text>
+        <text x="440" y="72" text-anchor="middle" style="font:400 11px Inter,sans-serif;fill:#6B7280">the same number - two very different fates</text>
+
+        <path d="M 400 82 L 200 128" stroke="#4338CA" stroke-width="2" fill="none"/>
+        <path d="M 480 82 L 680 128" stroke="#991B1B" stroke-width="2" fill="none"/>
+
+        <rect x="40" y="130" width="380" height="120" rx="12" fill="#4338CA"/>
+        <text class="a1fT" x="60" y="158">Measured well</text>
+        <text class="a1fX" x="60" y="182">· measures what truly matters</text>
+        <text class="a1fX" x="60" y="203">· used to steer and to grow people</text>
+        <text class="a1fX" x="60" y="224">· paired signals, honest conversation</text>
+        <text class="a1fX" x="60" y="245" style="font:700 12px Inter,sans-serif;fill:#C7D2FE">= aligned + motivated</text>
+
+        <rect x="460" y="130" width="380" height="120" rx="12" fill="#991B1B"/>
+        <text class="a1fT" x="480" y="158">Measured badly</text>
+        <text class="a1fG" x="480" y="182" style="fill:#FEE2E2">· measures what is easy to count</text>
+        <text class="a1fG" x="480" y="203" style="fill:#FEE2E2">· used only to judge, rank, and punish</text>
+        <text class="a1fG" x="480" y="224" style="fill:#FEE2E2">· one number, high stakes, no context</text>
+        <text x="480" y="245" style="font:700 12px Inter,sans-serif;fill:#FECACA">= gamed + fearful</text>
+
+        <rect x="40" y="266" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="a1fN" x="62" y="278">Same tool, opposite outcomes. The fork is intent and design, not the metric itself.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the same measurement can align people or teach them to game it</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Measure to steer and grow, not only to judge<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>There are three honest reasons to measure a person or a team, and they pull in different directions:</p>
+        <ul>
+          <li><strong>To steer</strong> - are we on track this week, and where do we adjust? Fast, cheap, low-stakes signals.</li>
+          <li><strong>To grow</strong> - what does this person need to get better? Forward-looking and developmental.</li>
+          <li><strong>To judge</strong> - the rating, the pay, the promotion. Rare, backward-looking, high-stakes.</li>
+        </ul>
+        <p>Most measurement damage comes from letting the third purpose contaminate the first two. The instant a steering signal also decides someone's bonus, it stops being an honest signal and becomes a number to defend. We will keep pulling these apart all course - and in a4 we make it a rule.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Cartwheel's weekly conversion dashboard.</strong> Read as a steering signal, it catches a broken checkout within hours - genuinely useful. Wired to an individual's pay, it becomes a number people spin in the stand-up rather than a truth they surface. The measurement did not change; the intent behind it did, and that is enough to flip its whole effect.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: GOODHART, CAMPBELL, COBRA ============ -->
+  <section class="section" id="goodhart">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · why targets get gamed</span>
+      <h2>Goodhart's Law and the cobra effect <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">This is not a people problem you can hire around. It is a law. <strong>Goodhart's Law:</strong> "When a measure becomes a target, it ceases to be a good measure." <strong>Campbell's Law</strong> (Donald Campbell, 1979) says the same about high-stakes social metrics: the more a number is used for consequential decisions, the more it will be corrupted and the more it will distort what it was meant to track.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Goodhart's Law chart: a measure correlates with the true outcome until it becomes a rewarded target, after which the measured number keeps rising in gold while the true outcome falls in indigo">
+        <style>
+          .a1gA { font: 400 11px Inter, sans-serif; fill: #6B7280; }
+          .a1gL { font: 700 12.5px Inter, sans-serif; }
+          .a1gN { font: 600 13px Inter, sans-serif; fill: #92400E; }
+          .a1gM { font: 700 11px Inter, sans-serif; fill: #991B1B; }
+        </style>
+        <!-- axes -->
+        <line x1="90" y1="60" x2="90" y2="252" stroke="#D1D5DB" stroke-width="1.4"/>
+        <line x1="90" y1="252" x2="840" y2="252" stroke="#D1D5DB" stroke-width="1.4"/>
+        <text class="a1gA" x="90" y="272" text-anchor="middle">measure introduced</text>
+        <text class="a1gA" x="840" y="272" text-anchor="end">time →</text>
+        <text class="a1gA" x="70" y="66" text-anchor="end">high</text>
+        <text class="a1gA" x="70" y="250" text-anchor="end">low</text>
+
+        <!-- target marker -->
+        <line x1="400" y1="60" x2="400" y2="252" stroke="#991B1B" stroke-width="1.4" stroke-dasharray="5 4"/>
+        <rect x="300" y="30" width="200" height="24" rx="6" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="a1gM" x="400" y="46" text-anchor="middle">becomes a rewarded target</text>
+
+        <!-- true outcome (indigo): rises then falls -->
+        <path d="M 90 210 L 250 160 L 400 128 L 560 165 L 700 205 L 840 232" fill="none" stroke="#4338CA" stroke-width="3"/>
+        <!-- measured number (gold): rises, keeps rising -->
+        <path d="M 90 210 L 250 160 L 400 128 L 560 92 L 700 72 L 840 60" fill="none" stroke="#D97706" stroke-width="3" stroke-dasharray="1 0"/>
+
+        <circle cx="400" cy="128" r="4" fill="#1F2937"/>
+
+        <!-- line labels -->
+        <rect x="612" y="66" width="176" height="20" rx="5" fill="#FEF3C7"/>
+        <text class="a1gL" x="620" y="80" style="fill:#92400E">the measured number ↑</text>
+        <rect x="612" y="214" width="176" height="20" rx="5" fill="#EEF2FF"/>
+        <text class="a1gL" x="620" y="228" style="fill:#312E81">the true outcome ↓</text>
+
+        <text class="a1gA" x="240" y="120" text-anchor="middle">they track together...</text>
+
+        <rect x="90" y="300" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a1gN" x="112" y="312">Before the target, the measure and the goal move together. After, effort shifts to the number - and the two diverge.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - once a measure is rewarded, the number climbs while the real outcome slips</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The cobra effect - the story you will not forget<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Colonial Delhi had a cobra problem, so the administration offered a bounty for every dead cobra brought in. It worked - briefly. Then enterprising residents began <strong>breeding cobras</strong> to collect the bounty. When officials realised and cancelled the scheme, the breeders released their now-worthless snakes, and the wild cobra population ended up <em>higher</em> than before. The measure ("dead cobras handed in") became the target, people optimised the measure rather than the goal, and the goal moved backwards.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Cartwheel's own cobra.</strong> Reward the support team purely on "tickets closed" and you breed cobras: agents close tickets fast, reopen counts climb, and customer satisfaction quietly falls. The number went up. The thing you actually cared about went down. Every metric you attach a reward to is a bounty - always ask what someone would breed to collect it.</p>
+        </div>
+        <div class="callout tip">
+          <strong>The leader's defence, in one line</strong>
+          You cannot repeal Goodhart's Law - you design around it. Measure what matters (not what is easy to count), pair every quantity metric with a quality one so gaming shows up, keep single numbers off high-stakes decisions, and grade what a person controls. The rest of this course is that defence, built out.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WALK-THROUGH 1 ============ -->
+  <section class="section" id="worked-1">
+    <div class="section-kicker">
+      <span class="klabel">Walk-through 1 of 2</span>
+      <h2>Spot the cobra in a Cartwheel target <span class="tag demo">★ 10 min · think it through</span></h2>
+    </div>
+    <p class="lede">A thought exercise, not a form to fill. Take a target a leadership team might set and predict, out loud, exactly how a rational person would game it - before it ever ships.</p>
+
+    <div class="steps">
+      <div class="step"><p>The target on the table: Cartwheel's VP of Growth proposes rewarding the marketing team on <strong>"number of new sign-ups this quarter"</strong>.</p></div>
+      <div class="step"><p>Run the Goodhart test: if this number alone earns the reward, what is the cheapest way to move it without moving the real goal?</p></div>
+      <div class="step"><p>Name the cobras: buy low-quality traffic, incentivise throwaway accounts, run a sweepstakes that attracts non-buyers. Sign-ups soar; paying customers do not.</p></div>
+      <div class="step"><p>Design the defence: pair the quantity ("sign-ups") with a quality guardrail ("sign-ups that place a first order within 30 days"), and watch the two together - never one alone.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The pattern, side by side</strong>
+      <table class="clean">
+        <thead><tr><th>If you reward only...</th><th>The cobra people breed</th><th>Pair it with</th></tr></thead>
+        <tbody>
+          <tr><td>Sign-ups</td><td>junk accounts, sweepstakes traffic</td><td>activated sign-ups (first order in 30 days)</td></tr>
+          <tr><td>Tickets closed</td><td>close-and-reopen, rushing customers</td><td>CSAT + first-contact resolution</td></tr>
+          <tr><td>Revenue this month</td><td>deep discounts that wreck margin</td><td>revenue at healthy margin</td></tr>
+        </tbody>
+      </table>
+      Every reward is a bounty. The question is never "is this a good number?" but "what would a smart, tired person do to move it cheaply?"
+    </div>
+  </section>
+
+  <!-- ============ WALK-THROUGH 2 ============ -->
+  <section class="section" id="worked-2">
+    <div class="section-kicker">
+      <span class="klabel">Walk-through 2 of 2</span>
+      <h2>Sort measures into steer, grow, or judge <span class="tag demo">★ 8 min · think it through</span></h2>
+    </div>
+    <p class="lede">Most measurement pain is a purpose mix-up: a good steering signal doing a judging job it was never built for. Practise the sort on Cartwheel before you do it on your own org.</p>
+
+    <div class="steps">
+      <div class="step"><p>Take three Cartwheel numbers: weekly conversion rate, an engineer's code-review turnaround, and the annual performance rating.</p></div>
+      <div class="step"><p>For each, decide its honest primary job - steer (on track?), grow (how to coach?), or judge (rating and pay).</p></div>
+      <div class="step"><p>Flag any number being used for a job it is bad at: conversion rate as an individual's pay input is the classic trap - nobody controls it alone.</p></div>
+      <div class="step"><p>Decide the fix: keep conversion as a shared steering signal, move judgment to things the person genuinely controls, and never let a stretch target set a bonus.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The same number, three uses, three fates.</strong> Cartwheel's conversion rate is an excellent steering signal, a useful development lens for Product, and a terrible individual pay metric. The number is not the problem - asking one number to steer, grow, and judge all at once is. Separate the jobs and the number becomes trustworthy again. This is the single move that survives the whole course, and a4 turns it into a hard rail.</p>
+    </div>
+  </section>
+
+  <!-- ============ HONESTY RAIL ============ -->
+  <section class="section" id="honesty">
+    <div class="section-kicker">
+      <span class="klabel">The honest rule up front</span>
+      <h2>An OKR score is for steering, never for pay <span class="tag concept">read this</span></h2>
+    </div>
+    <p class="lede">Before we have even written an OKR, plant the linchpin of the whole course: an OKR score exists to help a team steer and learn - to answer "are we on track and what did we learn?" It must never be wired directly to compensation or a rating. The moment it is, people set safe goals, sandbag, and defend the number instead of chasing the mission. We build this out properly in a4 (fair-measurement principles); for now, just hold it as a promise: <strong>measurement that builds trust instead of gaming</strong>.</p>
+    <div class="callout win">
+      <strong>The course promise</strong>
+      By session six you will be able to design a measurement system for a team that people trust enough to be honest inside - one that steers the work, grows the people, and judges fairly, with those three jobs kept deliberately apart.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 25-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Name three things your organisation measures people on. For <em>each</em>, write down the single cheapest way a rational person could game it. If the cheapest game is easy, you have found a cobra.</li>
+      <li>Pick the one you would least want gamed. What quality guardrail could you pair it with so gaming shows up immediately?</li>
+      <li>Take one number your org treats as high-stakes (it drives pay or promotion). Ask honestly: is it steering, growing, or judging - and is it any good at the job it is actually used for?</li>
+      <li>Optional: read a short summary of Goodhart's Law and Campbell's Law before a2, and keep the cobra story in your pocket for the next planning meeting.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered (cited)</h2>
+    </div>
+    <p class="lede">Taught from the measurement-and-incentives canon. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Goodhart's Law; Campbell's Law (Campbell, 1979); the cobra effect</span><span class="note">Part 2 · why any rewarded target eventually gets gamed</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Grove, "High Output Management"; Doerr, "Measure What Matters"</span><span class="note">Parts 0-1 · measure to steer and grow, the OKR mindset (built out in a2, a4)</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · "What gets measured gets managed" is best described as...</p>
+      <button class="qopt" type="button">A · A proven scientific law of organisations</button>
+      <button class="qopt" type="button">B · A management adage that is half-true - and dangerous if you forget the other half</button>
+      <button class="qopt" type="button">C · A rule that only applies to financial metrics</button>
+      <p class="qwhy">It is a widely-repeated adage (often mis-attributed to Drucker), not a law. Measure the right thing well and it aligns people; measure the wrong thing, or measure to punish, and people game the number instead.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Goodhart's Law says that when a measure becomes a target...</p>
+      <button class="qopt" type="button">A · It becomes more accurate over time</button>
+      <button class="qopt" type="button">B · It should be rewarded more heavily</button>
+      <button class="qopt" type="button">C · It ceases to be a good measure, because effort shifts to the number itself</button>
+      <p class="qwhy">Once a measure is rewarded, people optimise the measure rather than the underlying goal, and the two diverge - the measured number climbs while the true outcome can fall.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · The cobra effect is a vivid example of...</p>
+      <button class="qopt" type="button">A · A reward scheme producing the opposite of its goal by rewarding the metric, not the outcome</button>
+      <button class="qopt" type="button">B · Why measurement should be avoided entirely</button>
+      <button class="qopt" type="button">C · A statistical error in counting</button>
+      <p class="qwhy">Bounties on dead cobras led to cobra breeding; cancelling the scheme freed the snakes and left more cobras than before. Rewarding the measure ("cobras handed in") moved the real goal backwards.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Two faces</b><span>the same measure can align people or teach them to game it - the fork is intent and design.</span></div>
+      <div class="cheat-item"><b>"Measured = managed"</b><span>a management adage, not a law. Half-true and dangerous if you forget the other half.</span></div>
+      <div class="cheat-item"><b>Goodhart's Law</b><span>when a measure becomes a target, it stops being a good measure.</span></div>
+      <div class="cheat-item"><b>Campbell's Law</b><span>the higher the stakes on a metric, the more it gets corrupted and distorts.</span></div>
+      <div class="cheat-item"><b>The cobra effect</b><span>reward the metric, not the outcome, and people breed cobras. Every reward is a bounty.</span></div>
+      <div class="cheat-item"><b>Measure to steer + grow</b><span>not merely to judge. Keep steering, development, and reward on separate tracks.</span></div>
+      <div class="cheat-item"><b>OKR scores ≠ pay</b><span>the fairness linchpin, planted here, made a rule in a4.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>a2 - OKRs vs KPIs vs metrics: change vs health, and the Cartwheel metric tree.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 1 of 6 · learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a2-okrs-vs-kpis.html">Next: OKRs vs KPIs vs metrics →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

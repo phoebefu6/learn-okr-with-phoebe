@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 4 · Fair-measurement principles - learn OKRs with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-okr-with-phoebe</a> / Leader session 4 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe · Leader track · Session 4 of 6</div>
+    <h1>Fair-measurement principles: <span class="accent">why "objective" scores often are not</span></h1>
+    <p class="sub">Leaders trust ratings because they arrive as numbers, and numbers feel objective. The research says otherwise: more than half the variance in a performance rating is about the rater, not the person being rated. This session covers the idiosyncratic rater effect, the everyday biases that distort scores, the bias baked into feedback language, and the finding that a fair process builds more trust than a favourable outcome - ending on the linchpin: decouple OKR scores from pay.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">Leaders: C-level · upper mgmt</span>
+      <span class="chip audience">No code · concepts + decisions</span>
+      <span class="chip time">~25 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:5">3-20 · The rater effect + bias</span>
+      <span class="a3" style="flex:4">20-38 · Justice + decoupling</span>
+      <span class="a4" style="flex:1">38-42 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">In a3 we decomposed shared goals so each team is graded on a lever it controls. But even a perfectly-owned metric is scored by a human, and humans are not measuring instruments. Today we look at how measurement actually goes wrong: a rating tells you as much about the manager who gave it as the person who received it; a handful of predictable biases skew every score; and the very language of feedback is unequal - women, on the research, receive about twice as much vague, personality-based feedback as men. Then the constructive half: what "fair" actually means (it is mostly about process, not outcome), why development and evaluation must not share a form, and the rule that protects all of it - an OKR score never sets pay.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Worked example (Cartwheel)</span>
+      <span class="pill inkpill">Sources covered (cited)</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you take away today</strong>
+      A leader's eye for the four ways scores go unfair - rater idiosyncrasy, everyday bias, skewed feedback language, and process injustice - plus two design rules: split measuring-for-development from measuring-for-reward, and keep OKR scores decoupled from pay so people stay honest.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: RATER EFFECT + BIAS ============ -->
+  <section class="section" id="rater">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the rating measures the rater</span>
+      <h2>Most of a score is about the person giving it <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">The single most uncomfortable finding in performance measurement: when you decompose the variance in ratings, the largest chunk is the rater's own idiosyncrasy, not the ratee's performance. The "objective number" is mostly a fingerprint of who happened to hold the pen.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A single stacked bar breaking down what a performance rating actually measures: roughly 55 percent is the idiosyncratic rater effect, about 21 percent is the ratee's actual performance, and the rest is situation and random error.">
+        <style>
+          .a4rH { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .a4rT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .a4rP { font: 400 11px Inter, sans-serif; fill: #FEF3C7; }
+          .a4rW { font: 400 11px Inter, sans-serif; fill: #E0E7FF; }
+          .a4rG { font: 400 11px Inter, sans-serif; fill: #374151; }
+          .a4rN { font: 600 12.5px Inter, sans-serif; fill: #92400E; }
+        </style>
+
+        <text class="a4rH" x="24" y="30">What a performance rating actually measures</text>
+
+        <!-- stacked bar -->
+        <rect x="24" y="52" width="466" height="66" fill="#D97706"/>
+        <text class="a4rT" x="44" y="82">Rater idiosyncrasy</text>
+        <text class="a4rP" x="44" y="102">~55% of the variance</text>
+
+        <rect x="490" y="52" width="175" height="66" fill="#4338CA"/>
+        <text class="a4rT" x="506" y="82">Actual</text>
+        <text class="a4rW" x="506" y="102">~21%</text>
+
+        <rect x="665" y="52" width="191" height="66" fill="#9CA3AF"/>
+        <text class="a4rT" x="681" y="82" style="fill:#1F2937">Situation + error</text>
+        <text class="a4rG" x="681" y="102">~24%</text>
+
+        <!-- legend line -->
+        <text class="a4rG" x="24" y="150">The gold block is the manager, not the employee. Only the indigo block is the person being rated.</text>
+
+        <!-- source note -->
+        <rect x="24" y="176" width="832" height="40" rx="9" fill="#FEF3C7" stroke="#D97706" stroke-width="1.3"/>
+        <text class="a4rN" x="44" y="201">Scullen, Mount &amp; Goff (2000) found 50-60% of rating variance is the rater - so one score from one manager is a weak signal.</text>
+
+        <!-- bottom note -->
+        <rect x="24" y="228" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a4rN" x="46" y="240">The fix is not "try to be objective" - it is multiple raters, calibration, and never trusting a single number.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the rating measures the rater more than the ratee</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The five biases that quietly bend every score<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>On top of rater idiosyncrasy sit predictable, well-documented biases. Naming them is the first defence:</p>
+        <ul>
+          <li><strong>Recency</strong> - the last few weeks dominate a whole year's rating.</li>
+          <li><strong>Halo</strong> - one strong trait (or a good relationship) spills over and inflates everything else.</li>
+          <li><strong>Similarity / affinity</strong> - raters score people who resemble them more generously.</li>
+          <li><strong>Leniency vs central tendency</strong> - some managers rate everyone high; others cluster everyone in the safe middle. Two employees with identical work get different numbers from different managers.</li>
+        </ul>
+        <p>None of these are cured by asking managers to "be fair." They are cured by process: more than one rater, calibration across managers, evidence over impressions, and structured rather than free-form scoring.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Bias hides in the words, not just the score<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Even before a number is assigned, the <em>language</em> of feedback is unequal. Correll &amp; Simard (HBR 2016), drawing on the Textio review-bias work, found that women receive markedly more vague, personality-based feedback ("you're great to work with," "a bit abrasive") while men receive more specific, skill-based, actionable feedback ("tighten your financial modelling"). Reported figures put the vague-feedback gap at roughly two to one.</p>
+        <p>This matters to a leader for a hard reason: <strong>vague feedback cannot be acted on.</strong> If one group systematically gets feedback they cannot use to improve, the measurement system is quietly widening a gap rather than closing it - regardless of what the final scores say. Fair measurement audits the words, not only the numbers.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: JUSTICE + DECOUPLING ============ -->
+  <section class="section" id="justice">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · what fairness actually is</span>
+      <h2>People accept a hard outcome from a fair process <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Ask people what "fair" means and they say "I got what I deserved." The research on organizational justice (Greenberg 1987) says something more useful for leaders: how you decide often matters more than what you decide. A fair process buys trust even when the answer disappoints.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three pillars of organizational justice standing on a shared base: distributive justice (was the outcome fair), procedural justice (was the process fair, consistent and unbiased), and interactional justice (was I treated with respect and given honest reasons), with a note that a fair process builds trust even when the outcome disappoints.">
+        <style>
+          .a4jH { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .a4jT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .a4jS { font: 400 10.5px Inter, sans-serif; fill: #E0E7FF; }
+          .a4jX { font: 400 10.5px Inter, sans-serif; fill: #FEF3C7; }
+          .a4jB { font: 700 12px Inter, sans-serif; fill: #1F2937; }
+          .a4jN { font: 600 12.5px Inter, sans-serif; fill: #312E81; }
+        </style>
+
+        <text class="a4jH" x="24" y="28">The three justices - and the one that builds the most trust</text>
+
+        <!-- pillar 1 distributive -->
+        <rect x="60" y="52" width="220" height="150" rx="8" fill="#818CF8"/>
+        <text class="a4jT" x="170" y="86" text-anchor="middle">Distributive</text>
+        <text class="a4jS" x="170" y="112" text-anchor="middle">Was the outcome fair?</text>
+        <text class="a4jS" x="170" y="132" text-anchor="middle">the rating, raise,</text>
+        <text class="a4jS" x="170" y="150" text-anchor="middle">promotion itself</text>
+
+        <!-- pillar 2 procedural (highlighted gold) -->
+        <rect x="330" y="52" width="220" height="150" rx="8" fill="#D97706"/>
+        <text class="a4jT" x="440" y="86" text-anchor="middle">Procedural</text>
+        <text class="a4jX" x="440" y="112" text-anchor="middle">Was the process fair?</text>
+        <text class="a4jX" x="440" y="132" text-anchor="middle">consistent, unbiased,</text>
+        <text class="a4jX" x="440" y="150" text-anchor="middle">and I had a voice</text>
+
+        <!-- pillar 3 interactional -->
+        <rect x="600" y="52" width="220" height="150" rx="8" fill="#818CF8"/>
+        <text class="a4jT" x="710" y="86" text-anchor="middle">Interactional</text>
+        <text class="a4jS" x="710" y="112" text-anchor="middle">Was I treated well?</text>
+        <text class="a4jS" x="710" y="132" text-anchor="middle">respect + honest,</text>
+        <text class="a4jS" x="710" y="150" text-anchor="middle">clear reasons given</text>
+
+        <!-- shared base -->
+        <rect x="24" y="210" width="832" height="30" rx="7" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="a4jB" x="440" y="230" text-anchor="middle">Perceived fairness of the whole system</text>
+
+        <!-- bottom note -->
+        <rect x="24" y="262" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a4jN" x="46" y="274">A fair process (gold) builds trust even when the outcome disappoints. Get the process right first.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - distributive, procedural, and interactional justice</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Development and ranking should not share a form<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Measuring to <strong>develop</strong> a person and measuring to <strong>rank</strong> them for reward are opposite activities wearing the same word. Development needs honesty about weaknesses; ranking punishes admitting them. Put both on one form and people manage the number instead of telling you the truth - so you lose the coaching data <em>and</em> the ranking is corrupted by defensiveness.</p>
+        <p>The linchpin that keeps the whole system honest is Doerr's rule from <em>Measure What Matters</em>: <strong>decouple OKR scores from pay and ratings.</strong> When an OKR score does not decide compensation, people set ambitious goals and report progress truthfully - because there is no penalty for a stretch goal landing at 0.7. Wire the score to pay and everyone sandbags: they set goals they know they will hit, and your measurement system stops measuring anything real.</p>
+        <p>None of this means abandoning evaluation - reward decisions still have to be made. It means making them from a broader body of evidence (calibrated ratings, a manager's holistic judgment, sustained results over time) rather than from a raw OKR score. The OKR feeds the conversation; it does not automate the verdict.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WALK-THROUGH 1 ============ -->
+  <section class="section" id="worked-1">
+    <div class="section-kicker">
+      <span class="klabel">Walk-through 1 of 2</span>
+      <h2>Spot the rater, not the ratee, in a Cartwheel review <span class="tag demo">★ Worked example (Cartwheel) · 10 min</span></h2>
+    </div>
+    <p class="lede">Two Cartwheel managers rate the same analyst on the same quarter. Watch how much of the gap is about them, not her.</p>
+
+    <div class="steps">
+      <div class="step"><p>Manager A (a lenient rater who saw her strong March) scores the analyst 4.6 / 5. Manager B (a central-tendency rater who remembers a missed April deadline) scores her 3.2 / 5.</p></div>
+      <div class="step"><p>Same person, same work, a 1.4-point gap. Most of that gap is rater idiosyncrasy plus recency, not a change in her performance.</p></div>
+      <div class="step"><p>The fair response is not to average two noisy numbers - it is to add process: a second reviewer, calibration across managers, and evidence tied to specific outcomes.</p></div>
+      <div class="step"><p>Report her result as target + trend + context, never as a single verdict number that hides which rater produced it.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>Same analyst, two raters</strong>
+      <table class="clean">
+        <thead><tr><th>Signal</th><th>Manager A</th><th>Manager B</th></tr></thead>
+        <tbody>
+          <tr><td>Score given</td><td>4.6 / 5</td><td>3.2 / 5</td></tr>
+          <tr><td>Rater tendency</td><td>lenient</td><td>central / strict</td></tr>
+          <tr><td>What they anchored on</td><td>strong March (recency)</td><td>missed April deadline (recency)</td></tr>
+          <tr><td>Actual performance signal</td><td colspan="2">unchanged - the gap is mostly the rater</td></tr>
+        </tbody>
+      </table>
+      One manager, one number is a weak signal. Calibration and multiple raters turn noise into something you can trust.
+    </div>
+  </section>
+
+  <!-- ============ WALK-THROUGH 2 ============ -->
+  <section class="section" id="worked-2">
+    <div class="section-kicker">
+      <span class="klabel">Walk-through 2 of 2</span>
+      <h2>Rewrite vague feedback into something usable <span class="tag demo">★ Thought exercise · 8 min</span></h2>
+    </div>
+    <p class="lede">Vague, personality-based feedback is not just unfair - it is useless, because it cannot be acted on. The leadership skill is turning an impression into a specific, actionable observation. Watch the move.</p>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Before:</strong> "She's great to work with but can be a bit abrasive in meetings." This is personality-based, vague, and impossible to improve against - and it is exactly the kind of language the research finds women receive far more often.</p>
+      <p><strong>After:</strong> "In the last two planning meetings she interrupted colleagues three times before they finished. Next quarter, hold questions until the speaker is done, then summarise their point before adding yours." Specific, behavioural, time-bound, and actionable - the same message made fair.</p>
+      <p>The test for any line of feedback: could the person do something differently tomorrow because of it? If not, it is describing your impression, not their behaviour.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><p>Strip out the personality label ("abrasive," "great," "not a team player") - it describes the rater's impression, not a behaviour.</p></div>
+      <div class="step"><p>Replace it with the specific behaviour, when it happened, and its effect.</p></div>
+      <div class="step"><p>Add a concrete, doable next step so the person can actually improve against it.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Find one recent performance review you wrote or received. Highlight every vague or personality-based phrase ("great," "abrasive," "not strategic enough").</li>
+      <li>Rewrite each highlighted line into a specific, behavioural, actionable version: what happened, its effect, and a concrete next step.</li>
+      <li>Count the ratio - how much of the original review was actionable versus impression? Note the gap.</li>
+      <li>List which of the five biases (recency, halo, similarity, leniency, central tendency) you are personally most prone to as a rater.</li>
+      <li>Pick one score in your org that is currently wired to pay. Sketch how you would decouple it - what the score would inform instead, and what evidence would drive the reward decision.</li>
+      <li>Optional: read Correll &amp; Simard, "Vague Feedback Is Holding Women Back" (HBR 2016) before a5.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered (cited)</h2>
+    </div>
+    <p class="lede">Taught from the fair-measurement and organizational-justice canon. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Scullen, Mount &amp; Goff (2000), J. Applied Psychology</span><span class="note">Part 1 · idiosyncratic rater effect - 50-60% of rating variance is the rater</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Greenberg (1987), "A Taxonomy of Organizational Justice Theories," AMR</span><span class="note">Part 2 · distributive, procedural, and interactional justice</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Correll &amp; Simard (HBR 2016); Textio review-bias report</span><span class="note">Part 1 · gender bias in feedback language, ~2x more vague feedback for women</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · According to Scullen, Mount &amp; Goff (2000), what does most of a performance rating measure?</p>
+      <button class="qopt" type="button">A · The employee's actual performance</button>
+      <button class="qopt" type="button">B · The rater - their idiosyncrasy accounts for 50-60% of the variance</button>
+      <button class="qopt" type="button">C · The difficulty of the goal</button>
+      <p class="qwhy">More than half the variance in ratings is the rater, not the ratee. A single score from a single manager is a weak signal - the fix is multiple raters and calibration.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Greenberg's research suggests that what builds trust most is often...</p>
+      <button class="qopt" type="button">A · A more favourable outcome for the employee</button>
+      <button class="qopt" type="button">B · A larger raise</button>
+      <button class="qopt" type="button">C · A fair process - people accept a hard outcome if the process was fair</button>
+      <p class="qwhy">Procedural justice frequently matters more than the outcome itself. A consistent, unbiased process where the person had a voice builds trust even when the answer disappoints.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Why must OKR scores stay decoupled from pay?</p>
+      <button class="qopt" type="button">A · Because wiring scores to pay makes people sandbag goals and stop reporting honestly</button>
+      <button class="qopt" type="button">B · Because OKRs are too hard to measure</button>
+      <button class="qopt" type="button">C · Because pay is decided annually</button>
+      <p class="qwhy">Doerr's linchpin: when an OKR score does not set compensation, people set ambitious goals and report truthfully. Tie it to pay and they set safe goals they know they will hit.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The rating measures the rater</b><span>50-60% of score variance is the rater, not the ratee (Scullen &amp; Mount 2000).</span></div>
+      <div class="cheat-item"><b>Five biases</b><span>recency, halo, similarity/affinity, leniency, central tendency.</span></div>
+      <div class="cheat-item"><b>Bias in the words</b><span>women get ~2x more vague, personality-based feedback that cannot be acted on.</span></div>
+      <div class="cheat-item"><b>Three justices</b><span>distributive (outcome), procedural (process), interactional (respect).</span></div>
+      <div class="cheat-item"><b>Process beats outcome</b><span>a fair process builds trust even when the answer disappoints.</span></div>
+      <div class="cheat-item"><b>Develop vs rank</b><span>never put coaching and reward on the same form - it corrupts both.</span></div>
+      <div class="cheat-item"><b>Decouple from pay</b><span>OKR scores steer and teach; tie them to pay and people sandbag.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>a5 - AI in measurement: support vs surveillance, and the legal red lines.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 4 of 6 · learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a5-ai-in-measurement.html">Next: AI in measurement →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

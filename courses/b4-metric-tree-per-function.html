@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 4 · Metric tree per function - learn OKRs with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-okr-with-phoebe</a> / Manager session 4 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe · Manager track · Session 4 of 10</div>
+    <h1>The metric tree per function: <span class="accent">a fair OKR for every team</span></h1>
+    <p class="sub">One company, one North Star - but a dozen teams, each of which controls only a slice of it. This session builds the Cartwheel metric tree and hands every function its own Objective plus two or three Key Results on a lever it actually controls. Then it fixes the hardest problem in the whole course: the shared outcome that no single team owns. Grade the lever; watch the North Star together.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Manager track</span>
+      <span class="chip audience">Managers: middle mgmt · team leads</span>
+      <span class="chip audience">No code · templates + worked examples</span>
+      <span class="chip time">~45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:4">3-20 · The tree + controllability</span>
+      <span class="a3" style="flex:5">20-42 · Worked example: OKR per function</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>From "one fair metric" to "a fair metric per team"</h2>
+    </div>
+    <p class="lede">You can now write a good OKR (b2) and judge whether a metric is fair to grade on (b3). The problem is that a company does not have one metric - it has a tree. Cartwheel's revenue decomposes into <strong>Sessions × Conversion Rate × Average Order Value</strong>, and each branch splits again into levers that different teams own. Tonight you give every function an Objective and two to three Key Results on a lever it <strong>controls</strong>, with a note on why that lever is fair for that team. Then the attribution rule: the shared North Star is watched jointly, never dropped on one team's scorecard. The linchpin still holds - none of these scores feed pay.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Worked example (Cartwheel)</span>
+      <span class="pill inkpill">Sources covered (cited)</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The Cartwheel metric tree with each branch tagged by its owning team, a per-function OKR table for Growth, Product, Engineering, Operations, Support, Merchandising, and Data, the controllability note that keeps each one fair, the DORA four for Engineering (and why lines-of-code is a trap), and the attribution rule that puts the shared North Star under joint ownership.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE TREE + OWNERSHIP ============ -->
+  <section class="section" id="tree">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the tree</span>
+      <h2>Decompose the North Star, then hand out the branches <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">The e-commerce metric tree is the map. Revenue per visitor is the trunk; it factors into sessions, conversion, and order value; each factor breaks into levers a specific team can move. Fairness comes from handing each team the branch it controls - not the trunk.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Cartwheel metric tree: revenue per visitor at the top factors into sessions owned by Growth, conversion rate owned by Product, and average order value owned by Merchandising, with delivery and support levers owned by Operations and CX, and each branch tagged with its owning team">
+        <style>
+          .b4tT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b4tX { font: 400 10.5px Inter, sans-serif; fill: #E0E7FF; }
+          .b4tI { font: 700 12px Inter, sans-serif; fill: #1F2937; }
+          .b4tXk { font: 400 10.5px Inter, sans-serif; fill: #6B7280; }
+          .b4tTag { font: 700 10.5px Inter, sans-serif; fill: #92400E; }
+          .b4tN { font: 600 12.5px Inter, sans-serif; fill: #312E81; }
+        </style>
+        <!-- trunk -->
+        <rect x="320" y="30" width="240" height="56" rx="12" fill="#312E81"/>
+        <text class="b4tT" x="340" y="55">North Star</text>
+        <text class="b4tX" x="340" y="74">Revenue per visitor (shared)</text>
+        <!-- connectors -->
+        <path d="M440 86 L150 130" stroke="#D1D5DB" fill="none"/>
+        <path d="M440 86 L440 130" stroke="#D1D5DB" fill="none"/>
+        <path d="M440 86 L730 130" stroke="#D1D5DB" fill="none"/>
+        <!-- three factors -->
+        <rect x="40" y="130" width="220" height="58" rx="10" fill="#4338CA"/>
+        <text class="b4tT" x="58" y="154">Sessions</text>
+        <text class="b4tX" x="58" y="174">visits × traffic quality</text>
+        <rect x="330" y="130" width="220" height="58" rx="10" fill="#4338CA"/>
+        <text class="b4tT" x="348" y="154">Conversion rate</text>
+        <text class="b4tX" x="348" y="174">visitors → buyers</text>
+        <rect x="620" y="130" width="220" height="58" rx="10" fill="#4338CA"/>
+        <text class="b4tT" x="638" y="154">Average order value</text>
+        <text class="b4tX" x="638" y="174">basket size × mix</text>
+        <!-- owner tags -->
+        <rect x="40" y="200" width="220" height="46" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="b4tTag" x="58" y="220">owned by GROWTH</text>
+        <text class="b4tXk" x="58" y="238">CAC, ROAS, non-paid sessions</text>
+        <rect x="330" y="200" width="220" height="46" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="b4tTag" x="348" y="220">owned by PRODUCT</text>
+        <text class="b4tXk" x="348" y="238">checkout completion, activation</text>
+        <rect x="620" y="200" width="220" height="46" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="b4tTag" x="638" y="220">owned by MERCH</text>
+        <text class="b4tXk" x="638" y="238">AOV, category margin, sell-through</text>
+        <!-- supporting branches -->
+        <rect x="40" y="262" width="380" height="44" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b4tI" x="58" y="282">Delivery + cost per order → OPERATIONS</text>
+        <text class="b4tXk" x="58" y="298">on-time delivery, inventory turns</text>
+        <rect x="460" y="262" width="380" height="44" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b4tI" x="478" y="282">Service quality → SUPPORT / CX</text>
+        <text class="b4tXk" x="478" y="298">CSAT, first-contact resolution</text>
+        <rect x="40" y="318" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="b4tN" x="62" y="330">Each team owns its branch. The trunk (revenue per visitor) stays shared - it is watched, not graded on any one team.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the Cartwheel metric tree, each branch tagged by its owning team</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Controllability is the fairness test for a branch<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A branch is fair to grade a team on only if the team can actually move it. Two quick checks:</p>
+        <ul>
+          <li><strong>Does the team hold the lever?</strong> Growth owns spend and channel mix, so CAC and ROAS are fair. Growth does not own the checkout page, so grading Growth on site conversion rate is measuring someone else's work.</li>
+          <li><strong>Is the lever mostly free of other teams' effects?</strong> The cleaner the ownership, the fairer the grade. Where two teams share a lever, either split it into sub-levers each can own, or move it up to the "watched together" line.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The conversion-rate blame game.</strong> Before the tree, Cartwheel graded Growth on conversion rate. Growth drove more traffic, conversion dipped (new visitors convert lower), and Growth "failed" for succeeding. The tree fixed it: Growth owns sessions and traffic quality; Product owns the conversion of that traffic. Same company, two fair grades instead of one unfair one.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: ENGINEERING + ATTRIBUTION ============ -->
+  <section class="section" id="dora">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · engineering + the shared outcome</span>
+      <h2>DORA for Engineering, joint ownership for the North Star <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Engineering is where bad metrics do the most damage. Counting <strong>lines of code</strong> rewards bloat, punishes deletion, and - now that AI generates code by the screenful - measures almost nothing. The DORA metrics measure the flow of value instead, and they are self-checking: speed is held honest by stability.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DORA as a self-checking system: deploy frequency and lead time measure speed, while change-failure rate and time-to-restore hold that speed honest, so a team cannot game one without the paired metric exposing it, contrasted with lines of code which is meaningless">
+        <style>
+          .b4dT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b4dX { font: 400 11px Inter, sans-serif; fill: #E0E7FF; }
+          .b4dI { font: 700 12px Inter, sans-serif; fill: #1F2937; }
+          .b4dXk { font: 400 11px Inter, sans-serif; fill: #6B7280; }
+          .b4dBad { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+          .b4dN { font: 600 12.5px Inter, sans-serif; fill: #312E81; }
+        </style>
+        <!-- speed pair -->
+        <rect x="40" y="40" width="360" height="46" rx="10" fill="#4338CA"/>
+        <text class="b4dT" x="58" y="60">Speed</text>
+        <text class="b4dX" x="58" y="78">Deploy frequency · lead time for changes</text>
+        <!-- honesty arrow -->
+        <path d="M400 63 L480 63" stroke="#D97706" stroke-width="2" fill="none" marker-end="url(#b4dArr)"/>
+        <path d="M480 90 L400 90" stroke="#D97706" stroke-width="2" fill="none" marker-end="url(#b4dArr2)"/>
+        <defs>
+          <marker id="b4dArr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#D97706"/></marker>
+          <marker id="b4dArr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#D97706"/></marker>
+        </defs>
+        <text class="b4dTag" x="405" y="112" style="font:700 10px Inter,sans-serif;fill:#92400E">held honest by</text>
+        <!-- stability pair -->
+        <rect x="480" y="40" width="360" height="46" rx="10" fill="#818CF8"/>
+        <text class="b4dT" x="498" y="60">Stability</text>
+        <text class="b4dX" x="498" y="78">Change-failure rate · time to restore</text>
+        <!-- p75 -->
+        <rect x="40" y="128" width="800" height="40" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b4dI" x="58" y="153">Plus one user-facing outcome: p75 page load time (does the product feel fast for real users?)</text>
+        <!-- bad box -->
+        <rect x="40" y="184" width="800" height="44" rx="10" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.4"/>
+        <text class="b4dBad" x="58" y="204">Never: lines of code.</text>
+        <text class="b4dI" x="196" y="204">It rewards bloat, punishes clean deletion, and AI writes it by the screenful.</text>
+        <text class="b4dXk" x="58" y="222">Goodhart in one metric: the moment it is a target, it stops measuring productivity.</text>
+        <rect x="40" y="240" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="b4dN" x="62" y="252">A team cannot game deploy frequency without change-failure rate exposing it. That pairing is the fairness.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - DORA is self-checking: speed held honest by stability</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The attribution rule - watch the shared outcome, grade the lever<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The North Star - revenue per visitor, or overall conversion - is moved by everyone at once. That is a feature, not a bug: it forces teams to pull together. But it makes the shared number impossible to attribute fairly, so the rule is firm:</p>
+        <ul>
+          <li><strong>Grade each team on its controllable lever.</strong> Product on checkout completion, Growth on CAC, Ops on on-time delivery. These are clean enough to be fair.</li>
+          <li><strong>Watch the North Star jointly.</strong> Put revenue per visitor on a shared dashboard every team sees, discussed together in a cross-functional review. No one is graded on it alone; everyone is accountable to it together.</li>
+        </ul>
+        <p>HBR's guidance is the same at the team level: <strong>set OKRs for teams, not to rank individuals</strong>. Shared outcomes belong to shared conversations, not to one person's scorecard.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 1 ============ -->
+  <section class="section" id="worked-1">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 1 of 2</span>
+      <h2>A fair OKR for every Cartwheel function <span class="tag demo">★ 14 min · everyone tries</span></h2>
+    </div>
+    <p class="lede">The centrepiece of the whole track. For each function, give it an Objective, two or three Key Results on a lever it controls, and a one-line note on why that lever is fair for that team.</p>
+
+    <div class="steps">
+      <div class="step"><p>For each function, find its branch on the tree from Part 1 - the lever it actually holds.</p></div>
+      <div class="step"><p>Write an Objective that points at that branch, then 2-3 Key Results as measurable outcomes (from b2).</p></div>
+      <div class="step"><p>Add the controllability note: one line on why this team, and not another, should be graded on this.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The per-function OKR table</strong>
+      <table class="clean">
+        <thead><tr><th>Function</th><th>Objective</th><th>Key Results (the lever)</th><th>Controllability note</th></tr></thead>
+        <tbody>
+          <tr><td>Growth / Marketing</td><td>Bring in efficient, high-intent traffic</td><td>CAC ↓, ROAS ↑, non-paid sessions ↑</td><td>Owns spend + channel mix; does NOT own site conversion</td></tr>
+          <tr><td>Product / UX</td><td>Turn more visitors into buyers</td><td>Conversion rate ↑, checkout completion ↑, activation ↑</td><td>Owns the on-site experience the visitor moves through</td></tr>
+          <tr><td>Engineering</td><td>Ship value fast and safely</td><td>Deploy frequency, change-failure rate, p75 page load</td><td>DORA, self-checking; never lines of code</td></tr>
+          <tr><td>Operations / Fulfilment</td><td>Deliver reliably at the right cost</td><td>On-time delivery ↑, cost per order ↓, inventory turns ↑</td><td>Owns the warehouse + carrier levers, not demand</td></tr>
+          <tr><td>Support / CX</td><td>Resolve issues well, first time</td><td>CSAT ↑, first-response time ↓, first-contact resolution ↑</td><td>"Tickets closed" alone is gameable; pair with quality</td></tr>
+          <tr><td>Merchandising</td><td>Grow basket value and healthy margin</td><td>AOV ↑, category margin ↑, sell-through ↑</td><td>Owns assortment + pricing mix, not site traffic</td></tr>
+        </tbody>
+      </table>
+      Notice every Key Result is a measurable outcome, and every note names the lever the team holds. Data / Analytics gets its own row too: experiment velocity, a data-freshness SLA, and decisions-shipped - it owns the pipeline and the evidence, not the business result the evidence informs.
+    </div>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 2 ============ -->
+  <section class="section" id="worked-2">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 2 of 2</span>
+      <h2>Fix Engineering: swap lines-of-code for the DORA four <span class="tag demo">★ 8 min · do your own</span></h2>
+    </div>
+    <p class="lede">Cartwheel's old engineering scorecard graded lines of code shipped per sprint. Replace it with a fair system and score both against the b3 checklist.</p>
+
+    <div class="steps">
+      <div class="step"><p>Name the bad metric and its failure: lines of code is an activity count, trivially gamed (verbose code, no deletion), and now inflated by AI code generation.</p></div>
+      <div class="step"><p>Replace it with the DORA four as a system: deploy frequency and lead time for speed, change-failure rate and time-to-restore for stability - plus p75 page load as the user-facing outcome.</p></div>
+      <div class="step"><p>Score the old and the new against the six-point fair-metric checklist from b3.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>Old metric vs fair system, on the checklist</strong>
+      <table class="clean">
+        <thead><tr><th>Check (from b3)</th><th>Lines of code</th><th>DORA four + p75 load</th></tr></thead>
+        <tbody>
+          <tr><td>Outcome not activity</td><td>✗ pure activity</td><td>✓ flow + stability outcomes</td></tr>
+          <tr><td>Controllable</td><td>◐ but meaningless</td><td>✓ team owns its pipeline</td></tr>
+          <tr><td>Hard to game</td><td>✗ trivially inflated</td><td>✓ speed checked by stability</td></tr>
+          <tr><td>Holistic</td><td>✗ one number</td><td>✓ speed + stability + user speed</td></tr>
+        </tbody>
+      </table>
+      Lines of code fails every gate. The DORA system passes because its metrics police each other - you cannot deploy faster by cutting corners without change-failure rate rising to tell on you.
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Goodhart, twice over.</strong> The moment Cartwheel made lines of code a target, engineers wrote more verbose code and stopped deleting dead code - the metric went up while the codebase got worse. Then AI assistants arrived and any developer could generate thousands of lines in an afternoon, making the number meaningless as a measure of anything. DORA survives because it measures the outcome (value flowing safely to users), not the typing.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Draw your own company's metric tree: what is the North Star, and what two or three factors multiply into it?</li>
+      <li>For each of your teams, write an Objective and 2-3 Key Results on a lever that team controls, plus the controllability note.</li>
+      <li>Find one metric a team is graded on that it does not fully control. Split it into sub-levers, or move it to the watched-together line.</li>
+      <li>If you manage engineers, replace any activity count (lines, commits, story points as output) with the DORA four plus one user-facing outcome.</li>
+      <li>Optional: read the DORA metrics overview (dora.dev) and the HBR piece "Use OKRs to Set Goals for Teams, Not Individuals" before b5.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered (cited)</h2>
+    </div>
+    <p class="lede">Taught from the e-commerce measurement canon plus engineering and team-OKR sources. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">E-commerce metric canon - metric tree (Revenue = Sessions × CR × AOV, RPV), North Star</span><span class="note">Parts 1-2 · decomposing the tree, per-function levers</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">DORA metrics (dora.dev) - deploy frequency, lead time, change-failure rate, time to restore</span><span class="note">Part 2 · fair engineering metrics, why lines-of-code fails (Goodhart + AI)</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">HBR, "Use OKRs to Set Goals for Teams, Not Individuals" (2020)</span><span class="note">Part 2 · attribution rule, shared outcome as joint ownership</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Why is grading Growth / Marketing on site conversion rate unfair?</p>
+      <button class="qopt" type="button">A · Conversion rate is too hard to measure</button>
+      <button class="qopt" type="button">B · Growth owns traffic and spend, not the on-site experience that converts it - Product does</button>
+      <button class="qopt" type="button">C · Marketing teams should not have OKRs at all</button>
+      <p class="qwhy">Controllability is the fairness test. Growth owns CAC, ROAS, and traffic quality. Conversion of that traffic is Product's lever. Grade each team on the branch it actually holds.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · What makes the DORA metrics a fair, self-checking system for Engineering?</p>
+      <button class="qopt" type="button">A · They are easy to calculate automatically</button>
+      <button class="qopt" type="button">B · They count how much code each engineer writes</button>
+      <button class="qopt" type="button">C · Speed metrics are held honest by stability metrics, so gaming one shows up in the other</button>
+      <p class="qwhy">Deploy frequency and lead time measure speed; change-failure rate and time-to-restore measure stability. You cannot rush deploys without failure rate rising to expose it. Lines of code, by contrast, rewards bloat and is inflated by AI code generation.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · How should the shared North Star (revenue per visitor) be handled?</p>
+      <button class="qopt" type="button">A · Watched jointly on a shared dashboard - graded on the controllable lever, never on one team alone</button>
+      <button class="qopt" type="button">B · Assigned entirely to the Product team</button>
+      <button class="qopt" type="button">C · Split evenly and each team graded on one-sixth of it</button>
+      <p class="qwhy">The North Star is moved by everyone, so it cannot be attributed to one team fairly. Grade each team on its lever; watch the shared outcome together in a cross-functional review. Shared outcomes belong to shared conversations.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The tree</b><span>Revenue per visitor = Sessions × Conversion × AOV. Each factor splits into owned levers.</span></div>
+      <div class="cheat-item"><b>Grade the lever</b><span>give each team an OKR on a branch it controls, not on the shared trunk.</span></div>
+      <div class="cheat-item"><b>Growth</b><span>CAC, ROAS, non-paid sessions. Owns spend + channel, not site conversion.</span></div>
+      <div class="cheat-item"><b>Product</b><span>conversion rate, checkout completion, activation. Owns the on-site experience.</span></div>
+      <div class="cheat-item"><b>Engineering</b><span>DORA four + p75 load. Never lines of code (Goodhart + AI make it meaningless).</span></div>
+      <div class="cheat-item"><b>Ops / CX / Merch / Data</b><span>on-time delivery · CSAT + FCR (not tickets closed) · AOV + margin · experiment velocity.</span></div>
+      <div class="cheat-item"><b>Attribution rule</b><span>watch the North Star jointly; grade nobody on it alone. Team OKRs, not rankings.</span></div>
+      <div class="cheat-item"><b>Still decoupled</b><span>none of these lever scores feed pay. Steering and learning only.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b5 - monitoring cadence + dashboards: 1:1s, RAG, target + trend + context.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 4 of 10 · learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b3-choosing-fair-metrics.html">← Previous: Choosing fair metrics</a> &nbsp;·&nbsp; <a href="b5-monitoring-cadence.html">Next: Monitoring cadence →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

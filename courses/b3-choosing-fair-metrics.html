@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 3 · Choosing fair metrics - learn OKRs with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+<style>
+  /* ---- Fair-Metric Lab (fairness-lab.js) ---- */
+  .fal-shell { border: 1px solid #E5E7EB; border-radius: 16px; padding: 20px; background: #FFFFFF; box-shadow: 0 10px 30px rgba(31,41,55,.07); }
+  .fal-clabel, .fal-slabel, .fal-simtitle { font: 700 12px Inter, sans-serif; color: #6B7280; text-transform: uppercase; letter-spacing: .04em; }
+  .fal-metrics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .fal-btn { font: 600 13px Inter, sans-serif; padding: 9px 13px; border-radius: 12px; border: 1px solid #D1D5DB; background: #F9FAFB; color: #1F2937; cursor: pointer; transition: all .15s; display: flex; flex-direction: column; gap: 2px; text-align: left; }
+  .fal-btn:hover { border-color: #4338CA; }
+  .fal-btn.fal-on { background: #4338CA; color: #FFFFFF; border-color: #4338CA; }
+  .fal-role { font: 500 10.5px Inter, sans-serif; opacity: .7; }
+  .fal-grade { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 18px; align-items: stretch; }
+  .fal-scorebox { background: #EEF2FF; border: 1px solid #C7D2FE; border-radius: 12px; padding: 12px 18px; display: flex; flex-direction: column; gap: 2px; min-width: 150px; justify-content: center; }
+  .fal-score { font: 800 34px Inter, sans-serif; color: #1F2937; line-height: 1; }
+  .fal-score.fal-good { color: #4338CA; }
+  .fal-score.fal-bad { color: #991B1B; }
+  .fal-verdict { font: 700 12px Inter, sans-serif; color: #6B7280; }
+  .fal-rubric { flex: 1; min-width: 260px; display: grid; grid-template-columns: 1fr 1fr; gap: 7px; align-content: center; }
+  .fal-chip { font: 600 12px Inter, sans-serif; padding: 6px 10px; border-radius: 8px; }
+  .fal-chip.fal-yes { background: #EEF2FF; color: #312E81; }
+  .fal-chip.fal-no { background: #FEF2F2; color: #991B1B; }
+  .fal-sim { margin-top: 20px; border-top: 1px solid #E5E7EB; padding-top: 16px; }
+  .fal-simhead { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .fal-toggle { font: 600 13px Inter, sans-serif; padding: 8px 14px; border-radius: 999px; border: 1px solid #D1D5DB; background: #F9FAFB; color: #1F2937; cursor: pointer; }
+  .fal-toggle.fal-ton { background: #D97706; color: #FFFFFF; border-color: #D97706; }
+  .fal-chart { width: 100%; overflow-x: auto; }
+  .fal-chart svg { width: 100%; height: auto; display: block; }
+  .fal-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 8px 0; font: 500 12.5px Inter, sans-serif; color: #6B7280; }
+  .fal-legend span { display: inline-flex; align-items: center; gap: 7px; }
+  .fal-sw { width: 16px; height: 4px; border-radius: 2px; display: inline-block; }
+  .fal-sw.fal-meas { background: #D97706; }
+  .fal-sw.fal-true { background: #4338CA; }
+  .fal-say { font: 500 13.5px Inter, sans-serif; color: #374151; line-height: 1.6; background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 10px; padding: 12px 14px; }
+  .fal-say b { color: #1F2937; }
+  .fal-say.fal-alarm { background: #FEF2F2; border-color: #FCA5A5; }
+  .fal-say.fal-alarm b { color: #991B1B; }
+  .fal-say.fal-okmsg { background: #EEF2FF; border-color: #C7D2FE; }
+  .fal-say.fal-okmsg b { color: #312E81; }
+  .fal-rail { margin-top: 14px; font: 400 12.5px Inter, sans-serif; color: #6B7280; line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-okr-with-phoebe</a> / Manager session 3 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe · Manager track · Session 3 of 10</div>
+    <h1>Choosing fair metrics: <span class="accent">design for the gaming</span></h1>
+    <p class="sub">Every metric you set will be optimised - that is the point. The question is whether optimising it produces the outcome you wanted, or just a better-looking number. This session turns the fair-metric checklist into a scoring habit, shows how Goodhart's Law breaks metrics tied to reward, and hands you a live Fair-Metric Lab where you grade Cartwheel metrics and watch what happens when you tie them to pay.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Manager track</span>
+      <span class="chip audience">Managers: middle mgmt · team leads</span>
+      <span class="chip audience">No code · a live lab</span>
+      <span class="chip time">45 minutes</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:4">3-18 · Goodhart + surrogation</span>
+      <span class="a3" style="flex:5">18-42 · The Fair-Metric Lab</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>From checklist to instinct</h2>
+    </div>
+    <p class="lede">In b1 you met the six-point fair-metric checklist and in b2 you wrote objectives and key results. Tonight the two meet: how do you know a key result is one you can fairly grade a team on, rather than one they will quietly game? The answer is a law almost as reliable as gravity - Goodhart's Law - and a habit of scoring every metric before you deploy it. You will end the session having driven a real lab that scores metrics and simulates the gaming for you.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Fair-Metric Lab</span>
+      <span class="pill inkpill">Sources covered (cited)</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A working understanding of Goodhart's Law and surrogation, the reflex of scoring a metric on the checklist before you set it, and hands-on time with the Fair-Metric Lab watching gameable metrics diverge from the outcomes they were meant to stand for.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: GOODHART ============ -->
+  <section class="section" id="goodhart">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · why metrics break</span>
+      <h2>When a measure becomes a target <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Goodhart's Law: "When a measure becomes a target, it ceases to be a good measure." A metric works as a quiet signal because it correlates with something you care about. Turn it into a target - especially one tied to reward - and people optimise the metric directly, snapping the correlation. The measure and the goal drift apart. This drift has a name: surrogation.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A measure and the true goal start correlated, then once the measure becomes a rewarded target the measured number rises while the true outcome falls away">
+        <style>
+          .b3gT { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .b3gX { font: 400 11.5px Inter, sans-serif; fill: #6B7280; }
+          .b3gN { font: 600 13px Inter, sans-serif; fill: #92400E; }
+          .b3gM { font: 700 12px Inter, sans-serif; fill: #D97706; }
+          .b3gV { font: 700 12px Inter, sans-serif; fill: #4338CA; }
+        </style>
+        <text class="b3gT" x="24" y="26">Make it a rewarded target, and the two pull apart</text>
+        <line x1="60" y1="60" x2="60" y2="180" stroke="#D1D5DB"/>
+        <line x1="60" y1="180" x2="840" y2="180" stroke="#D1D5DB"/>
+        <line x1="450" y1="60" x2="450" y2="180" stroke="#9CA3AF" stroke-dasharray="4 4"/>
+        <text class="b3gX" x="150" y="200">correlated (a quiet signal)</text>
+        <text class="b3gX" x="520" y="200">measure becomes a rewarded target</text>
+        <!-- measured line: rises after target -->
+        <polyline points="60,150 250,140 450,132 620,96 760,66 830,58" fill="none" stroke="#D97706" stroke-width="2.5"/>
+        <text class="b3gM" x="700" y="52">the measured number</text>
+        <!-- true outcome: falls after target -->
+        <polyline points="60,150 250,140 450,132 620,150 760,168 830,176" fill="none" stroke="#4338CA" stroke-width="2.5"/>
+        <text class="b3gV" x="700" y="172">the true outcome</text>
+        <rect x="24" y="216" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b3gN" x="46" y="228">Surrogation: the metric quietly replaces the goal in people's minds, and they optimise the proxy.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - Goodhart's Law: the measure and the goal drift apart under reward</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The classics - and why paired metrics resist gaming<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>The cobra effect</strong> - a bounty on dead cobras bred cobra farms. The metric (cobras handed in) rose; the goal (fewer cobras) reversed.</li>
+          <li><strong>Lines of code</strong> - reward it and engineers write more, worse code. AI code generation makes it meaningless entirely.</li>
+          <li><strong>Tickets closed</strong> - reward it and agents close-and-reopen and rush customers, while satisfaction quietly falls.</li>
+          <li><strong>The defence: measure as a system.</strong> Pair a quantity metric with a quality one (deploys with change-failure rate; tickets closed with CSAT). You cannot juice one without the other catching you. DORA works precisely because its four metrics hold each other honest.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Design for the gaming before you deploy.</strong> Assume any metric you announce will be optimised the laziest way that moves the number. Ask: "what is the cheapest way to make this go up without doing the real work?" If that cheap path exists, either pair the metric or do not grade on it.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: SCORING HABIT ============ -->
+  <section class="section" id="scoring">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the scoring habit</span>
+      <h2>Score every metric before you set it <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">The checklist from b1 becomes a fast score. Rate the metric on outcome-vs-activity, controllability, game-resistance, and holism. A high score means it is fair to grade on; a low score means watch it as context, or pair it, or drop it. The lab below does this scoring in front of you.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A metric scores high or low on four fairness dimensions, deciding whether to grade on it, pair it, or only watch it as context">
+        <style>
+          .b3sT { font: 700 12.5px Inter, sans-serif; fill: #1F2937; }
+          .b3sX { font: 400 11px Inter, sans-serif; fill: #6B7280; }
+          .b3sH { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .b3sN { font: 600 13px Inter, sans-serif; fill: #312E81; }
+        </style>
+        <rect x="24" y="40" width="250" height="120" rx="12" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b3sT" x="44" y="66">Score the four</text>
+        <text class="b3sX" x="44" y="88">outcome not activity</text>
+        <text class="b3sX" x="44" y="106">controllable</text>
+        <text class="b3sX" x="44" y="124">hard to game</text>
+        <text class="b3sX" x="44" y="142">holistic / balanced</text>
+        <path d="M286,100 L330,100" stroke="#9CA3AF" stroke-width="2" marker-end="url(#a3)"/>
+        <rect x="340" y="46" width="230" height="42" rx="9" fill="#4338CA"/>
+        <text class="b3sH" x="360" y="72">High score -&gt; grade on it</text>
+        <rect x="340" y="94" width="230" height="42" rx="9" fill="#D97706"/>
+        <text class="b3sH" x="360" y="120">Middling -&gt; pair it</text>
+        <rect x="340" y="142" width="230" height="18" rx="6" fill="#F9FAFB" stroke="#D1D5DB"/>
+        <rect x="596" y="46" width="260" height="90" rx="12" fill="#FEF2F2" stroke="#991B1B"/>
+        <text class="b3sT" x="616" y="72">Low score</text>
+        <text class="b3sX" x="616" y="94">watch as context only,</text>
+        <text class="b3sX" x="616" y="112">never on a scorecard</text>
+        <rect x="24" y="180" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="b3sN" x="46" y="192">The lab below scores real Cartwheel metrics on exactly these four, then simulates the gaming.</text>
+        <defs><marker id="a3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#9CA3AF"/></marker></defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - score, then grade / pair / watch</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ DEMO: THE LAB ============ -->
+  <section class="section" id="demo-lab">
+    <div class="section-kicker">
+      <span class="klabel">Demo · drive it yourself</span>
+      <h2>The Fair-Metric Lab <span class="tag demo">★ live scoring + Goodhart simulator</span></h2>
+    </div>
+    <p class="lede">This is a real lab, not a slideshow. Pick a Cartwheel metric and it scores its fairness from the metric's actual attributes. Then flip "tie this metric to individual pay" and watch the deterministic Goodhart simulation: for a gameable metric, the measured number races to target while the true outcome it stood for collapses. For a fair metric, the two stay together even under pressure.</p>
+
+    <div id="fairness-lab"></div>
+
+    <div class="callout tip">
+      <strong>Read the gap</strong>
+      The distance between the gold line (what you measure) and the indigo line (the real outcome) is surrogation made visible. A fair metric keeps that gap small even when it is tied to pay. A gameable one blows it wide open - which is the whole argument for keeping OKR scores away from compensation.
+    </div>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE ============ -->
+  <section class="section" id="worked">
+    <div class="section-kicker">
+      <span class="klabel">Worked example</span>
+      <h2>Turn a gameable metric into a fair one <span class="tag demo">★ 8 min · do your own</span></h2>
+    </div>
+    <p class="lede">Take a low-scoring metric from the lab and repair it.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pick a metric that scored low (lines of code, hours logged, tickets closed) and name the cheapest way to game it.</p></div>
+      <div class="step"><p>Find the outcome it was really a proxy for (valuable software, real contribution, satisfied customers).</p></div>
+      <div class="step"><p>Replace or pair it so gaming the number would require actually doing the work - then re-score.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Pairing beats policing.</strong> You will never out-police a gameable metric; people are creative under reward pressure. The durable fix is structural: pair quantity with quality so the only way to move the number is to do the real thing. That is why "deploys per week" alone is dangerous but "deploys per week with change-failure under 15%" is safe.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Score three of your team's key results in the lab's four dimensions. Which are fair to grade on?</li>
+      <li>For each low scorer, write the cheapest way someone could game it without doing the real work.</li>
+      <li>Pair or replace one gameable metric so the number cannot move without the outcome moving.</li>
+      <li>Find one metric currently tied to pay or bonus that would fail the lab. Raise it with your leadership.</li>
+      <li>Optional: read the Splunk or CNA explainer on Goodhart's Law and note one example from your own org.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered (cited)</h2>
+    </div>
+    <p class="lede">Taught from the measurement-integrity canon. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Goodhart's Law; Campbell's Law (1979); surrogation (Choi, Hecht &amp; Tayler)</span><span class="note">Parts 1-2 · why metrics break under reward, and how to design against it</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">DORA metrics (dora.dev) as a gaming-resistant system</span><span class="note">Part 1 · pairing quantity with quality</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What does Goodhart's Law predict?</p>
+      <button class="qopt" type="button">A · Metrics get more accurate the more you use them</button>
+      <button class="qopt" type="button">B · When a measure becomes a target, people optimise the number and it stops tracking the goal</button>
+      <button class="qopt" type="button">C · Bigger teams need more metrics</button>
+      <p class="qwhy">A metric works as a signal because it correlates with what you care about. Make it a rewarded target and people optimise the proxy directly, snapping the correlation - surrogation.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · What is the durable defence against a gameable metric?</p>
+      <button class="qopt" type="button">A · Police it harder and punish gaming</button>
+      <button class="qopt" type="button">B · Keep it secret from the team</button>
+      <button class="qopt" type="button">C · Pair it with a quality metric so the number cannot move without the outcome moving</button>
+      <p class="qwhy">You cannot out-police creativity under reward pressure. Pairing quantity with quality (deploys + change-failure, tickets + CSAT) makes gaming require doing the real work.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · In the lab, a gameable metric tied to pay shows...</p>
+      <button class="qopt" type="button">A · The measured line racing up while the true-outcome line collapses - a wide surrogation gap</button>
+      <button class="qopt" type="button">B · Both lines rising together</button>
+      <button class="qopt" type="button">C · No change at all</button>
+      <p class="qwhy">That widening gap between measured and true is surrogation made visible, and the core argument for keeping OKR scores decoupled from compensation.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Goodhart's Law</b><span>when a measure becomes a target, it stops being a good measure.</span></div>
+      <div class="cheat-item"><b>Surrogation</b><span>the metric quietly replaces the goal; people optimise the proxy.</span></div>
+      <div class="cheat-item"><b>Design for gaming</b><span>ask the cheapest way to move the number without doing the work.</span></div>
+      <div class="cheat-item"><b>Pair, do not police</b><span>quantity + quality (deploys + change-failure, tickets + CSAT).</span></div>
+      <div class="cheat-item"><b>Score before you set</b><span>outcome, controllable, game-resistant, holistic - grade / pair / watch.</span></div>
+      <div class="cheat-item"><b>Systems beat single numbers</b><span>DORA's four metrics hold each other honest.</span></div>
+      <div class="cheat-item"><b>The reward trap</b><span>gameable + tied to pay = the widest surrogation gap. Decouple.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b4 - the Cartwheel metric tree: fair OKRs for every function.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 3 of 10 · learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b2-writing-okrs.html">← Prev: Writing good OKRs</a> &nbsp;·&nbsp; <a href="b4-metric-tree-per-function.html">Next: The metric tree per function →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+<script src="../assets/fairness-lab.js?v=1"></script>
+</body>
+</html>

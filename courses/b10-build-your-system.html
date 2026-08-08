@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 10 · Build your measurement system - learn OKRs with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-okr-with-phoebe</a> / Manager session 10 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe · Manager track · Session 10 of 10</div>
+    <h1>The capstone: <span class="accent">assemble the whole system</span></h1>
+    <p class="sub">Nine sessions of parts, one session to put them together. A measurement system is not a set of OKRs - it is seven layers that hold each other up: the goal, the OKRs, the controllable slice of the metric tree, the health guardrails, the cadence, the conversations, and the review of the measures themselves. This session builds all seven for one Cartwheel team, runs it through six gates that decide whether it is fair, and then attacks it deliberately - as an employee, as someone optimising the number, and as a regulator - before you build your own.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Manager track</span>
+      <span class="chip audience">Managers: middle mgmt · team leads</span>
+      <span class="chip audience">No code · templates + worked examples</span>
+      <span class="chip time">~45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:4">3-20 · Seven layers + six gates</span>
+      <span class="a3" style="flex:5">20-42 · Worked: build it, then red-team it</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">Every session so far handed you one component. b1 gave the three purposes and the fair-metric checklist, b2 the OKRs, b3 the fairness scoring and the Goodhart lab, b4 the metric tree per function, b5 the cadence and dashboards, b6 the separated conversations, b7 the bias controls, b8 the AI guardrails, b9 the repair kit. Assembled badly, those parts still produce a system people manage instead of work. So the capstone is mostly about the joins. Two things decide whether it holds: <strong>every layer has to point at the same goal</strong>, and <strong>every layer has to survive someone trying to win rather than contribute</strong>. That second test is the one teams skip, so we run it explicitly today. And the linchpin one final time: the OKR score is for steering and learning, never a direct input to pay.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Worked example (Cartwheel)</span>
+      <span class="pill inkpill">Sources covered (cited)</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The seven-layer system on one page, the six gates that decide whether it is fair enough to ship, a complete worked system for Cartwheel's Growth team (goal, OKRs, owned levers, guardrails, cadence, conversations, review), a red-team pass from three hostile angles, and the one-page template to build your own team's system this quarter.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: SEVEN LAYERS ============ -->
+  <section class="section" id="layers">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the anatomy</span>
+      <h2>Seven layers, each answering one question <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">If a layer is missing, something else silently takes its job - and usually badly. Skip the guardrails and the OKR eats quality. Skip the review of the measures and last year's proxy is still steering you. Read the stack as a set of questions, and any gap becomes obvious.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 406" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The seven layers of a measurement system, each answering one question: the goal, the OKRs, the owned slice of the metric tree, health guardrails, cadence, conversations, and the review of the measures themselves">
+        <style>
+          .b10sT { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .b10sW { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b10sWx { font: 400 11.5px Inter, sans-serif; fill: #E0E7FF; }
+          .b10sB { font: 700 12.5px Inter, sans-serif; fill: #1F2937; }
+          .b10sX { font: 400 11.5px Inter, sans-serif; fill: #4B5563; }
+          .b10sN { font: 600 13px Inter, sans-serif; fill: #92400E; }
+        </style>
+        <text class="b10sT" x="24" y="32">The stack, top to bottom</text>
+        <rect x="24" y="48" width="832" height="38" rx="8" fill="#312E81"/>
+        <text class="b10sW" x="44" y="72">1 · The goal</text>
+        <text class="b10sWx" x="320" y="72">what outcome are we actually here to change</text>
+        <rect x="24" y="92" width="832" height="38" rx="8" fill="#4338CA"/>
+        <text class="b10sW" x="44" y="116">2 · The OKRs</text>
+        <text class="b10sWx" x="320" y="116">one objective, two or three key results, committed or stretch</text>
+        <rect x="24" y="136" width="832" height="38" rx="8" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b10sB" x="44" y="160">3 · The owned lever</text>
+        <text class="b10sX" x="320" y="160">the slice of the metric tree this team can actually move</text>
+        <rect x="24" y="180" width="832" height="38" rx="8" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="b10sB" x="44" y="204">4 · Health guardrails</text>
+        <text class="b10sX" x="320" y="204">thresholds that must not be crossed while chasing the target</text>
+        <rect x="24" y="224" width="832" height="38" rx="8" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b10sB" x="44" y="248">5 · The cadence</text>
+        <text class="b10sX" x="320" y="248">weekly steering, monthly trend, quarterly scoring and reset</text>
+        <rect x="24" y="268" width="832" height="38" rx="8" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b10sB" x="44" y="292">6 · The conversations</text>
+        <text class="b10sX" x="320" y="292">1:1s and CFRs, kept in separate rooms from pay</text>
+        <rect x="24" y="312" width="832" height="38" rx="8" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="b10sB" x="44" y="336">7 · Review of the measures</text>
+        <text class="b10sX" x="320" y="336">quarterly audit: is each number still measuring the thing</text>
+        <rect x="24" y="374" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b10sN" x="46" y="386">Miss a layer and something else takes its job. Layer 7 is the one everyone forgets, and the one that ages the system.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - seven layers, each answering exactly one question</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What happens when a layer is missing<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Each gap has a predictable symptom, which makes diagnosis fast:</p>
+        <ul>
+          <li><strong>No goal</strong> - the OKRs read as a task list and nobody can say why a key result matters. Reprioritising becomes an argument about preference.</li>
+          <li><strong>No owned lever</strong> - the team is graded on a shared outcome, so credit and blame are both arbitrary and the metric is gameable by whoever reports it.</li>
+          <li><strong>No guardrails</strong> - the target gets hit and something unmeasured pays for it. This is the b9 gaming pattern, pre-installed.</li>
+          <li><strong>No cadence</strong> - problems surface at quarter end, when it is too late to steer. The system becomes a scoring ritual.</li>
+          <li><strong>No separated conversations</strong> - the number starts driving pay in practice even if the policy says otherwise, and honest reporting stops.</li>
+          <li><strong>No review of the measures</strong> - proxies drift, surrogation sets in, and you spend a year steering by a number that stopped tracking the goal.</li>
+        </ul>
+        <p>Work upward when you diagnose: most complaints about "our OKRs are useless" trace to layer 1 or layer 3, not to the OKR wording.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Sizing the system: how much is enough<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Capstone temptation is to build something impressive. Resist it - an over-built system fails by being ignored, which is indistinguishable from having no system.</p>
+        <ul>
+          <li><strong>One objective per team per quarter</strong>, two or three key results. More than that and nothing is a priority.</li>
+          <li><strong>Two or three guardrails</strong>, watched not graded. A guardrail list of ten is a scorecard by another name.</li>
+          <li><strong>One weekly steering number</strong> per team that everyone can name from memory. If people have to open a dashboard to recall it, it is not steering anything.</li>
+          <li><strong>One page total.</strong> If the system does not fit on a page, the team will not hold it in their heads, and a system nobody holds is a document.</li>
+        </ul>
+        <p>The quarterly review is where you add things - and, more usefully, remove them. Most mature systems get smaller over time, not bigger.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: SIX GATES ============ -->
+  <section class="section" id="gates">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the fairness gates</span>
+      <h2>Six gates before you ship it <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The layers make the system work. These gates decide whether it is fair - and any one of them failing is enough to turn the whole thing into a number-management exercise.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 288" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Six fairness gates a measurement system must pass: decoupled from pay, controllable per owner, paired and guardrailed, transparent and written down, contestable, and reviewed on a cadence">
+        <style>
+          .b10gT { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .b10gB { font: 700 12.5px Inter, sans-serif; fill: #1F2937; }
+          .b10gX { font: 400 11px Inter, sans-serif; fill: #6B7280; }
+          .b10gBad { font: 600 12.5px Inter, sans-serif; fill: #991B1B; }
+          .b10gN { font: 600 13px Inter, sans-serif; fill: #312E81; }
+        </style>
+        <text class="b10gT" x="24" y="32">Six gates - all six, or it is not fair yet</text>
+        <rect x="24" y="48" width="270" height="64" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b10gB" x="40" y="72">1 · Decoupled from pay</text>
+        <text class="b10gX" x="40" y="94">scores steer and teach, never set comp</text>
+        <rect x="305" y="48" width="270" height="64" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b10gB" x="321" y="72">2 · Controllable per owner</text>
+        <text class="b10gX" x="321" y="94">each graded number has one real owner</text>
+        <rect x="586" y="48" width="270" height="64" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b10gB" x="602" y="72">3 · Paired + guardrailed</text>
+        <text class="b10gX" x="602" y="94">nothing can be won by hurting something</text>
+        <rect x="24" y="124" width="270" height="64" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="b10gB" x="40" y="148">4 · Transparent + written</text>
+        <text class="b10gX" x="40" y="170">people know how it is computed</text>
+        <rect x="305" y="124" width="270" height="64" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="b10gB" x="321" y="148">5 · Contestable</text>
+        <text class="b10gX" x="321" y="170">a named route to challenge an outcome</text>
+        <rect x="586" y="124" width="270" height="64" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="b10gB" x="602" y="148">6 · Reviewed on a cadence</text>
+        <text class="b10gX" x="602" y="170">the measures get audited, not just results</text>
+        <rect x="24" y="200" width="832" height="44" rx="10" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.4"/>
+        <text class="b10gBad" x="44" y="228">Fail any gate and you get a system people manage instead of work - accurate numbers, worse outcomes.</text>
+        <rect x="24" y="268" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="b10gN" x="46" y="280">Gate 1 is the linchpin. Wire scores to pay and the other five stop mattering.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - six gates, with decoupling from pay as the linchpin</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Red-teaming: attack your own system before it ships<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The gates are a checklist, and checklists reward good intentions. Red-teaming does not. Take three hostile roles in turn and try to break your own design:</p>
+        <ul>
+          <li><strong>The optimiser.</strong> "How do I hit every number without doing the work?" If you find a route in under two minutes, so will someone under pressure. Their answer tells you which guardrail is missing.</li>
+          <li><strong>The employee on the receiving end.</strong> "Which of these could punish me for something I do not control? Where would I feel measured rather than supported?" This finds controllability failures and surveillance creep faster than any audit.</li>
+          <li><strong>The regulator or auditor.</strong> "Show me the criteria, the evidence, the human decision-maker, and the contest route." If any answer is verbal only, the system is not documented enough to be defended.</li>
+        </ul>
+        <p>Add a fourth if you can: the newcomer who asks what each number is for. Anything you cannot explain in one sentence is a candidate for removal.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Rolling it out without breaking trust<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A fair system introduced badly still lands as surveillance. Sequence matters as much as design:</p>
+        <ul>
+          <li><strong>Say what it is not for, first.</strong> People assume any new measurement is about pay or cuts. Address that in the opening sentence, and put it in writing so it survives the retelling.</li>
+          <li><strong>Run one quarter with no consequences.</strong> Score it, learn from it, change what was wrong. A system that visibly changed after feedback earns more trust than a perfect one imposed.</li>
+          <li><strong>Show your own numbers first.</strong> Managers who publish their own OKRs and scores before asking the team to make the whole thing feel like steering rather than inspection.</li>
+          <li><strong>Name what you will stop doing.</strong> If nothing is retired, the system reads as extra work, and it will be resisted for good reason.</li>
+        </ul>
+        <p>Trust is a component of the system, not a side effect. Where it is thin, measurement gets interpreted at its worst reading, and honest reporting is the first thing you lose.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 1 ============ -->
+  <section class="section" id="worked-1">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 1 of 2</span>
+      <h2>Build the system for Cartwheel Growth <span class="tag demo">★ 14 min · everyone tries</span></h2>
+    </div>
+    <p class="lede">One team, one quarter, all seven layers. Cartwheel's Growth team owns acquisition and the top of the funnel. Build it in order - and notice that the guardrails are written before the cadence, because they constrain what the target may cost.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Layer 1, the goal:</strong> profitable growth, not traffic. State it as an outcome: more paying customers acquired at a sustainable cost.</p></div>
+      <div class="step"><p><strong>Layer 2, the OKRs:</strong> one objective, three key results, each a measurable outcome. Mark which are committed and which are stretch.</p></div>
+      <div class="step"><p><strong>Layer 3, the owned lever:</strong> from the metric tree, Growth owns sessions and new-customer conversion - not order value, which Merchandising owns.</p></div>
+      <div class="step"><p><strong>Layer 4, the guardrails:</strong> what must not be sacrificed to hit those key results. Cost per acquisition, retention, and refund rate.</p></div>
+      <div class="step"><p><strong>Layers 5 and 6, cadence and conversations:</strong> one weekly steering number, monthly trend review, quarterly scoring; 1:1s and CFRs on their own track, no pay talk.</p></div>
+      <div class="step"><p><strong>Layer 7, the review:</strong> at quarter end, audit the measures with b9's five questions before setting the next OKRs.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>Cartwheel Growth - the one-page system</strong>
+      <table class="clean">
+        <thead><tr><th>Layer</th><th>Content</th><th>Owner / rhythm</th></tr></thead>
+        <tbody>
+          <tr><td>1 · Goal</td><td>Acquire more paying customers at a sustainable cost</td><td>Growth lead</td></tr>
+          <tr><td>2 · Objective</td><td>Make first-time buying at Cartwheel the easy choice</td><td>Quarter</td></tr>
+          <tr><td>2 · KR1 (committed)</td><td>New-customer conversion rate from 1.8% to 2.2%</td><td>Growth + Product</td></tr>
+          <tr><td>2 · KR2 (committed)</td><td>Qualified sessions from 640k to 760k per month</td><td>Growth</td></tr>
+          <tr><td>2 · KR3 (stretch)</td><td>First-order refund rate stays at or below 4%</td><td>Growth + CX</td></tr>
+          <tr><td>3 · Owned lever</td><td>Sessions x new-customer conversion. Order value is not theirs</td><td>Growth</td></tr>
+          <tr><td>4 · Guardrail</td><td>Cost per acquisition not above the agreed ceiling</td><td>Watched weekly</td></tr>
+          <tr><td>4 · Guardrail</td><td>30-day retention of new cohorts does not fall</td><td>Watched monthly</td></tr>
+          <tr><td>5 · Steering number</td><td>Weekly new-customer conversion, with target and trend</td><td>Weekly, 15 min</td></tr>
+          <tr><td>5 · Scoring</td><td>0 to 1 per KR, ~0.7 is healthy for stretch, learning not verdict</td><td>Quarterly</td></tr>
+          <tr><td>6 · Conversations</td><td>Weekly 1:1 steering, quarterly growth check-in, pay elsewhere</td><td>Separate rooms</td></tr>
+          <tr><td>7 · Measure review</td><td>b9's five questions before the next OKR set</td><td>Quarterly</td></tr>
+        </tbody>
+      </table>
+      Note what KR3 does: it is a guardrail promoted into the OKR set because it is the thing most likely to be sacrificed for KR1. If a key result can only be hit by damaging something, name that something and put it on the page.
+    </div>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 2 ============ -->
+  <section class="section" id="worked-2">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 2 of 2</span>
+      <h2>Red-team the system you just built <span class="tag demo">★ 8 min · do your own</span></h2>
+    </div>
+    <p class="lede">Now attack it. Three hostile roles, one pass each, and a fix for every hole. A system that has not been attacked has only been proofread.</p>
+
+    <div class="steps">
+      <div class="step"><p>As <strong>the optimiser</strong>: find the cheapest way to hit each key result without doing the work. Write the route down, then close it.</p></div>
+      <div class="step"><p>As <strong>the employee</strong>: find where you could be punished for something outside your control, or where you would feel watched rather than supported.</p></div>
+      <div class="step"><p>As <strong>the auditor</strong>: ask for the criteria, the evidence, the human decision-maker, and the contest route. Note anything that exists only verbally.</p></div>
+      <div class="step"><p>Fix each hole at the layer that caused it - guardrail, ownership, documentation - and re-run the six gates.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The red-team pass on Cartwheel Growth</strong>
+      <table class="clean">
+        <thead><tr><th>Role</th><th>Attack found</th><th>Layer at fault</th><th>Fix</th></tr></thead>
+        <tbody>
+          <tr><td>Optimiser</td><td>Buy cheap low-intent traffic to inflate sessions</td><td>4 · guardrails</td><td>Define "qualified" sessions; hold CPA and retention as guardrails</td></tr>
+          <tr><td>Optimiser</td><td>Heavy first-order discounting to lift conversion</td><td>2 · KR design</td><td>KR3 refund and retention guardrail already blocks it - keep it graded</td></tr>
+          <tr><td>Employee</td><td>Conversion drops because checkout broke - not Growth's doing</td><td>3 · ownership</td><td>Shared outcome noted; grade the lever, record the context at scoring</td></tr>
+          <tr><td>Employee</td><td>Weekly number feels like inspection</td><td>6 · conversations</td><td>Steering only in the 1:1; manager publishes their own numbers too</td></tr>
+          <tr><td>Auditor</td><td>Scoring rules exist only in the lead's head</td><td>1 and 7 · written</td><td>Write the criteria and scoring guide; state what scores are not used for</td></tr>
+          <tr><td>Auditor</td><td>No contest route if someone disputes a score</td><td>Gate 5</td><td>Name who to raise it with, what they see, and the response time</td></tr>
+        </tbody>
+      </table>
+      Six attacks, six fixes, and not one of them required a new metric. Most fairness problems are missing guardrails, unclear ownership, or undocumented rules.
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The system that survived its first bad quarter.</strong> The real test of a measurement system is not the quarter it succeeds - it is the first quarter a team misses badly. If the design is right, that quarter produces a useful conversation: which assumption was wrong, which guardrail held, what the team learned, what the next OKR should be. If the design is wrong, it produces defensiveness, rounded-up scores, and a story about external factors. Same miss, two completely different outcomes, and the difference was decided months earlier by whether the score was wired to pay. That is the whole course in one sentence: build the system so that missing a target is safe to say out loud.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Build your own - this quarter <span class="tag exercise">◐ 60-90 min total</span></h2>
+    </div>
+    <ul>
+      <li>Write your team's seven layers on one page. If it does not fit, cut until it does.</li>
+      <li>Run the six gates against it and be honest about gate 1: is any part of this score reaching a pay or rating decision in practice, whatever the policy says?</li>
+      <li>Red-team it with all three roles. Write the attack, the layer at fault, and the fix. Ask a peer to run the optimiser pass, since you are too close to find your own holes.</li>
+      <li>Write the two documents from b8 if AI touches any of it: the never-automate list and the disclosure.</li>
+      <li>Book the two recurring meetings now - the weekly steering slot and the quarterly measure review with b9's five questions.</li>
+      <li>Share the page with your team and ask the one question that matters: what here would you game, and what here feels unfair? Fix what they tell you before the quarter starts.</li>
+      <li>Optional: read the leader track (a1 to a6) to see the same system from the side that designs and governs it.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered (cited)</h2>
+    </div>
+    <p class="lede">The capstone draws on the whole course. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Doerr, "Measure What Matters" + Google re:Work; Grove, "High Output Management"</span><span class="note">Layers 1-2 and 5-6 · OKR anatomy, scoring, cadence, CFRs, decoupling from pay</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">E-commerce metric canon (Revenue = Sessions x CR x AOV); HBR "Use OKRs for Teams, Not Individuals" (2020); Kaplan &amp; Norton, Balanced Scorecard</span><span class="note">Layers 3-4 · owned levers, shared outcomes, balancing guardrails</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Goodhart's Law; surrogation (Choi, Hecht &amp; Tayler); Greenberg (1987) organizational justice</span><span class="note">Gates and red-team · gaming routes, drift, contestability</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Scullen &amp; Mount (2000) rater effects; EU AI Act / GDPR Art 22 / NYC LL144; Edmondson, psychological safety</span><span class="note">Gates 4-6 and rollout · evidence, documentation, safety to miss a target</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · A team's OKRs are well written but the system keeps producing hit targets and worse outcomes. Which layer is most likely missing?</p>
+      <button class="qopt" type="button">A · Layer 2, the OKRs need rewording</button>
+      <button class="qopt" type="button">B · Layer 5, the cadence is too slow</button>
+      <button class="qopt" type="button">C · Layer 4, the health guardrails that say what must not be sacrificed</button>
+      <p class="qwhy">Hit-the-target-and-something-else-pays is the b9 gaming pattern, and missing guardrails install it by default. Name what the target could damage and watch it - or promote it into the OKR set, as KR3 does for Cartwheel Growth.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Which gate is the linchpin, without which the other five stop mattering?</p>
+      <button class="qopt" type="button">A · Decoupled from pay</button>
+      <button class="qopt" type="button">B · Reviewed on a cadence</button>
+      <button class="qopt" type="button">C · Transparent and written down</button>
+      <p class="qwhy">Wire OKR scores to pay and people defend numbers instead of reporting honestly - which corrupts the evidence the other five gates depend on. Scores steer and teach; pay decisions belong in their own rare, well-evidenced conversation.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · What does the "optimiser" role in a red-team pass tell you?</p>
+      <button class="qopt" type="button">A · Which employees are likely to game the system</button>
+      <button class="qopt" type="button">B · Which guardrail is missing, by showing the cheapest route to hitting the number without the work</button>
+      <button class="qopt" type="button">C · Whether the OKRs are ambitious enough</button>
+      <p class="qwhy">Red-teaming is about the design, never the people. If you can find a shortcut in two minutes, someone under pressure will too - and the route they would take names the guardrail you have not written yet.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 10 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Seven layers</b><span>goal, OKRs, owned lever, guardrails, cadence, conversations, review of the measures.</span></div>
+      <div class="cheat-item"><b>Layer 7 is forgotten</b><span>audit the measures quarterly or last year's proxy keeps steering you.</span></div>
+      <div class="cheat-item"><b>Six gates</b><span>decoupled from pay, controllable, paired, transparent, contestable, reviewed.</span></div>
+      <div class="cheat-item"><b>Gate 1 is the linchpin</b><span>scores steer and teach. Pay decisions live in their own room.</span></div>
+      <div class="cheat-item"><b>One page or it does not exist</b><span>one objective, two or three KRs, two or three guardrails, one weekly number.</span></div>
+      <div class="cheat-item"><b>Red-team it</b><span>optimiser, employee, auditor. Fix at the layer that caused the hole.</span></div>
+      <div class="cheat-item"><b>Promote the sacrifice</b><span>if a KR can only be hit by damaging something, put that something on the page.</span></div>
+      <div class="cheat-item"><b>The real test</b><span>build it so that missing a target is safe to say out loud.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 10 of 10 · learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b9-when-metrics-go-wrong.html">← Prev: When metrics go wrong</a> &nbsp;·&nbsp; <a href="a1-why-measure.html">Next: the leader track →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

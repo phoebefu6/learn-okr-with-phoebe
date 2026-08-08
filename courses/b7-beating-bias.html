@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 7 · Beating the bias - learn OKRs with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-okr-with-phoebe</a> / Manager session 7 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe · Manager track · Session 7 of 10</div>
+    <h1>Beating the bias: <span class="accent">the rating says more about you</span></h1>
+    <p class="sub">Here is the finding that should change how you write a review: when researchers pulled apart what drives a performance rating, the biggest single factor was not the person being rated - it was the person doing the rating. This session takes that seriously. You will meet the idiosyncratic rater effect, the four distortions that ride on top of it, the way bias hides in ordinary review language, and calibration done in a way that corrects bias instead of manufacturing a new one. Then you audit a Cartwheel review cycle yourself.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Manager track</span>
+      <span class="chip audience">Managers: middle mgmt · team leads</span>
+      <span class="chip audience">No code · templates + worked examples</span>
+      <span class="chip time">~45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:4">3-20 · Rater effect + biased language</span>
+      <span class="a3" style="flex:5">20-42 · Worked: audit + calibrate</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">Last session you split the conversations so honesty could survive. This one attacks the next leak: even a well-run, well-separated conversation can carry a rating that is mostly noise. Three ideas carry the session. First, <strong>a rating is a measurement instrument, and the instrument is a human being</strong> - so most of what a rating varies with is the rater, not the rated. Second, <strong>bias travels in language</strong>, not just in numbers: the words a manager reaches for differ by who is being described, and the difference is measurable. Third, <strong>calibration is the fix, but only if it is run properly</strong> - done badly it becomes forced ranking with a friendlier name. None of this is a reason to stop measuring. It is a reason to measure with the error in view.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Worked example (Cartwheel)</span>
+      <span class="pill inkpill">Sources covered (cited)</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The rater-effect headline and what it means for your own reviews, the four classic distortions named so you can catch yourself in the act, a language audit that turns personality labels into behaviour and impact, the rules that make a calibration session fair rather than a ranking exercise, and a four-question self-audit to run before you submit any rating.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE RATER EFFECT ============ -->
+  <section class="section" id="rater-effect">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the instrument is a person</span>
+      <h2>The idiosyncratic rater effect <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Scullen, Mount and Goff took thousands of multi-source performance ratings apart to see what the variance was actually made of. The uncomfortable answer: the largest share traced to the individual rater's own way of rating, and only a modest share to the ratee's actual performance.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 272" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A stacked bar showing that most of the variance in a performance rating traces to the individual rater rather than to the person being rated, plus the four classic rating distortions: recency, halo, leniency versus severity, and central tendency">
+        <style>
+          .b7rT { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .b7rW { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .b7rX { font: 400 11px Inter, sans-serif; fill: #6B7280; }
+          .b7rB { font: 700 12.5px Inter, sans-serif; fill: #1F2937; }
+          .b7rN { font: 600 13px Inter, sans-serif; fill: #312E81; }
+        </style>
+        <text class="b7rT" x="24" y="32">What a performance rating is actually made of</text>
+        <rect x="24" y="48" width="175" height="44" rx="6" fill="#4338CA"/>
+        <text class="b7rW" x="40" y="76">Ratee ~21%</text>
+        <rect x="199" y="48" width="449" height="44" fill="#D97706"/>
+        <text class="b7rW" x="219" y="76" style="fill:#FEF3C7">The individual rater ~54%</text>
+        <rect x="648" y="48" width="208" height="44" rx="6" fill="#9CA3AF"/>
+        <text class="b7rW" x="668" y="76">Level + error ~25%</text>
+        <text class="b7rX" x="24" y="112">Reported idiosyncratic rater effects were roughly 53% to 62% depending on the rater level.</text>
+        <text class="b7rT" x="24" y="146">Four distortions riding on top</text>
+        <rect x="24" y="158" width="202" height="58" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b7rB" x="40" y="182">Recency</text>
+        <text class="b7rX" x="40" y="202">last month outweighs a year</text>
+        <rect x="234" y="158" width="202" height="58" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b7rB" x="250" y="182">Halo / horns</text>
+        <text class="b7rX" x="250" y="202">one strong trait colors all</text>
+        <rect x="444" y="158" width="202" height="58" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="b7rB" x="460" y="182">Leniency vs severity</text>
+        <text class="b7rX" x="460" y="202">every rater has a set point</text>
+        <rect x="654" y="158" width="202" height="58" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+        <text class="b7rB" x="670" y="182">Central tendency</text>
+        <text class="b7rX" x="670" y="202">all ratings bunch in middle</text>
+        <rect x="24" y="240" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="b7rN" x="46" y="252">If most of the signal is the rater, a single rater's number is not a verdict. Treat it as one noisy reading.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - most of a rating's variance is the rater, not the rated</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What the rater effect does and does not mean<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The finding is easy to over-read in both directions, so be precise about it:</p>
+        <ul>
+          <li><strong>It does mean</strong> that a single manager's rating is a noisy instrument. Two honest, competent managers rating the same person will often land in different places, and the gap is mostly them, not the person.</li>
+          <li><strong>It does mean</strong> that one number from one rater should never be treated as an objective fact about a human being.</li>
+          <li><strong>It does not mean</strong> raters are lying or that performance is unmeasurable. Real differences exist - they are just a smaller share of the variance than we assume.</li>
+          <li><strong>It does mean</strong> the fix is structural: more than one perspective, criteria fixed in advance, evidence attached to claims, and calibration to level out rater set points.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Two managers, one analyst.</strong> A Cartwheel analyst moves from Merchandising to Growth mid-year. Her old manager rates her a 4 (he rates almost everyone 4). Her new manager rates her a 3 (he reserves 4 for exceptional). Nothing about her work changed between those two numbers. Without calibration, the average of two rater set points becomes her "performance" - and follows her into a pay decision.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Two quieter biases: contrast and similarity<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Beyond the four classic distortions, two more do damage precisely because they feel like good judgment:</p>
+        <ul>
+          <li><strong>Contrast bias</strong> - you rate the person against whoever you assessed just before them, not against the criteria. Review order quietly becomes part of the score. The fix is dull and effective: rate every person against the written criteria, one criterion at a time, and shuffle the order.</li>
+          <li><strong>Similarity bias</strong> - people who work, communicate, or think like you read as "strong". This is how homogeneous teams grow while everyone believes they are being meritocratic. The fix is to ask, for each rating, which evidence would look different if this person's style matched yours less.</li>
+        </ul>
+        <p>Both biases share a tell: you can describe the impression clearly but cannot name the evidence. That gap is the signal to slow down.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: BIAS IN THE LANGUAGE ============ -->
+  <section class="section" id="language">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · bias travels in words</span>
+      <h2>What the review language gives away <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Bias rarely shows up as a lower number. It shows up as vaguer praise, more comment on personality, and less concrete, career-building specificity - and those differences have been measured in real review corpora.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A comparison of vague personality-based feedback against specific behaviour-based feedback, with reported research findings that women receive more vague praise and more personality criticism than men">
+        <style>
+          .b7lT { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .b7lH { font: 700 12.5px Inter, sans-serif; fill: #991B1B; }
+          .b7lG { font: 700 12.5px Inter, sans-serif; fill: #312E81; }
+          .b7lX { font: 400 11.5px Inter, sans-serif; fill: #4B5563; }
+          .b7lD { font: 600 12.5px Inter, sans-serif; fill: #92400E; }
+          .b7lN { font: 600 13px Inter, sans-serif; fill: #312E81; }
+        </style>
+        <text class="b7lT" x="24" y="34">The same performance, described two ways</text>
+        <rect x="24" y="48" width="404" height="126" rx="10" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.4"/>
+        <text class="b7lH" x="44" y="74">Vague + about the person</text>
+        <text class="b7lX" x="44" y="98">"She is very supportive of the team."</text>
+        <text class="b7lX" x="44" y="120">"Can come across as abrasive."</text>
+        <text class="b7lX" x="44" y="142">"Great attitude, keep it up."</text>
+        <text class="b7lX" x="44" y="164">No behaviour, no impact, nothing to act on.</text>
+        <rect x="452" y="48" width="404" height="126" rx="10" fill="#EEF2FF" stroke="#4338CA" stroke-width="1.4"/>
+        <text class="b7lG" x="472" y="74">Specific + about the work</text>
+        <text class="b7lX" x="472" y="98">"Rebuilt the returns flow last quarter."</text>
+        <text class="b7lX" x="472" y="120">"Support tickets on returns fell 22%."</text>
+        <text class="b7lX" x="472" y="142">"Next: lead the checkout review."</text>
+        <text class="b7lX" x="472" y="164">Behaviour, impact, next step - promotable evidence.</text>
+        <rect x="24" y="192" width="832" height="68" rx="10" fill="#FEF3C7" stroke="#D97706" stroke-width="1.4"/>
+        <text class="b7lD" x="44" y="218">Reported: women receive more vague praise and less specific, business-linked feedback (Correll &amp; Simard, HBR 2016).</text>
+        <text class="b7lD" x="44" y="242">Reported: critical feedback for women far more often includes personality criticism such as "abrasive" (Snyder, 2014).</text>
+        <rect x="24" y="286" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="b7lN" x="46" y="298">Audit the words, not only the scores. Vague praise is a career tax, even when the number looks generous.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - vague praise costs careers even when the rating looks fine</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Calibration done fairly, and the trap next to it<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Calibration is a room where managers compare how they are applying the criteria, so one manager's 4 means roughly what another's does. Done well it is the single best correction for rater set points. Done badly it becomes forced distribution wearing a nicer label.</p>
+        <ul>
+          <li><strong>Fair calibration</strong> - criteria agreed in advance, evidence required for every claim, discussion of how the standard is being applied, outliers examined in both directions, and a written record of what changed and why.</li>
+          <li><strong>The trap</strong> - arriving with a quota ("only 15% can be top"), ranking people against each other rather than the criteria, and letting the most confident voice in the room set the standard. That does not remove bias; it launders it and adds a new one.</li>
+        </ul>
+        <p>A blunt test: if the session's output is a rank order, it was a ranking meeting. If its output is a shared, evidenced standard plus a handful of adjusted ratings with reasons attached, it was calibration.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why "no rating at all" is not the answer<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A tempting response to the rater effect is to scrap ratings entirely. Some organisations tried it, and the honest result is mixed: when the formal rating disappears but pay and promotion decisions do not, judgment simply moves somewhere less visible - hallway reputation, a manager's advocacy, who is remembered in the room. That is not less biased; it is only less auditable.</p>
+        <ul>
+          <li><strong>Keep a decision record.</strong> If a judgment affects someone's pay or level, write down the criteria and the evidence, whatever you call the output.</li>
+          <li><strong>Reduce the stakes on any single reading.</strong> Multiple perspectives, a longer window, and evidence beat a cleverer scale.</li>
+          <li><strong>Separate steering from evaluation</strong> (b6's golden rule), so most measurement is low-stakes and honest, and the rare high-stakes judgment is properly evidenced.</li>
+        </ul>
+        <p>The goal is not a perfect number. It is a defensible, contestable, well-evidenced judgment that the person can see and challenge.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 1 ============ -->
+  <section class="section" id="worked-1">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 1 of 2</span>
+      <h2>Audit a Cartwheel review cycle's language <span class="tag demo">★ 12 min · everyone tries</span></h2>
+    </div>
+    <p class="lede">Four real-sounding lines from Cartwheel's last review round. Flag the bias pattern in each, then rewrite it as behaviour plus impact plus next step - the b6 shape, now used as a bias control.</p>
+
+    <div class="steps">
+      <div class="step"><p>Read each line and ask the first audit question: <strong>is there any evidence here?</strong> If you cannot name the behaviour, the line is an impression.</p></div>
+      <div class="step"><p>Ask the second: <strong>is this about the work or the personality?</strong> Personality words are where bias concentrates.</p></div>
+      <div class="step"><p>Ask the third: <strong>would this help the person get promoted?</strong> Vague praise reads well and advances nobody.</p></div>
+      <div class="step"><p>Rewrite each line with behaviour, impact, and a next step. Then compare across the team: who got specifics and who got adjectives?</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The language audit, line by line</strong>
+      <table class="clean">
+        <thead><tr><th>Review line</th><th>Pattern</th><th>Rewritten</th></tr></thead>
+        <tbody>
+          <tr><td>"Very supportive, a real team player."</td><td>Vague praise, no evidence</td><td>"Onboarded two analysts in Q3; both shipped their first dashboard inside a month."</td></tr>
+          <tr><td>"Can come across as abrasive in reviews."</td><td>Personality criticism</td><td>"In the last two design reviews, feedback was given without naming what to change. Next: lead with the specific ask."</td></tr>
+          <tr><td>"Had a fantastic quarter, great energy."</td><td>Recency plus halo</td><td>"Cut checkout errors 18% in Q4 after a flat Q2 and Q3. Full-year trend is upward."</td></tr>
+          <tr><td>"Not quite ready for senior yet."</td><td>Unfalsifiable, no criteria</td><td>"Senior requires leading a cross-team project; she has led within Growth only. Next: own the returns project in Q1."</td></tr>
+        </tbody>
+      </table>
+      Notice what the rewrites do: every one becomes contestable. A person can argue with evidence, and that is the point.
+    </div>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 2 ============ -->
+  <section class="section" id="worked-2">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 2 of 2</span>
+      <h2>Run a fair calibration session <span class="tag demo">★ 10 min · do your own</span></h2>
+    </div>
+    <p class="lede">Five Cartwheel managers, one standard to share. Design the room so it corrects rater set points instead of producing a ranking - then run the four-question self-audit before you submit anything.</p>
+
+    <div class="steps">
+      <div class="step"><p>Before the room: every manager writes their rating <strong>with evidence attached</strong>, against criteria fixed in advance. No evidence, no claim.</p></div>
+      <div class="step"><p>Open with the standard, not the people: what does each level actually look like in observed behaviour at Cartwheel?</p></div>
+      <div class="step"><p>Examine outliers in <strong>both</strong> directions - the unusually generous rater and the unusually harsh one. Set points are the target, not people.</p></div>
+      <div class="step"><p>Record every change and its reason. A rating that moves without a written reason is a new bias, not a correction.</p></div>
+      <div class="step"><p>Close by naming who got specifics and who got adjectives across the whole cycle, and fix the language before it goes out.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>Calibration rules and the self-audit</strong>
+      <table class="clean">
+        <thead><tr><th>Rule</th><th>Why it exists</th><th>Failure mode it blocks</th></tr></thead>
+        <tbody>
+          <tr><td>Criteria fixed before ratings</td><td>Stops the standard moving to fit a conclusion</td><td>Post-hoc justification</td></tr>
+          <tr><td>Evidence required per claim</td><td>Impressions cannot be examined; behaviour can</td><td>Halo, similarity bias</td></tr>
+          <tr><td>No quota, no forced curve</td><td>Calibration levels set points, it does not allocate</td><td>Forced ranking in disguise</td></tr>
+          <tr><td>Outliers both ways</td><td>Harsh raters distort as much as generous ones</td><td>Leniency and severity</td></tr>
+          <tr><td>Written reason for every change</td><td>Makes the decision contestable later</td><td>Loudest-voice-wins</td></tr>
+        </tbody>
+      </table>
+      The four-question self-audit, before you submit: What is my evidence? Is this the work or the person? Did I judge the whole period or the last month? Would I write this same sentence about someone whose style matches mine?
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The quota that ate the calibration.</strong> A common pattern: leadership tells the calibration room that "roughly 15% should be top box." The moment that lands, managers stop comparing standards and start trading people. The strongest advocate wins, the quietest team loses, and the outcome correlates with manager confidence rather than performance. Calibration levels rater set points; it must never be handed a distribution to hit. If a distribution is genuinely required by a pay budget, keep that decision in a separate, clearly-named step - it is a budgeting call, not a measurement one.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Pull your last review cycle and count, per person, how many statements name a behaviour with evidence versus how many are adjectives. Look at how that splits across your team.</li>
+      <li>Search your own feedback notes for "abrasive," "aggressive," "too nice," "not a culture fit," "great attitude." Rewrite each as behaviour plus impact plus next step.</li>
+      <li>Estimate your own set point: are you a generous rater or a harsh one? Ask a peer manager to compare two ratings against the same criteria and see how far apart you land.</li>
+      <li>Take one rating you are least sure about and run the four-question self-audit on it. Note what changes.</li>
+      <li>If your organisation calibrates, check the session against the five rules above. If it does not calibrate, draft the agenda you would propose.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered (cited)</h2>
+    </div>
+    <p class="lede">Taught from the rating-bias research. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Scullen, Mount &amp; Goff (2000), "Understanding the Latent Structure of Job Performance Ratings," J. Applied Psychology</span><span class="note">Part 1 · the idiosyncratic rater effect, reported at roughly 53-62% of variance</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Correll &amp; Simard, "Vague Feedback Is Holding Women Back," HBR (2016); Snyder (2014) review-language analysis</span><span class="note">Part 2 · vague praise, personality criticism, and the specificity gap</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Calibration practice; Greenberg (1987) procedural justice</span><span class="note">Worked examples · fair calibration rules, evidence, contestability</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · The idiosyncratic rater effect says the largest share of variance in a performance rating traces to...</p>
+      <button class="qopt" type="button">A · The person being rated</button>
+      <button class="qopt" type="button">B · The individual doing the rating</button>
+      <button class="qopt" type="button">C · The rating scale's design</button>
+      <p class="qwhy">Scullen, Mount and Goff reported idiosyncratic rater effects of roughly 53-62% of variance, with a far smaller share traced to the ratee's actual performance. One rater's number is a noisy reading, not a verdict.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · A review line reading "great attitude, real team player" is a problem mainly because...</p>
+      <button class="qopt" type="button">A · It is too positive to be credible</button>
+      <button class="qopt" type="button">B · It should have a number attached</button>
+      <button class="qopt" type="button">C · It has no behaviour, no impact, and nothing anyone can act on or contest</button>
+      <p class="qwhy">Vague praise reads well and advances nobody. Research reports women receive more of it and less specific, business-linked feedback - so the gap costs careers even when the score looks generous.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · What turns a calibration session into forced ranking in disguise?</p>
+      <button class="qopt" type="button">A · Arriving with a quota and comparing people against each other instead of the criteria</button>
+      <button class="qopt" type="button">B · Requiring evidence for every claim</button>
+      <button class="qopt" type="button">C · Examining unusually harsh raters as well as generous ones</button>
+      <p class="qwhy">Calibration exists to level rater set points against a shared standard. Hand the room a distribution to hit and managers start trading people; the loudest advocate wins and a new bias replaces the old one.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 7 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Rater effect</b><span>roughly 53-62% of rating variance is the rater (Scullen &amp; Mount). One rater, one noisy reading.</span></div>
+      <div class="cheat-item"><b>Four distortions</b><span>recency, halo/horns, leniency vs severity, central tendency. Name them to catch them.</span></div>
+      <div class="cheat-item"><b>Two quiet ones</b><span>contrast (rated against the last person) and similarity (people like you read as strong).</span></div>
+      <div class="cheat-item"><b>Bias lives in words</b><span>vague praise and personality criticism, not lower scores. Audit the language.</span></div>
+      <div class="cheat-item"><b>Evidence or nothing</b><span>if you cannot name the behaviour, it is an impression - do not submit it as a rating.</span></div>
+      <div class="cheat-item"><b>Fair calibration</b><span>criteria first, evidence per claim, no quota, outliers both ways, written reasons.</span></div>
+      <div class="cheat-item"><b>Self-audit</b><span>evidence? work or person? whole period or last month? same sentence for a different style?</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b8 - AI-assisted, responsibly: where AI helps with this, and the lines it must not cross.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 7 of 10 · learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b6-fair-conversations.html">← Prev: Fair conversations</a> &nbsp;·&nbsp; <a href="b8-ai-assisted.html">Next: AI-assisted, responsibly →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 2 · Writing OKRs - learn OKRs with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-okr-with-phoebe</a> / Manager session 2 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe · Manager track · Session 2 of 10</div>
+    <h1>Writing good OKRs: <span class="accent">an inspiring objective, measurable results</span></h1>
+    <p class="sub">A good OKR is two halves that fit together: a qualitative, time-boxed Objective that says where you are going, and two to four Key Results that prove you got there in numbers. This session gives you the test that separates a real result from a disguised task, the difference between a committed and a stretch goal, and the 0-1 scoring scale - all worked on Cartwheel, our mid-size online retailer. And the rule that keeps the whole thing honest: OKR scores never touch pay.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Manager track</span>
+      <span class="chip audience">Managers: middle mgmt · team leads</span>
+      <span class="chip audience">No code · templates + worked examples</span>
+      <span class="chip time">~45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:4">3-20 · Objective + Key Results</span>
+      <span class="a3" style="flex:5">20-42 · Worked example: rewrite an OKR</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>From "measure fairly" to "write the goal"</h2>
+    </div>
+    <p class="lede">Last session you learned to tell activity from outcome and to run a metric through the fair-metric checklist. Tonight you turn that judgment into the format your company actually writes goals in: the <strong>OKR</strong> - Objective and Key Results. The craft is small but unforgiving. Most bad OKRs fail in one of two ways: the Objective is a vague wish, or the "Key Results" are really a to-do list wearing a number. We will fix both on Cartwheel, then set the scoring scale that tells you at quarter-end how you did. One rule carries over and never leaves: an OKR score is for steering and learning. It is <strong>decoupled from pay and ratings</strong> - the moment a score decides a bonus, people sandbag the goal and stop being honest.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Worked example (Cartwheel)</span>
+      <span class="pill inkpill">Sources covered (cited)</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The anatomy of a good OKR (one inspiring Objective, 2-4 measurable outcome Key Results), the "can it be checked off as done?" test that catches disguised tasks, the difference between committed and stretch goals, the 0-1 scoring scale with the ~0.7 sweet spot, and one weak Cartwheel OKR rewritten from a wish-plus-checklist into an inspiring goal with outcome results.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: OBJECTIVE VS KEY RESULTS ============ -->
+  <section class="section" id="anatomy">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · anatomy</span>
+      <h2>The Objective inspires; the Key Results measure <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">John Doerr's formula is deliberately plain: <strong>"I will [Objective] as measured by [Key Results]."</strong> The Objective is qualitative, memorable, and time-boxed - it says where you are going and why it matters. The Key Results are the numbers that prove you arrived. Get the split right and the rest of OKR practice is easy.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anatomy of an OKR: one qualitative time-boxed Objective on the left, two to four measurable outcome Key Results on the right, with the test that a Key Result you can simply check off as done is really an output that needs rewriting">
+        <style>
+          .b2aT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b2aX { font: 400 11.5px Inter, sans-serif; fill: #E0E7FF; }
+          .b2aI { font: 700 12.5px Inter, sans-serif; fill: #1F2937; }
+          .b2aXk { font: 400 11px Inter, sans-serif; fill: #6B7280; }
+          .b2aN { font: 600 13px Inter, sans-serif; fill: #92400E; }
+          .b2aBad { font: 700 12.5px Inter, sans-serif; fill: #991B1B; }
+        </style>
+        <rect x="24" y="40" width="300" height="150" rx="12" fill="#4338CA"/>
+        <text class="b2aT" x="44" y="68">Objective</text>
+        <text class="b2aX" x="44" y="90">Qualitative. Inspiring.</text>
+        <text class="b2aX" x="44" y="108">Time-boxed (this quarter).</text>
+        <text class="b2aX" x="44" y="126">Says WHERE we are going.</text>
+        <text class="b2aX" x="44" y="150" style="fill:#C7D2FE">"Make checkout the smoothest</text>
+        <text class="b2aX" x="44" y="168" style="fill:#C7D2FE">step of the Cartwheel journey."</text>
+        <text class="b2aT" x="352" y="34" style="fill:#1F2937">as measured by</text>
+        <rect x="352" y="44" width="504" height="34" rx="8" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b2aI" x="368" y="66">KR1 · checkout completion 61% → 72%</text>
+        <rect x="352" y="86" width="504" height="34" rx="8" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b2aI" x="368" y="108">KR2 · conversion rate 2.1% → 2.8%</text>
+        <rect x="352" y="128" width="504" height="34" rx="8" fill="#EEF2FF" stroke="#4338CA"/>
+        <text class="b2aI" x="368" y="150">KR3 · checkout error rate 4.0% → 1.5%</text>
+        <text class="b2aXk" x="352" y="182">2 to 4 Key Results. Each is a measurable OUTCOME with a from → to number.</text>
+        <rect x="24" y="210" width="832" height="44" rx="10" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.4"/>
+        <text class="b2aBad" x="44" y="230">The test:</text>
+        <text class="b2aI" x="108" y="230">if a "Key Result" can be ticked off as done ("ship the new checkout"), it is an OUTPUT.</text>
+        <text class="b2aI" x="44" y="248">Rewrite it as the measurable change the work is supposed to cause.</text>
+        <rect x="24" y="272" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b2aN" x="46" y="284">Objective = the why and where. Key Results = the proof, in numbers you do not control by fiat.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - one inspiring Objective, 2-4 measurable outcome Key Results</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The "done" test - outputs in disguise<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The single most common OKR mistake is dressing a task up as a Key Result. Use one test:</p>
+        <ul>
+          <li><strong>Can it be checked off as "done"?</strong> "Ship the new checkout", "run five campaigns", "launch the app" - these are outputs. You either did them or you did not, and doing them proves nothing changed.</li>
+          <li><strong>Does it name a measurable change?</strong> "Checkout completion 61% → 72%", "conversion 2.1% → 2.8%" - these are outcomes. The team could ship every feature on the roadmap and still miss them, which is exactly why they are worth grading.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Shipping is not succeeding.</strong> A Cartwheel squad once "hit" its quarter by shipping a redesigned checkout - then discovered completion had not moved a point. The feature was the plan, not the goal. Key Results measure the result the feature was supposed to buy. Keep the roadmap as your task list; keep the OKR as the outcome it should produce.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: COMMITTED VS STRETCH + SCORING ============ -->
+  <section class="section" id="scoring">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · commitment + scoring</span>
+      <h2>Committed vs stretch, and the 0-1 scale <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Not every OKR carries the same promise. Google re:Work separates two kinds: <strong>committed</strong> OKRs you fully expect to hit (target score 1.0), and <strong>aspirational or stretch</strong> OKRs you set knowing ~0.7 is a strong result. Grading both on the same 0-1 scale only works if everyone knows which kind they signed up for.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The 0 to 1 OKR scoring dial: committed OKRs target 1.0, aspirational stretch OKRs have a sweet spot around 0.7, scores near 1.0 on a stretch goal suggest the goal was set too low, and scores below 0.4 suggest it was unrealistic or deprioritised">
+        <style>
+          .b2sT { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .b2sX { font: 400 11px Inter, sans-serif; fill: #6B7280; }
+          .b2sW { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .b2sN { font: 600 13px Inter, sans-serif; fill: #312E81; }
+          .b2sTick { font: 600 11px Inter, sans-serif; fill: #4B5563; }
+        </style>
+        <!-- scale track -->
+        <rect x="60" y="70" width="760" height="26" rx="13" fill="#F9FAFB" stroke="#E5E7EB"/>
+        <!-- 0 to 0.4 red zone -->
+        <rect x="60" y="70" width="304" height="26" rx="13" fill="#FEF2F2"/>
+        <!-- 0.6 to 0.8 sweet spot -->
+        <rect x="516" y="70" width="152" height="26" fill="#FEF3C7"/>
+        <!-- ticks -->
+        <text class="b2sTick" x="56" y="120">0.0</text>
+        <text class="b2sTick" x="360" y="120">0.4</text>
+        <text class="b2sTick" x="586" y="120">0.7</text>
+        <text class="b2sTick" x="808" y="120">1.0</text>
+        <line x1="60" y1="60" x2="60" y2="100" stroke="#D1D5DB"/>
+        <line x1="364" y1="60" x2="364" y2="100" stroke="#D1D5DB"/>
+        <line x1="592" y1="60" x2="592" y2="100" stroke="#D97706" stroke-width="2"/>
+        <line x1="820" y1="60" x2="820" y2="100" stroke="#D1D5DB"/>
+        <!-- sweet spot marker -->
+        <circle cx="592" cy="83" r="9" fill="#D97706"/>
+        <text class="b2sW" x="585" y="87">✓</text>
+        <text class="b2sT" x="516" y="52" style="fill:#92400E">stretch sweet spot ~0.7</text>
+        <!-- committed marker -->
+        <circle cx="820" cy="83" r="9" fill="#4338CA"/>
+        <text class="b2sT" x="726" y="52" style="fill:#312E81">committed target 1.0</text>
+        <!-- zone labels -->
+        <text class="b2sX" x="90" y="150">Below 0.4 on a stretch goal:</text>
+        <text class="b2sX" x="90" y="168">too ambitious, mis-scoped, or</text>
+        <text class="b2sX" x="90" y="186">quietly deprioritised. Ask why.</text>
+        <text class="b2sX" x="470" y="150">0.6 to 0.7 on a stretch goal:</text>
+        <text class="b2sX" x="470" y="168">genuine, healthy progress on</text>
+        <text class="b2sX" x="470" y="186">a goal that should feel hard.</text>
+        <rect x="60" y="210" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="b2sN" x="82" y="222">A 1.0 on a stretch goal is not a triumph - it means the goal was set too safe. Adapt the ~0.7 norm to your context.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the 0-1 dial: committed at 1.0, stretch sweet spot near 0.7</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The ~0.7 norm is Google's - adapt it, and keep it away from pay<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two things about scoring get misused, so hold them carefully:</p>
+        <ul>
+          <li><strong>~0.7 is a Google convention, not a law.</strong> It works because Google explicitly decouples OKR scores from pay, so a "0.7" carries no penalty. If your organisation is newer to OKRs, start with more committed goals and introduce stretch gradually. Pick a norm, state it out loud, and keep it consistent so scores are comparable.</li>
+          <li><strong>The score is a conversation-starter, never a verdict.</strong> A 0.5 with a good story (the market moved, a dependency slipped) can be a better quarter than a 1.0 on a goal that was too easy. Read the score with its trend and context, exactly as you learned in b1.</li>
+        </ul>
+        <p>And the linchpin again: because OKRs are meant to be ambitious, wiring the score to a bonus guarantees sandbagging. Keep scoring on the steering track. Pay is decided elsewhere, on a fuller picture.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Fewer, bolder OKRs - 3 to 5 objectives, not 15<span class="mini">1 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>OKRs are a focusing tool, so the count matters. Doerr's guidance: <strong>3 to 5 objectives</strong> per team per quarter, each with 2 to 4 Key Results. If everything is a priority, nothing is - a team with fifteen objectives has simply relabelled its to-do list. When you cannot cut, ask which OKR you would defend if you could only keep three. Those are your real goals; the rest is ordinary work that does not need an OKR to get done.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 1 ============ -->
+  <section class="section" id="worked-1">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 1 of 2</span>
+      <h2>Rewrite a weak Cartwheel OKR <span class="tag demo">★ 12 min · everyone tries</span></h2>
+    </div>
+    <p class="lede">A Cartwheel team lead brings a first draft: a vague Objective and a to-do list masquerading as Key Results. Walk it through the anatomy and the "done" test, then rewrite it.</p>
+
+    <div class="steps">
+      <div class="step"><p>The draft. Objective: <strong>"Do well in Q3."</strong> Key Results: <strong>"ship the new checkout", "run 5 marketing campaigns".</strong> Score it against the anatomy from Part 1.</p></div>
+      <div class="step"><p>Diagnose the Objective: not inspiring, not time-specific in any meaningful way, gives no direction. "Do well" cannot be aimed at.</p></div>
+      <div class="step"><p>Diagnose the Key Results with the "done" test: both can be checked off as done. "Ship checkout" and "run 5 campaigns" are outputs - they prove effort, not results.</p></div>
+      <div class="step"><p>Rewrite the Objective so it inspires and points somewhere: <strong>"Make Cartwheel's checkout the smoothest step of the journey."</strong></p></div>
+      <div class="step"><p>Rewrite each Key Result as a measurable outcome with a from → to number: conversion rate 2.1% → 2.8%, checkout completion 61% → 72%. The shipping and the campaigns move down to the roadmap as the how.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>Before and after, side by side</strong>
+      <table class="clean">
+        <thead><tr><th>Part</th><th>Before (weak)</th><th>After (fair + measurable)</th></tr></thead>
+        <tbody>
+          <tr><td>Objective</td><td>"Do well in Q3"</td><td>"Make checkout the smoothest step of the Cartwheel journey"</td></tr>
+          <tr><td>KR1</td><td>"Ship the new checkout" (output)</td><td>Conversion rate 2.1% → 2.8%</td></tr>
+          <tr><td>KR2</td><td>"Run 5 campaigns" (output)</td><td>Checkout completion 61% → 72%</td></tr>
+          <tr><td>Passes "done" test?</td><td>✗ both can be ticked off</td><td>✓ both name a measurable change</td></tr>
+        </tbody>
+      </table>
+      The shipped feature and the campaigns are not deleted - they become the plan for how to move these numbers. The OKR grades the result; the roadmap tracks the work.
+    </div>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 2 ============ -->
+  <section class="section" id="worked-2">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 2 of 2</span>
+      <h2>Label Cartwheel OKRs: committed vs stretch <span class="tag demo">★ 8 min · do your own</span></h2>
+    </div>
+    <p class="lede">Setting the commitment level is a promise, so it has to be explicit. Take a mixed set of Cartwheel Key Results and label each as committed (expect 1.0) or stretch (expect ~0.7), with the score you would call a good quarter.</p>
+
+    <div class="steps">
+      <div class="step"><p>For each Key Result, ask: is this something we must deliver (committed), or a bold reach we set to pull ourselves further (stretch)?</p></div>
+      <div class="step"><p>Write the expected score next to each so no one is surprised at quarter-end - committed targets 1.0, stretch aims for ~0.7.</p></div>
+      <div class="step"><p>Sanity-check: if every OKR is committed, you are playing it safe; if every one is stretch, nothing is guaranteed. Aim for a mix.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The labelled set</strong>
+      <table class="clean">
+        <thead><tr><th>Cartwheel Key Result</th><th>Type</th><th>Good-quarter score</th></tr></thead>
+        <tbody>
+          <tr><td>Keep site uptime ≥ 99.9%</td><td>Committed</td><td>1.0 - a floor, not a reach</td></tr>
+          <tr><td>Ship PDPA-compliant consent flow by quarter-end</td><td>Committed</td><td>1.0 - a must-do</td></tr>
+          <tr><td>Lift conversion rate 2.1% → 2.8%</td><td>Stretch</td><td>~0.7 (reach ≈ 2.6%) is strong</td></tr>
+          <tr><td>Grow repeat-purchase rate 28% → 38%</td><td>Stretch</td><td>~0.7 is a genuine win</td></tr>
+        </tbody>
+      </table>
+      A 0.7 on the stretch rows is a good quarter. A 0.7 on the committed rows is a problem - you missed a promise. Same number, different meaning, because the commitment was set in advance.
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Name the type before the quarter, not after.</strong> The unfairness sneaks in when a team treats a stretch goal as committed only once it is missed - suddenly a healthy 0.7 reads as failure. Cartwheel's fix is a one-line label on every OKR at the start. It costs nothing and removes an entire category of quarter-end argument.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take one OKR your team wrote and run every Key Result through the "done" test. Rewrite any that can be checked off as done into a measurable outcome.</li>
+      <li>Check your Objective: is it qualitative, inspiring, and time-boxed? Rewrite it if it reads like a task or a wish.</li>
+      <li>Label each of your current OKRs committed or stretch, and write the expected score next to it.</li>
+      <li>Count your objectives. If you have more than five, decide which three you would defend and demote the rest to ordinary work.</li>
+      <li>Optional: read Google re:Work "Set goals with OKRs" and Doerr's "Measure What Matters" ch. on scoring before b3.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered (cited)</h2>
+    </div>
+    <p class="lede">Taught from the OKR canon on goal anatomy and scoring. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Doerr, "Measure What Matters" (2018)</span><span class="note">Parts 1-2 · objective + key results formula, committed vs aspirational, fewer bolder goals</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Google re:Work, "Set goals with OKRs" (rework.withgoogle.com)</span><span class="note">Part 2 · the 0-1 scale, the ~0.7 sweet spot norm, decoupling scores from pay</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · "Ship the new checkout" is a weak Key Result mainly because...</p>
+      <button class="qopt" type="button">A · It is too ambitious for one quarter</button>
+      <button class="qopt" type="button">B · It belongs to Engineering, not the team</button>
+      <button class="qopt" type="button">C · It can be checked off as "done" - it is an output, not a measurable outcome</button>
+      <p class="qwhy">The "done" test: if a Key Result can simply be ticked off, it is an output. Rewrite it as the measurable change it should cause, such as checkout completion 61% → 72%.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · On a stretch (aspirational) OKR, what score is generally considered a strong result?</p>
+      <button class="qopt" type="button">A · Exactly 1.0 every time</button>
+      <button class="qopt" type="button">B · Around 0.7 - hitting 1.0 suggests the goal was set too safe</button>
+      <button class="qopt" type="button">C · Anything above 0.0</button>
+      <p class="qwhy">Around 0.7 is the Google stretch-goal sweet spot (a norm to adapt, not a law). A 1.0 on a stretch goal usually means it was not ambitious enough. Committed OKRs, by contrast, target 1.0.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Why must OKR scores stay decoupled from pay?</p>
+      <button class="qopt" type="button">A · Because ambitious goals scored for pay get sandbagged, and people stop being honest</button>
+      <button class="qopt" type="button">B · Because scoring takes too long to calculate</button>
+      <button class="qopt" type="button">C · Because HR software cannot store the numbers</button>
+      <p class="qwhy">OKRs are meant to be ambitious. Wire the score to a bonus and people set safe goals to protect the number. Keep scoring on the steering track; decide pay elsewhere, on a fuller picture.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The formula</b><span>"I will [Objective] as measured by [Key Results]." Objective inspires; KRs measure.</span></div>
+      <div class="cheat-item"><b>Objective</b><span>qualitative, inspiring, time-boxed. Says where you are going and why.</span></div>
+      <div class="cheat-item"><b>Key Results</b><span>2-4 measurable outcomes with from → to numbers. Not tasks.</span></div>
+      <div class="cheat-item"><b>The "done" test</b><span>if a KR can be ticked off as done, it is an output. Rewrite it.</span></div>
+      <div class="cheat-item"><b>Committed vs stretch</b><span>committed targets 1.0; stretch aims for ~0.7. Label it up front.</span></div>
+      <div class="cheat-item"><b>0-1 scale</b><span>~0.7 sweet spot is a Google norm - adapt it. Read score with trend + context.</span></div>
+      <div class="cheat-item"><b>Fewer, bolder</b><span>3-5 objectives, 2-4 KRs each. If everything is a priority, nothing is.</span></div>
+      <div class="cheat-item"><b>Decoupled from pay</b><span>the linchpin. Scores steer and teach; they never set a bonus.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b3 - choosing fair metrics: the checklist + the Goodhart gaming lab.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 2 of 10 · learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b1-foundations.html">← Previous: Foundations</a> &nbsp;·&nbsp; <a href="b3-choosing-fair-metrics.html">Next: Choosing fair metrics →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

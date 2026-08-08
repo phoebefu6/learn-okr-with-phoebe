@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager session 1 · Foundations - learn OKRs with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-okr-with-phoebe</a> / Manager session 1 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn OKRs with Phoebe · Manager track · Session 1 of 10</div>
+    <h1>Foundations: <span class="accent">measure the right thing, fairly</span></h1>
+    <p class="sub">Before a single OKR is written, a manager needs three things straight: what a measurement is even for, the difference between activity and results, and what makes a metric fair enough to put a person's name against. This session sets all three up on our running company - Cartwheel, a mid-size online retailer - and hands you the fair-metric checklist you will use for the rest of the track.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Manager track</span>
+      <span class="chip audience">Managers: middle mgmt · team leads</span>
+      <span class="chip audience">No code · templates + worked examples</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · What + why we measure</span>
+      <span class="a3" style="flex:5">18-42 · Worked example: fix a metric</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How this track works</h2>
+    </div>
+    <p class="lede">Ten practical sessions, one running company: <strong>Cartwheel</strong>, a mid-size direct-to-consumer home-and-lifestyle retailer. You will write real OKRs for its teams, choose metrics that are fair to grade people on, set a monitoring cadence that steers without smothering, run performance conversations that separate steering from judgment, use AI as a bias-checking helper (never a judge), and diagnose metrics that have gone wrong. Tonight is the foundation: why we measure, the difference between activity and outcome, and the checklist that decides whether a metric is fair. A running note repeated all track: an OKR score is for steering and learning, never a direct input to someone's pay - the moment it drives compensation, people stop being honest.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Worked example (Cartwheel)</span>
+      <span class="pill inkpill">Sources covered (cited)</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The three purposes of measurement kept separate (steering, development, reward), a clear grip on activity vs outcome, the six-point fair-metric checklist, and one bad Cartwheel metric diagnosed and rewritten into a fair one - the move you will repeat for the rest of the course.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THREE PURPOSES + OUTPUT VS OUTCOME ============ -->
+  <section class="section" id="purposes">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · why we measure</span>
+      <h2>Three jobs people jam into one number <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Most broken performance systems fail for one reason: they force a single number to do three different jobs at once. Pull them apart and almost everything gets easier - and fairer.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three purposes of measurement kept separate: steering (is the work on track), development (how do I grow this person), and evaluation (rating and pay), and the warning that mixing them corrupts the data">
+        <style>
+          .b1pT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b1pX { font: 400 11.5px Inter, sans-serif; fill: #E0E7FF; }
+          .b1pI { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .b1pN { font: 600 13px Inter, sans-serif; fill: #92400E; }
+        </style>
+        <rect x="24" y="42" width="260" height="86" rx="12" fill="#4338CA"/>
+        <text class="b1pT" x="44" y="70">1 · Steering</text>
+        <text class="b1pX" x="44" y="92">Is the work on track?</text>
+        <text class="b1pX" x="44" y="110">Weekly. Fast, cheap signals.</text>
+        <rect x="310" y="42" width="260" height="86" rx="12" fill="#818CF8"/>
+        <text class="b1pT" x="330" y="70">2 · Development</text>
+        <text class="b1pX" x="330" y="92">How do I grow this person?</text>
+        <text class="b1pX" x="330" y="110">Ongoing. Forward-looking.</text>
+        <rect x="596" y="42" width="260" height="86" rx="12" fill="#D97706"/>
+        <text class="b1pT" x="616" y="70">3 · Evaluation</text>
+        <text class="b1pX" x="616" y="92" style="fill:#FEF3C7">Rating, pay, promotion.</text>
+        <text class="b1pX" x="616" y="110" style="fill:#FEF3C7">Rare. Backward-looking.</text>
+        <rect x="24" y="150" width="832" height="42" rx="10" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.4"/>
+        <text class="b1pI" x="44" y="176">Jam all three into one score and people stop being honest - they defend the number instead of doing the work.</text>
+        <rect x="24" y="214" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b1pN" x="46" y="226">Run steering weekly and evaluation rarely, on separate tracks. Never let a stretch goal decide someone's pay.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - keep steering, development, and reward on separate tracks</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Activity, output, outcome, impact - reward the right rung<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The second foundation is knowing which rung of the ladder a metric sits on:</p>
+        <ul>
+          <li><strong>Activity</strong> - what you did (calls made, hours logged). Easy to count, easy to fake, says nothing about value.</li>
+          <li><strong>Output</strong> - what you produced (tickets closed, features shipped). Still a task count.</li>
+          <li><strong>Outcome</strong> - the result that actually changed (customers retained, conversion lifted). This is what to grade.</li>
+          <li><strong>Impact</strong> - the long-run business effect (revenue, loyalty). Real, but shared and slow.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>"Busy" is not "effective".</strong> A Cartwheel support agent who closes 60 tickets a day looks productive - until you see the reopens and the falling CSAT. Activity and output are seductive because they are easy to count. Fair measurement climbs the ladder to outcomes: did the customer actually get helped?</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE FAIR-METRIC CHECKLIST ============ -->
+  <section class="section" id="checklist">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · what makes a metric fair</span>
+      <h2>The six-point fair-metric checklist <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Before you put a person's name against a number, run it through six questions. If it fails the first three, do not grade anyone on it - at most, watch it as context.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The six-point fair metric checklist: outcome not activity, controllable, hard to game, holistic, transparent, and tied to development">
+        <style>
+          .b1cT { font: 700 12.5px Inter, sans-serif; fill: #1F2937; }
+          .b1cX { font: 400 11px Inter, sans-serif; fill: #6B7280; }
+          .b1cN { font: 600 13px Inter, sans-serif; fill: #312E81; }
+        </style>
+        <g>
+          <rect x="24" y="40" width="270" height="60" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+          <text class="b1cT" x="40" y="64">1 · Outcome, not activity</text>
+          <text class="b1cX" x="40" y="84">measures a result, not a task count</text>
+          <rect x="305" y="40" width="270" height="60" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+          <text class="b1cT" x="321" y="64">2 · Controllable</text>
+          <text class="b1cX" x="321" y="84">the person can actually influence it</text>
+          <rect x="586" y="40" width="270" height="60" rx="10" fill="#EEF2FF" stroke="#4338CA"/>
+          <text class="b1cT" x="602" y="64">3 · Hard to game</text>
+          <text class="b1cX" x="602" y="84">gaming it would not fool anyone</text>
+          <rect x="24" y="110" width="270" height="60" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+          <text class="b1cT" x="40" y="134">4 · Holistic</text>
+          <text class="b1cX" x="40" y="154">balances quality, quantity, behaviour</text>
+          <rect x="305" y="110" width="270" height="60" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+          <text class="b1cT" x="321" y="134">5 · Transparent</text>
+          <text class="b1cX" x="321" y="154">the person knows how it is computed</text>
+          <rect x="586" y="110" width="270" height="60" rx="10" fill="#FEF3C7" stroke="#D97706"/>
+          <text class="b1cT" x="602" y="134">6 · Tied to development</text>
+          <text class="b1cX" x="602" y="154">informs growth, not just judgment</text>
+        </g>
+        <rect x="24" y="210" width="14" height="14" rx="3" fill="#4338CA"/>
+        <text class="b1cN" x="46" y="222">Fail 1, 2, or 3 and the metric is unfair to grade on. You will score metrics on exactly these in b3.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the six-point fair-metric checklist</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Controllability and attribution - the two that get forgotten<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two checklist points quietly cause most unfairness:</p>
+        <ul>
+          <li><strong>Controllability</strong> - do not grade a person on something they cannot move. A support agent does not control product bugs; punishing them for complaint volume during a botched release is measuring the weather, not the person.</li>
+          <li><strong>Attribution</strong> - many outcomes are shared. Cartwheel's conversion rate is moved by Marketing, Product, Engineering, and Merchandising together. Making it one person's grade is both unfair and gameable. Give each team a controllable slice; watch the shared outcome together.</li>
+        </ul>
+        <p>You will meet the attribution problem head-on in b4, when you map the Cartwheel metric tree to the teams that actually own each branch.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 1 ============ -->
+  <section class="section" id="worked-1">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 1 of 2</span>
+      <h2>Diagnose and fix a bad Cartwheel metric <span class="tag demo">★ 12 min · everyone tries</span></h2>
+    </div>
+    <p class="lede">Take a metric a manager actually proposed, run it through the checklist, and rewrite it into something fair to grade on.</p>
+
+    <div class="steps">
+      <div class="step"><p>The proposal: grade Cartwheel support agents on <strong>tickets closed per day</strong>. Score it against the six points.</p></div>
+      <div class="step"><p>Find the failures: it is an output (activity), highly gameable (close-and-reopen), and narrow (ignores whether the customer was actually helped).</p></div>
+      <div class="step"><p>Rewrite it to an outcome that resists gaming: <strong>CSAT paired with first-contact resolution</strong> - two outcomes that keep each other honest.</p></div>
+      <div class="step"><p>Keep "tickets closed" only as a workload/context signal, never as the grade.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The diagnosis, side by side</strong>
+      <table class="clean">
+        <thead><tr><th>Check</th><th>Tickets closed</th><th>CSAT + first-contact resolution</th></tr></thead>
+        <tbody>
+          <tr><td>Outcome not activity</td><td>✗ output</td><td>✓ outcome</td></tr>
+          <tr><td>Controllable</td><td>◐ partly</td><td>✓ mostly</td></tr>
+          <tr><td>Hard to game</td><td>✗ very gameable</td><td>✓ two paired outcomes</td></tr>
+          <tr><td>Holistic</td><td>✗ narrow</td><td>✓ quality + resolution</td></tr>
+        </tbody>
+      </table>
+      A metric that fails three of the first three checks belongs on a dashboard as context, not on a person's scorecard.
+    </div>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE 2 ============ -->
+  <section class="section" id="worked-2">
+    <div class="section-kicker">
+      <span class="klabel">Worked example 2 of 2</span>
+      <h2>Sort your metrics into the three purposes <span class="tag demo">★ 8 min · do your own</span></h2>
+    </div>
+    <p class="lede">Take the numbers your team already tracks and file each one under the job it is actually for. Most confusion comes from a metric being used for the wrong purpose.</p>
+
+    <div class="steps">
+      <div class="step"><p>List every metric your team tracks today.</p></div>
+      <div class="step"><p>For each, mark whether it is really for steering (are we on track), development (how do I coach), or evaluation (rating and pay).</p></div>
+      <div class="step"><p>Flag any metric doing double duty as both a steering signal and a pay input - that is where honesty leaks out.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The same number, three uses, three problems.</strong> Cartwheel's weekly conversion rate is a great steering signal (spot a broken checkout fast), a fine development lens (where should Product invest?), and a terrible individual pay metric (nobody controls it alone). The number is not the problem - using one number for all three purposes is. Decouple, and it becomes trustworthy again.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take three metrics your team is graded on and score each against the six-point checklist. Which fail the first three?</li>
+      <li>Rewrite one failing metric into a fairer outcome-based version, and note what you would keep it as context.</li>
+      <li>Sort your team's metrics into steering / development / evaluation. Circle any doing double duty with pay.</li>
+      <li>Find one metric your team is graded on that it does not actually control. Decide what to do about it.</li>
+      <li>Optional: read the HBR piece "Use OKRs to Set Goals for Teams, Not Individuals" before b2.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered (cited)</h2>
+    </div>
+    <p class="lede">Taught from the goal-setting and fair-measurement canon. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Doerr, "Measure What Matters"; Grove, "High Output Management"</span><span class="note">Parts 0-1 · why we measure, steering vs reward, the OKR mindset</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Goodhart's Law; HBR "Use OKRs for Teams, Not Individuals" (2020)</span><span class="note">Part 2 · gameability, controllability, attribution</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · What is the single most common cause of broken performance systems?</p>
+      <button class="qopt" type="button">A · Not enough metrics</button>
+      <button class="qopt" type="button">B · Metrics that are too hard to compute</button>
+      <button class="qopt" type="button">C · One number forced to do steering, development, and reward all at once</button>
+      <p class="qwhy">Separate the three purposes. When a steering or stretch metric also drives pay, people defend the number instead of doing the work, and the data stops being honest.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · Which rung of the ladder should you grade people on?</p>
+      <button class="qopt" type="button">A · Activity - what they did</button>
+      <button class="qopt" type="button">B · Outcome - the result that actually changed</button>
+      <button class="qopt" type="button">C · Impact - the long-run business effect</button>
+      <p class="qwhy">Activity and output are easy to count and easy to fake. Impact is real but shared and slow. Outcomes are the fair, gradable middle: the result that changed and the person influenced.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · "Tickets closed per agent" fails the checklist mainly because it is...</p>
+      <button class="qopt" type="button">A · An easily-gamed activity count that ignores whether the customer was helped</button>
+      <button class="qopt" type="button">B · Too hard to measure accurately</button>
+      <button class="qopt" type="button">C · Not tracked by most tools</button>
+      <p class="qwhy">It is an output, highly gameable (close-and-reopen, rushing customers), and narrow. Pair CSAT with first-contact resolution to grade the outcome instead.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Manager session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Three purposes</b><span>steering (weekly), development (ongoing), evaluation (rare). Keep them on separate tracks.</span></div>
+      <div class="cheat-item"><b>Never mix pay + steering</b><span>the moment a stretch metric drives pay, people game it and stop being honest.</span></div>
+      <div class="cheat-item"><b>The ladder</b><span>activity - output - outcome - impact. Grade outcomes.</span></div>
+      <div class="cheat-item"><b>Fair-metric checklist</b><span>outcome, controllable, hard-to-game, holistic, transparent, tied to development.</span></div>
+      <div class="cheat-item"><b>Controllability</b><span>do not grade people on what they cannot move.</span></div>
+      <div class="cheat-item"><b>Attribution</b><span>shared outcomes get a controllable slice per team + a jointly-watched top number.</span></div>
+      <div class="cheat-item"><b>Fix, do not delete</b><span>a failing metric often survives as context on a dashboard, just not on a scorecard.</span></div>
+      <div class="cheat-item"><b>Next session</b><span>b2 - writing good OKRs: objectives, key results, committed vs stretch, scoring.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Manager session 1 of 10 · learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b2-writing-okrs.html">Next: Writing good OKRs →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
