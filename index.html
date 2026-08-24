@@ -73,6 +73,87 @@
 
   .rail { margin-top: 1.4rem; border: 1px solid var(--hairline); border-left: 4px solid var(--amber); border-radius: var(--radius); background: var(--amber-50); padding: 1rem 1.2rem; font-size: .9rem; }
   .rail b { color: var(--amber-ink); }
+
+  /* The poster lives at the foot of this page, below the knowledge map, rather than on a
+     page of its own. It holds its authored width and either scales to fit or scrolls,
+     because a reference sheet that reflows stops being a reference sheet. */
+  .poster-section { margin-top: 2.2rem; padding-top: 1.5rem; border-top: 1px solid var(--hairline); }
+  /* The sheet is authored wider than the course's reading column, so inside that column it
+     would fit at 0.67 and render 11.5px type at 7.7px. Break the section out to full width
+     and it fits near 1:1 on a desktop instead. */
+  /* Break out of the reading column, but only where it buys something. Below 1100px the
+     sheet is already at actual size and scrolling inside its frame, so the negative margins
+     would add a page-level scrollbar for no gain. 100vw also counts the scrollbar, so --sbw
+     is measured in script and taken back off. */
+  @media (min-width: 1100px) {
+    .poster-section { margin-left: calc(50% - 50vw + (var(--sbw, 0px) / 2));
+                      margin-right: calc(50% - 50vw + (var(--sbw, 0px) / 2));
+                      padding-left: clamp(1rem, 4vw, 4rem); padding-right: clamp(1rem, 4vw, 4rem); }
+  }
+  .poster-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .poster-section .ps-lede { color: var(--muted); font-size: .92rem; margin-bottom: .7rem; }
+  .poster-bar { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; margin-bottom: .7rem; }
+  .poster-bar .pb-note { font-size: .82rem; color: var(--muted); min-width: 0; flex: 1; }
+  .poster-btn {
+    font: inherit; font-size: .82rem; font-weight: 700; cursor: pointer;
+    border: 1px solid var(--hairline); background: #fff; color: var(--indigo-deep);
+    border-radius: 999px; padding: .5rem 1rem; min-height: 44px;
+    display: inline-flex; align-items: center; gap: .4rem; text-decoration: none;
+    transition: all .12s ease;
+  }
+  .poster-btn:hover { background: var(--indigo-50); border-color: var(--indigo-soft); }
+  .poster-btn[aria-pressed="true"] { background: var(--indigo-deep); color: #fff; border-color: var(--indigo-deep); }
+  .poster-frame {
+    border: 1px solid var(--hairline); border-radius: var(--radius);
+    background: var(--paper); overflow: auto; -webkit-overflow-scrolling: touch;
+  }
+  .poster-stage { position: relative; margin: 0 auto; }
+  .poster-frame > .poster-stage > img { display: block; width: 100%; height: auto; }
+.vposter{position:relative;width:1086px;height:1448px;transform-origin:top left;background:url("assets/poster/learn-okr-with-phoebe-hero.webp") center/cover no-repeat;-webkit-font-smoothing:antialiased}
+.vposter *, .vposter *::before, .vposter *::after{margin:0;padding:0;box-sizing:border-box}
+.vposter html, .vposter .vp-t{position:absolute}
+.vposter /* #6E7681 measures 4.34:1 on this ground and fails; #8A929C passes at 6.33 */ .vp-mut{color:#8A929C}
+.vposter .vp-wht{color:#F2F4F7}
+.vposter .vp-cy{color:#4FC3E8}
+.vposter .vp-am{color:#E8912F}
+.vposter .vp-mono{font-family:"SF Mono",Menlo,Consolas,monospace}
+.vposter .vp-mast{left:5.2%; top:4.6%; width:30%}
+.vposter .vp-mast .vp-kick{font-size:10.5px; letter-spacing:.22em; color:#4FC3E8; font-weight:700}
+.vposter .vp-mast h1{font-size:31px; line-height:.98; font-weight:700; letter-spacing:-.025em;
+            color:#F2F4F7; margin-top:9px; text-transform:uppercase}
+.vposter .vp-mast .vp-sub{font-size:11.5px; line-height:1.45; color:#8A929C; margin-top:10px}
+.vposter /* five labels, .vposter ranged right, .vposter each aligned to a dial centre */ .vp-lab{right:69.5%; text-align:right; transform:translateY(-50%);}
+.vposter .vp-lab b{display:block; font-size:12.5px; letter-spacing:.13em; font-weight:700; color:#F2F4F7;
+          font-family:"SF Mono",Menlo,monospace}
+.vposter .vp-lab span{display:block; font-size:10.5px; color:#8A929C; margin-top:2px; letter-spacing:.04em}
+.vposter .vp-lab i{position:absolute; right:-26px; top:50%; width:20px; height:1px; background:#4FC3E8;
+          opacity:.75}
+.vposter .vp-col{left:62%; width:33%;}
+.vposter .vp-mod{margin-bottom:26px}
+.vposter .vp-mod > .vp-h{font-size:9.5px; letter-spacing:.2em; color:#4FC3E8; font-weight:700;
+             font-family:"SF Mono",Menlo,monospace; padding-bottom:7px;
+             border-bottom:1px solid rgba(138,146,156,.32); margin-bottom:11px}
+.vposter .vp-bar{margin-bottom:10px}
+.vposter .vp-bar .vp-r{display:flex; justify-content:space-between; align-items:baseline; font-size:11px;
+           letter-spacing:.03em}
+.vposter .vp-bar .vp-r em{font-style:normal; color:#8A929C}
+.vposter .vp-bar .vp-r b{font-family:"SF Mono",Menlo,monospace; font-size:13px; font-weight:700}
+.vposter .vp-bar .vp-track{height:5px; background:rgba(138,146,156,.2); margin-top:5px; position:relative}
+.vposter .vp-bar .vp-track i{position:absolute; left:0; top:0; bottom:0}
+.vposter .vp-src{font-size:11px; line-height:1.5; color:#8A929C}
+.vposter .vp-src b{color:#F2F4F7; font-weight:600}
+.vposter .vp-fix div{display:flex; gap:9px; align-items:baseline; font-size:11.5px; line-height:1.4;
+            color:#F2F4F7; padding:4.5px 0}
+.vposter .vp-fix div u{text-decoration:none; font-family:"SF Mono",Menlo,monospace; font-size:10.5px;
+              color:#4FC3E8; min-width:16px}
+.vposter .vp-foot{left:5.2%; right:5.2%; bottom:5.4%;}
+.vposter .vp-foot .vp-say{font-size:19px; line-height:1.32; color:#F2F4F7; font-weight:600; letter-spacing:-.012em;
+              max-width:64%}
+.vposter .vp-foot .vp-say em{font-style:normal; color:#E8912F}
+.vposter .vp-foot .vp-meta{display:flex; justify-content:space-between; align-items:baseline; margin-top:16px;
+               padding-top:11px; border-top:1px solid rgba(138,146,156,.3);
+               font-family:"SF Mono",Menlo,monospace; font-size:10px; letter-spacing:.14em;
+               color:#8A929C; text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -271,6 +352,97 @@
     <div class="mm-wrap"><div id="mindmap"></div></div>
   </section>
 
+
+  <section class="section poster-section" id="poster">
+    <h2>The plate: the rating measures the rater 📐</h2>
+    <p class="ps-lede">Five identical instruments, one shared input, five different readings. The uncomfortable finding under fair measurement, with the variance decomposition and the structural fix. Every word on the plate is real text.</p>
+    <div class="poster-bar">
+      <button class="poster-btn" id="zoomToggle" type="button" aria-pressed="false">Actual size</button>
+      <a class="poster-btn" href="assets/poster/learn-okr-with-phoebe-poster.png" download>Download for print (2172px)</a>
+      <span class="pb-note">Every word here is real selectable text, so it stays sharp however far you zoom.</span>
+    </div>
+    <div class="poster-frame" id="frame">
+      <div class="poster-stage" id="stage">
+        <div class="vposter" id="vp">
+
+
+  <div class="vp-t vp-mast">
+    <div class="vp-kick">LEARN OKRs WITH PHOEBE</div>
+    <h1>The rating measures the rater</h1>
+    <div class="vp-sub">16 sessions on measuring people and teams fairly, worked on one online retailer, Cartwheel.</div>
+  </div>
+
+  <div class="vp-t vp-lab" style="top:17.5%"><b>SAME PERSON</b><span>one ratee</span><i></i></div>
+  <div class="vp-t vp-lab" style="top:30.2%"><b>SAME EVIDENCE</b><span>one body of work</span><i></i></div>
+  <div class="vp-t vp-lab" style="top:43.5%"><b>SAME CRITERIA</b><span>one rubric</span><i></i></div>
+  <div class="vp-t vp-lab" style="top:57.0%"><b>SAME QUARTER</b><span>one period</span><i></i></div>
+  <div class="vp-t vp-lab" style="top:70.4%"><b>SAME FORM</b><span>one scale, 0 to 1</span><i></i></div>
+
+  <div class="vp-t vp-col" style="top:13.5%">
+    <div class="vp-mod">
+      <div class="vp-h">WHAT A RATING ACTUALLY MEASURES</div>
+      <div class="vp-bar">
+        <div class="vp-r"><em>Rater idiosyncrasy</em><b class="vp-am">~55%</b></div>
+        <div class="vp-track"><i class="vp-am" style="width:55%;background:#E8912F"></i></div>
+      </div>
+      <div class="vp-bar">
+        <div class="vp-r"><em>Actual performance</em><b class="vp-cy">~21%</b></div>
+        <div class="vp-track"><i style="width:21%;background:#4FC3E8"></i></div>
+      </div>
+      <div class="vp-bar">
+        <div class="vp-r"><em>Situation and error</em><b class="vp-wht">~24%</b></div>
+        <div class="vp-track"><i style="width:24%;background:#8A929C"></i></div>
+      </div>
+    </div>
+
+    <div class="vp-mod">
+      <div class="vp-h">THE SOURCE</div>
+      <div class="vp-src">Scullen, Mount &amp; Goff (2000) found <b>50 to 60 percent</b> of rating variance is the rater. One score from one manager is a weak signal about a person.</div>
+    </div>
+
+    <div class="vp-mod">
+      <div class="vp-h">SO THE FIX IS STRUCTURAL</div>
+      <div class="vp-fix">
+        <div><u>01</u>More than one perspective</div>
+        <div><u>02</u>Criteria fixed in advance</div>
+        <div><u>03</u>Evidence attached to claims</div>
+        <div><u>04</u>Calibration across raters</div>
+      </div>
+    </div>
+
+    <div class="vp-mod">
+      <div class="vp-h">THE ANATOMY, FROM SESSION A2</div>
+      <div class="vp-src">An <b>Objective</b> is qualitative: one memorable sentence about where you
+      want to be. Its <b>two to three Key Results</b> are the measurable outcomes that prove you
+      got there. If you cannot put a number on a Key Result, it is not a Key Result.</div>
+      <div class="vp-fix" style="margin-top:9px">
+        <div><u>0-1</u>Key Results score on one scale</div>
+        <div><u>~0.7</u>The sweet spot, a Google norm to adapt, not a law</div>
+        <div><u>C/A</u>Committed goals differ from aspirational ones</div>
+      </div>
+    </div>
+
+    <div class="vp-mod">
+      <div class="vp-h">WHAT IT IS NOT</div>
+      <div class="vp-src">Not that raters lie, and not that performance cannot be measured. Real differences exist. They are simply a smaller share of the variance than we assume.</div>
+    </div>
+  </div>
+
+  <div class="vp-t vp-foot">
+    <div class="vp-say">Five instruments. One input. Five readings. The gap is mostly <em>them</em>, not the person.</div>
+    <div class="vp-meta">
+      <span>learn-okr-with-phoebe</span>
+      <span>2 tracks &middot; 16 sessions &middot; 6 leader &middot; 10 manager</span>
+      <span>by Phoebe Fu</span>
+    </div>
+  </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="pagefoot">
     <span>learn-okr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> · sources: Grove &amp; Doerr · Google re:Work · Goodhart's Law · rater-effect research (Scullen &amp; Mount) · organizational justice (Greenberg) · Balanced Scorecard · EU AI Act / GDPR / NYC LL144</span>
   </footer>
@@ -354,5 +526,41 @@ window.MINDMAP_DATA = {
 </script>
 <script src="assets/mindmap.js?v=6"></script>
 <script src="assets/app.js?v=6"></script>
+
+<script>
+(function () {
+  var vp = document.getElementById('vp');
+  if (!vp) return;
+  var W = 1086, MIN_FIT = 0.8;
+  var frame = document.getElementById('frame'), stage = document.getElementById('stage'),
+      btn = document.getElementById('zoomToggle');
+  var userChose = false, actual = false;
+  function sbw() {
+    var w = window.innerWidth - document.documentElement.clientWidth;
+    document.documentElement.style.setProperty('--sbw', (w > 0 ? w : 0) + 'px');
+  }
+  function full() { vp.style.transform = 'none'; stage.style.height = ''; stage.style.width = W + 'px'; }
+  function apply() {
+    var avail = frame.clientWidth;
+    if (!avail || avail < 40) { full(); return; }   // a hidden frame must never scale to nothing
+    var s = avail / W;
+    if (!userChose) actual = s < MIN_FIT;           // below 0.8 the labels stop being readable
+    if (actual || s >= 1) full();
+    else {
+      vp.style.transform = 'scale(' + s + ')';
+      stage.style.width = W + 'px';
+      stage.style.height = Math.ceil(vp.offsetHeight * s) + 'px';
+    }
+    btn.setAttribute('aria-pressed', actual ? 'true' : 'false');
+    btn.textContent = actual ? 'Fit to width' : 'Actual size';
+  }
+  btn.addEventListener('click', function () {
+    userChose = true; actual = !actual; apply(); if (actual) frame.scrollLeft = 0;
+  });
+  window.addEventListener('resize', function () { sbw(); apply(); });
+  if (typeof ResizeObserver === 'function') new ResizeObserver(apply).observe(frame);
+  sbw(); apply();
+})();
+</script>
 </body>
 </html>
